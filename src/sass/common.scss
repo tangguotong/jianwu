@@ -1,0 +1,95 @@
+@import "../vonder/font-awesome-4.7.0/scss/font-awesome";
+@import "headerLeft";
+@import "workTable";//辅助工作台样式
+@import "openCases";//案件受理样式
+
+
+
+/*内容*/
+
+.wrapper{
+  position: relative;
+  padding: $topHeight 0 0 20%;
+}
+.content{
+  //padding: 25px 30px 0 30px;/
+  background-color: #f4f4f4;
+}
+.one-content{
+  padding: 20px 25px;
+  margin-bottom: 15px;
+  border-top: $borderGrey;
+  border-bottom: $borderGrey;
+  background-color: #fff;
+}
+.one-content:first-child{
+  border-top: none;
+}
+.one-content:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.btn-box{
+  .btn{
+    margin-right: 20px;
+  }
+  .btn:last-child{
+    margin-right: 0;
+  }
+}
+.footer{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #292f43;
+}
+.yy-content-title{
+  font-size: 14px;
+  color: #868e9a;
+  a,
+  a:focus,
+  a:visited,
+  a:hover{
+    text-decoration: none;
+    color: #1696fd;
+  }
+}
+
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

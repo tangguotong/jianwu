@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <title>检务中心</title>
+
+
+
+    <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vonder/bootstrap-table/bootstrap-table.min.css">
+
+    <link rel="stylesheet" href="../../vonder/jqueryStep/css/jquery.step.css">
+
+
+    <link rel="stylesheet" href="../../css/common.css">
+
+    <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../vonder/bootstrap-table/bootstrap-table.min.js"></script>
+
+    <script src="../../vonder/jqueryStep/js/jquery.step.min.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <script src="../../js/openCases/caseReport.js"></script>
+</head>
+<body>
+<!--头-->
+<header >
+    <nav class="navbar-fixed-top navbar navbar-default nav-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <span>
+                        <img src="../../images/work-table/logo.png" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="link">
+                <ul class="nav navbar-nav">
+                    <li ><a href="./auxiliaryBench.html">检察办案</a></li>
+                    <li class="active"><a href="./jianwuCenter.html">检务中心</a></li>
+                    <li><a href="#">检务大屏</a></li>
+
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="mr10 ">
+                    <div class="input-group nav-input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" class="form-control" placeholder="请输入关键字">
+                    </div>
+                </li>
+                <li><a href="#" class="relative">
+                    <span class="fa fa-bell-o"></span>
+                    <span class="badge badge-header-right">3</span>
+                    消息
+                </a></li>
+                <li>
+                    <img class="user-header" src="../../images/work-table/user_header.png" alt="">
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        检察官  林俊杰
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">系统设置</a></li>
+                        <li><a href="#">配置平台</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--头end-->
+
+<div class="wrapper pl0">
+    <!--内容-->
+    <div class="content">
+        <div class="one-content">
+            <div class="case-message clearfix">
+                <div class="message-logo">
+                    <img src="../../images/openCases/su_icon.png" alt="">
+                </div>
+                <div class="message-details">
+                    <p class="case-message-title">王某某等3人盗窃案</p>
+                    <div class="message-classify">
+                            <span>
+                                案件类型：<b>提请批准逮捕</b>
+                            </span>
+                        <span>
+                                涉嫌罪名：<b>盗窃</b>
+                            </span>
+                        <span>
+                                犯罪类型：<b>多人一罪</b>
+                            </span>
+                        <span>
+                                侦查机构：<b>太原市公安局万柏林分局</b>
+                            </span>
+                    </div>
+                </div>
+                <div class="message-btn pull-right">
+                    <button class="btn btn-border-blue">查看电子卷宗</button>
+                </div>
+            </div>
+            <div class="step" id="step"></div>
+        </div>
+        <div class="one-content">
+            <p class="first-level-title">
+                <img src="../../images/openCases/case-first-title-01.png" alt="">
+                <span>受理案件分析结果报告</span>
+            </p>
+            <div class="panel panel-has-blue-title">
+                <div class="panel-heading">
+                    <p class="panel-title">案件基本信息</p>
+                </div>
+                <div class="panel-body">
+                    <table class="table details-table">
+                        <thead>
+                        <tr>
+                            <th>王某某等3人盗窃案</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                <span>案件类型:</span>
+                                <span>提请批准逮捕</span>
+                            </td>
+                            <td>
+                                <span>涉嫌罪名:</span>
+                                <span>盗窃（多人一罪）</span>
+                            </td>
+                            <td>
+                                <span>侦查机构:</span>
+                                <span>太原市公安局万柏林分局</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>卷宗页数:</span>
+                                <span>124</span>
+                            </td>
+                            <td>
+                                <span>上传文件名称:</span>
+                                <span>王某某盗窃案.zip</span>
+                            </td>
+                            <td>
+                                <span>提交时间:</span>
+                                <span>2018-08-03</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="panel panel-has-blue-title">
+                <div class="panel-heading">
+                    <p class="panel-title">案件受理材料</p>
+                    <div class="tab-search clearfix">
+                        <ul id="myTab" class="nav nav-tabs pull-left nav-my-style ">
+                            <li class="">
+                                <a href="#tab0" data-toggle="tab" aria-expanded="false">
+                                    盗窃罪
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#tab1" data-toggle="tab" aria-expanded="false">故意伤害罪</a>
+                            </li>
+                            <li class="active">
+                                <a href="#tab2" data-toggle="tab" aria-expanded="true">掩饰隐瞒犯罪所得</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in" id="tab0">
+                            <p class="table-icon"><span class="icons"></span> 受理必要材料 <span class="fs12">(已识别 <b>12</b>/总计 <b>32</b>）</span></p>
+                            <table class="table table-normal" id="need">
+
+                            </table>
+
+
+                            <p class="table-icon mt10"><span class="icons"></span> 受理非必要材料 <span class="fs12">(已识别 <b>12</b>/总计 <b>32</b>）</span></p>
+
+                            <table class="table table-normal" id="noNeed">
+                                <thead>
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="tab1">
+                            故意伤害罪
+                        </div>
+                        <div class="tab-pane fade" id="tab2">
+                            掩饰隐瞒犯罪所得
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-has-blue-title">
+                <div class="panel-heading">
+                    <p class="panel-title">案件材料分析建议</p>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-normal" id="suggestTable"></table>
+                </div>
+            </div>
+
+
+            <p class="text-center mb0 btn-box">
+                <button class="btn btn-blue-gradient"> 受理</button>
+                <button class="btn btn-blue-gradient">不受理</button>
+                <button class="btn btn-border-blue">受理并指派</button>
+            </p>
+        </div>
+    </div>
+    <!--内容end-->
+
+    <footer class="blue-footer">
+        <p>Copyright 2018 中科点击（北京）技术有限公司提供技术支持</p>
+    </footer>
+</div>
+
+</body>
+<script>
+
+</script>
+</html>

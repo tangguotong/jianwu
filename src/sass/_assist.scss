@@ -1,0 +1,67 @@
+
+/*------------字体-----------*/
+.over-ellipsis{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.fc-gray-light{
+  color: #868e9a;
+}
+.fc-gray-deep{
+  color: #464d5c;
+}
+.fc-blue{
+  color: #1696fd;
+}
+.fs12{
+  font-size: 12px;
+}
+.fs14{
+  font-size: 14px;
+}
+/*-------------------边距-------------*/
+.pr0{
+  padding-right: 0;
+}
+.pd0{
+  padding: 0;
+}
+.pb0{
+  padding-bottom: 0!important;
+}
+.pl0{
+  padding-left: 0!important;
+}
+.ml20{
+  margin-left: 20px;
+}
+.mb0{
+  margin-bottom: 0;
+}
+.mr10{
+  margin-right: 10px;
+}
+.mt10{
+  margin-top: 10px;
+}
+/*---------------定位-----------------*/
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
+/*-----------高度-----------*/
+
+.heightP100{
+  height: 100%;
+}
+
+
+/*-----------边框----------*/
+$borderGrey:1px solid #ededed;
+
+
+
+

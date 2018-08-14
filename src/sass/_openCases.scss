@@ -1,0 +1,176 @@
+@import "panel";
+/*--------------案件受理报告页面--------------*/
+//案件信息
+.case-message{
+  padding-bottom: 20px;
+  border-bottom: $borderGrey;
+  >div{
+    float: left;
+    height: 60px;
+  }
+  .message-logo{
+    width: 66px;
+  }
+  img{
+    width: 80%;
+  }
+  .case-message-title{
+    font-size: 16px;
+    color: #2b93f5;
+    font-weight: bold;
+  }
+  .message-classify{
+    span{
+      margin-right: 45px;
+      font-size: 13px;
+      color: #868e9a;
+      b{
+        font-weight: normal;
+        color: #595e6b;
+      }
+    }
+  }
+}
+.step{
+  padding: 20px 0 0 0;
+}
+
+.first-level-title{
+  margin-bottom: 18px;
+  display: table;
+  span{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #464d5c;
+    font-weight: bold;
+  }
+  img{
+    display: table-cell;
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+}
+
+
+/*---------------电子卷宗页面-------------------------*/
+.ele-box{
+  padding: 20px 25px;
+}
+.search-code{
+  input{
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size:12px;
+    color: #868e9a;
+  }
+  .input-group{
+    position: relative;
+    width: 160px;
+    border:$borderGrey;
+    height: 32px;
+    padding:3px 20px 3px 3px;
+    margin-right: 20px;
+    span{
+      position: absolute;
+      right: 0;
+      color: #868e9a;
+      //top: 10px;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+  .bootstrap-select{
+    width: 160px!important;
+  }
+}
+.choose-box{
+  padding: 10px 0;
+  label{
+    padding-bottom: 50px;
+  }
+  .choose-title{
+    font-size: 13px;
+    color: #464d5c;
+    vertical-align: middle;
+    .icheckbox_square-blue{
+      margin-right: 8px;
+    }
+    input{
+      margin-right: 8px;
+    }
+    span{
+      color: #868e9a;
+      .fc-blue{
+        color: #1696fd;
+      }
+    }
+    span.fc-blue{
+      color: #1696fd;
+      cursor: pointer;
+    }
+  }
+  .check-group{
+    margin-right:-15px;
+    margin-left: -15px;
+    .check-item{
+      position: relative;
+      border: $borderGrey;
+      padding: 10px;
+      //margin: 0 10px;
+      .check-message{
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        font-size: 13px;
+      }
+      .check-img{
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background:url("../images/openCases/check-img.png")no-repeat;
+        background-position: 0 -37px;
+        -webkit-background-size: 30px auto;
+        background-size: 30px auto;
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+    .checked{
+      span{
+        background-position: 0 0!important;
+      }
+    }
+    .fixed-table-container{
+      border: none;
+      tbody td {
+         border-left: none;
+        padding: 8px 15px!important;
+      }
+    }
+
+    table{
+      border-bottom: none!important;
+      tr:hover{
+        background-color: #fff;
+      }
+    }
+  }
+  .check-table{
+    border: none!important;
+    thead{
+      //display: none!important;
+    }
+    tr:hover{
+      background-color: #fff!important;
+    };
+  }
+}

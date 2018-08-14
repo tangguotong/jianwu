@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <title>辅助工作台</title>
+    <style>
+        html,body{
+            height:100%;
+        }
+    </style>
+
+
+
+    <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vonder/schedule/schedule.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../vonder/schedule/schedule.js"></script>
+    <script src="../../js/common.js"></script>
+
+    <script src="../../js/workTable/auxiliaryBench.js"></script>
+</head>
+<body>
+<!--头-->
+<header >
+    <nav class="navbar-fixed-top navbar navbar-default nav-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <span>
+                        <img src="../../images/work-table/logo.png" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="link">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./auxiliaryBench.html">检察办案</a></li>
+                    <li><a href="jianwuCenter.html">检务中心</a></li>
+                    <li><a href="#">检务大屏</a></li>
+
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="mr10 ">
+                    <div class="input-group nav-input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" class="form-control" placeholder="请输入关键字">
+                    </div>
+                </li>
+                <li><a href="#" class="relative">
+                    <span class="fa fa-bell-o"></span>
+
+                    <span class="badge badge-header-right">3</span>
+                    消息
+                </a></li>
+                <li>
+                    <img class="user-header" src="../../images/work-table/user_header.png" alt="">
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        检察官  林俊杰
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">系统设置</a></li>
+                        <li><a href="#">配置平台</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--头end-->
+
+<div class="wrapper heightP100">
+    <!--左-->
+    <ul class="nav nav-pills nav-stacked nav-left-title">
+        <li class="date-box">
+            <div class="left-slide">
+                <div class="yy-slide">
+                    <div class="pull-left">
+                        <p class="time mb0">13:09</p>
+                        <p class="date">2018-08-07</p>
+                    </div>
+                    <div class="pull-right">
+                        <p class="area"><span class="	glyphicon glyphicon-map-marker"></span>太原</p>
+                        <p>星期二</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="left-slide">
+                <!--链接-->
+                <a class="this-link" href="#"></a>
+                <div class="yy-slide">
+                    <div class="yy-left col-md-3 pr0">
+                        <div class="app-logo">
+                            <span>
+                                <img src="../../images/work-table/left-icon-01.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="yy-middle col-md-7 pl0">
+                        <h4>案件受理 <span class="badge badge-red">99+</span></h4>
+                        <p class="over-ellipsis">待办0件  |  共9件</p>
+                    </div>
+                    <div class="yy-right col-md-2 text-right">
+                        <a href="" class="yy-btns">
+                            <img src="../../images/work-table/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="left-slide">
+                <!--链接-->
+                <a class="this-link" href="#"></a>
+                <div class="yy-slide">
+                    <div class="yy-left col-md-3 pr0">
+                        <div class="app-logo">
+                            <span>
+                                <img src="../../images/work-table/left-icon-02.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="yy-middle col-md-7 pl0">
+                        <h4>案件指派</h4>
+                        <p class="over-ellipsis">待办0件  |  共9件</p>
+                    </div>
+                    <div class="yy-right col-md-2 text-right">
+                        <a href="" class="yy-btns">
+                            <img src="../../images/work-table/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="left-slide">
+                <!--链接-->
+                <a class="this-link" href="#"></a>
+                <div class="yy-slide">
+                    <div class="yy-left col-md-3 pr0">
+                        <div class="app-logo">
+                            <span>
+                                <img src="../../images/work-table/left-icon-03.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="yy-middle col-md-7 pl0">
+                        <h4>审查批捕</h4>
+                        <p class="over-ellipsis">待办0件  |  共9件</p>
+                    </div>
+                    <div class="yy-right col-md-2 text-right">
+                        <a href="" class="yy-btns">
+                            <img src="../../images/work-table/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="left-slide">
+                <!--链接-->
+                <a class="this-link" href="#"></a>
+                <div class="yy-slide">
+                    <div class="yy-left col-md-3 pr0">
+                        <div class="app-logo">
+                            <span>
+                                <img src="../../images/work-table/left-icon-04.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="yy-middle col-md-7 pl0">
+                        <h4>案件跟踪监督</h4>
+                        <p class="over-ellipsis">待办0件  |  共9件</p>
+                    </div>
+                    <div class="yy-right col-md-2 text-right">
+                        <a href="" class="yy-btns">
+                            <img src="../../images/work-table/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="left-slide">
+                <!--链接-->
+                <a class="this-link" href="#"></a>
+                <div class="yy-slide">
+                    <div class="yy-left col-md-3 pr0">
+                        <div class="app-logo">
+                            <span>
+                                <img src="../../images/work-table/left-icon-05.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="yy-middle col-md-7 pl0">
+                        <h4>案件评查</h4>
+                        <p class="over-ellipsis">待办0件  |  共9件</p>
+                    </div>
+                    <div class="yy-right col-md-2 text-right">
+                        <a href="" class="yy-btns">
+                            <img src="../../images/work-table/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li >
+            <div class="left-slide">
+                <!--链接-->
+                <a class="this-link" href="#"></a>
+                <div class="yy-slide">
+                    <div class="yy-left col-md-3 pr0">
+                        <div class="app-logo">
+                            <span>
+                                <img src="../../images/work-table/left-icon-06.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="yy-middle col-md-7 pl0">
+                        <h4>案件受理</h4>
+                        <p class="over-ellipsis">待办0件  |  共9件</p>
+                    </div>
+                    <div class="yy-right col-md-2 text-right">
+                        <a href="" class="yy-btns">
+                            <img src="../../images/work-table/right-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!--左end-->
+    <!--内容-->
+    <div class="heightP100">
+        <div class="col-md-9 pd0 heightP100 ">
+            <div class="center-container heightP100">
+                <div class="content-header">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p class="yy-content-title">早安，检察官-王学聪，祝你开心每一天！</p>
+                            <p class="content-title mb0">我的任务 <span>( <span class="fc-blue">3</span>个待办)</span></p>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="head-line-box">
+                                <div class="pull-left head-line-logo"></div>
+                                <div class="pull-left head-line-list">
+                                    <ul class="animation-list">
+                                        <li><a href="#">1太原市万柏林区人民检察院智慧检务大数据系统二期需求征集中</a></li>
+                                        <li>2太原市万柏林区人民检察院智慧检务大数据系统二期需求征集中</li>
+                                        <li>3太原市万柏林区人民检察院智慧检务大数据系统二期需求征集中</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="big task-container">
+                    <div class="task-box">
+                        <div class="task-left">
+                            <p class="mb0">05月06日</p>
+                            <p>16：21</p>
+                        </div>
+                        <div class="task-right">
+                            <div class="panel panel-light-blue">
+                                <div class="panel-heading">
+                                    <p class="panel-title">案件指派</p>
+                                </div>
+                                <div class="panel-body">
+                                    <button class="btn btn-border-blue pull-right">立即处理</button>
+                                    <p class="fc-gray-deep fs14">恶匪持枪抢劫杀人 警方四小时锁定疑凶</p>
+                                    <p class="fc-gray-light fs14 mb0"><span class="	glyphicon glyphicon-time"></span>截至2017年08月10日    <span class="ml20">12：10</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-box">
+                        <div class="task-left">
+                            <p class="mb0">05月06日</p>
+                            <p>16：21</p>
+                        </div>
+                        <div class="task-right">
+                            <div class="panel panel-light-blue">
+                                <div class="panel-heading">
+                                    <p class="panel-title">案件指派</p>
+                                </div>
+                                <div class="panel-body">
+                                    <button class="btn btn-border-blue pull-right">立即处理</button>
+                                    <p class="fc-gray-deep fs14">恶匪持枪抢劫杀人 警方四小时锁定疑凶</p>
+                                    <p class="fc-gray-light fs14 mb0"><span class="	glyphicon glyphicon-time"></span>截至2017年08月10日    <span class="ml20">12：10</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-box">
+                        <div class="task-left">
+                            <p class="mb0">05月06日</p>
+                            <p>16：21</p>
+                        </div>
+                        <div class="task-right">
+                            <div class="panel panel-light-blue">
+                                <div class="panel-heading">
+                                    <p class="panel-title">案件指派</p>
+                                </div>
+                                <div class="panel-body">
+                                    <button class="btn btn-border-blue pull-right">立即处理</button>
+                                    <p class="fc-gray-deep fs14">恶匪持枪抢劫杀人 警方四小时锁定疑凶</p>
+                                    <p class="fc-gray-light fs14 mb0"><span class="	glyphicon glyphicon-time"></span>截至2017年08月10日    <span class="ml20">12：10</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-box">
+                        <div class="task-left">
+                            <p class="mb0">05月06日</p>
+                            <p>16：21</p>
+                        </div>
+                        <div class="task-right">
+                            <div class="panel panel-light-blue">
+                                <div class="panel-heading">
+                                    <p class="panel-title">案件指派</p>
+                                </div>
+                                <div class="panel-body">
+                                    <button class="btn btn-border-blue pull-right">立即处理</button>
+                                    <p class="fc-gray-deep fs14">恶匪持枪抢劫杀人 警方四小时锁定疑凶</p>
+                                    <p class="fc-gray-light fs14 mb0"><span class="	glyphicon glyphicon-time"></span>截至2017年08月10日    <span class="ml20">12：10</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">Copyright 2018 中科点击（北京）技术有限公司提供技术支持</div>
+        </div>
+        <div class="col-md-3 pd0 heightP100">
+            <div class="right-box heightP100">
+                <div class="schedule">
+                    <button class="btn btn-blue deal-qulick pull-right"><span class="glyphicon glyphicon-plus"></span>新建日程</button>
+                    <div id='schedule-box' class="boxshaw">
+
+                    </div>
+                </div>
+                <div class="task-little">
+                    <p class="task-small-title">7月10日</p>
+                    <div class="small-task">
+                        <div class="task-box">
+                            <div class="task-left">
+                                <p class="mb0">16：21</p>
+                                <p>16：21</p>
+                            </div>
+                            <div class="task-right">
+                                <img class="pull-right pop-img" src="../../images/work-table/other.png" alt="">
+                                <p class="fc-gray-deep fs14">王晓斌盗窃案</p>
+                            </div>
+                        </div>
+                        <div class="task-box">
+                            <div class="task-left">
+                                <p class="mb0">16：21</p>
+                                <p>16：21</p>
+                            </div>
+                            <div class="task-right">
+                                <img class="pull-right" src="../../images/work-table/other.png" alt="">
+                                <p class="fc-gray-deep fs14">王晓斌盗窃案</p>
+                            </div>
+                        </div>
+                        <div class="task-box">
+                            <div class="task-left">
+                                <p class="mb0">16：21</p>
+                                <p>16：21</p>
+                            </div>
+                            <div class="task-right">
+                                <img class="pull-right" src="../../images/work-table/other.png" alt="">
+                                <p class="fc-gray-deep fs14">王晓斌盗窃案</p>
+                            </div>
+                        </div>
+                        <div class="task-box">
+                            <div class="task-left">
+                                <p class="mb0">16：21</p>
+                                <p>16：21</p>
+                            </div>
+                            <div class="task-right">
+                                <img class="pull-right" src="../../images/work-table/other.png" alt="">
+                                <p class="fc-gray-deep fs14">王晓斌盗窃案</p>
+                            </div>
+                        </div>
+                        <div class="task-box">
+                            <div class="task-left">
+                                <p class="mb0">16：21</p>
+                                <p>16：21</p>
+                            </div>
+                            <div class="task-right">
+                                <img class="pull-right" src="../../images/work-table/other.png" alt="">
+                                <p class="fc-gray-deep fs14">王晓斌盗窃案</p>
+                            </div>
+                        </div>
+                        <div class="task-box">
+                            <div class="task-left">
+                                <p class="mb0">16：21</p>
+                                <p>16：21</p>
+                            </div>
+                            <div class="task-right">
+                                <img class="pull-right" src="../../images/work-table/other.png" alt="">
+                                <p class="fc-gray-deep fs14">王晓斌盗窃案</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--内容end-->
+
+</div>
+
+</body>
+</html>

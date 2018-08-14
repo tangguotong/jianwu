@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <title>电子卷宗</title>
+
+    <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vonder/bootstrap-table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../vonder/bootstrap-select-1.12.4/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../vonder/iCheck/skins/square/blue.css">
+    <link rel="stylesheet" href="../../css/common.css">
+
+    <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../vonder/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="../../vonder/bootstrap-select-1.12.4/dist/js/bootstrap-select.min.js"></script>
+    <script src="../../vonder/iCheck/icheck.min.js"></script>
+    <script src="../../js/common.js"></script>
+
+</head>
+<body>
+<!--头-->
+<header >
+    <nav class="navbar-fixed-top navbar navbar-default nav-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <span>
+                        <img src="../../images/work-table/logo.png" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="link">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./auxiliaryBench.html">检察办案</a></li>
+                    <li class=""><a href="./jianwuCenter.html">检务中心</a></li>
+                    <li><a href="#">检务大屏</a></li>
+
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="mr10 ">
+                    <div class="input-group nav-input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" class="form-control" placeholder="请输入关键字">
+                    </div>
+                </li>
+                <li><a href="#" class="relative">
+                    <span class="fa fa-bell-o"></span>
+                    <span class="badge badge-header-right">3</span>
+                    消息
+                </a></li>
+                <li>
+                    <img class="user-header" src="../../images/work-table/user_header.png" alt="">
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        检察官  林俊杰
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">系统设置</a></li>
+                        <li><a href="#">配置平台</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--头end-->
+
+
+<div class="wrapper">
+    <div class="file-left">
+        <div class="panel-group" id="accordion">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <adata-toggle="collapse" href="#collapseOne">
+                            证明案件来源
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        1
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse"
+                           href="#collapseTwo">
+                            <span class="title-icon-text">
+                                <i class="fa fa-caret-right"></i>
+                                <span class="file-icon"></span>
+                                <span>犯罪嫌疑人基本情况</span>
+                            </span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        2
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse"
+                           href="#collapseThree">
+                            犯罪嫌疑人供述或辩解
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                       3
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse"
+                           href="#collapseFour">
+                            被害人陈达材料
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        4
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse"
+                           href="#collapseFive">
+                            证人证言
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        5
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--内容-->
+    <div class="content">
+        <div class="one-content pb0">
+            <div class="clearfix">
+                <div class="btn-box pull-left">
+                    <button class="btn btn-blue-gradient">证据录入</button>
+                    <button class="btn btn-default">移动到</button>
+                    <button class="btn btn-default">删除</button>
+                    <button class="btn btn-default">导出阅卷笔记</button>
+                </div>
+                <div class="pull-right search-code">
+                    <div class="input-group pull-left">
+                        <input type="text" class="" placeholder="请输入证据关键词">
+                        <span class=""> <i class="glyphicon glyphicon-search"></i></span>
+                    </div>
+                    <select class="pull-right selectpicker" name="" id="">
+                        <option value="">每行显示3张</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="choose-box">
+                <p class="choose-title">
+                    <input type="checkbox" id="checkAll">全选
+                    <span class="ml20 mr10">已选中<span class="fc-blue">3</span>项</span>
+                    <span class="fc-blue">取消</span>
+                </p>
+
+                <div class="check-group">
+
+                    <table id="checkTable"></table>
+                    <!--<div class="col-md-4">
+                        <input type="checkbox" class="checkboxs hidden" id="check1">
+                        <label for="check1">
+                            <div class="check-item">
+                                <span class="check-img"></span>
+                                <div class="check-message">
+                                    <span class="pull-left fc-gray-deep">001.jpg</span>
+                                    <span class="pull-right fc-blue">2条标注</span>
+                                </div>
+                                <img src="../../images/openCases/file-img.png" alt="">
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="checkbox" class="checkboxs hidden" id="check2">
+                        <label for="check2">
+
+                            <div class="check-item">
+                                <span class="check-img"></span>
+                                <div class="check-message">
+                                    <span class="pull-left fc-gray-deep">001.jpg</span>
+                                    <span class="pull-right fc-blue">2条标注</span>
+                                </div>
+                                <img src="../../images/openCases/file-img.png" alt="">
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="checkbox" class="checkboxs hidden" id="check3">
+                        <label for="check3">
+                            <div class="check-item">
+                                <span class="check-img"></span>
+                                <div class="check-message">
+                                    <span class="pull-left fc-gray-deep">001.jpg</span>
+                                    <span class="pull-right fc-blue">2条标注</span>
+                                </div>
+                                <img src="../../images/openCases/file-img.png" alt="">
+                            </div>
+                        </label>
+                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--内容end-->
+
+
+
+</div>
+<footer class="blue-footer">
+    <p>Copyright 2018 中科点击（北京）技术有限公司提供技术支持</p>
+</footer>
+</body>
+<script src="../../js/openCases/eleFile.js"></script>
+<script>
+
+</script>
+</html>

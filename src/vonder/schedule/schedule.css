@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+#schedule-box{
+    /*width: 320px;*/
+    height: 100%;
+    margin: 0 auto;
+    padding:15px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #dadada;
+}
+.schedule-hd{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+.today{
+    flex: 1;
+    text-align: center;
+}
+.ul-box{
+    overflow: hidden;
+}
+.ul-box > li{
+    float: left;
+    width: 14.28%;
+    text-align: center;
+    padding: 3px 0;
+}
+.other-month{
+    color: #999999;
+}
+.other-month span{
+    visibility: hidden;
+}
+.current-month{
+    color: #333333;
+}
+.today-style{
+    border-radius: 50%;
+    background: #58d321;
+}
+.arrow{
+    cursor: pointer;
+}
+.dayStyle{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.current-month > .dayStyle:hover
+{
+    background: #2b93f5;
+    color: #ffffff;
+}
+
+.current-month > .dayStyle:hover:after{
+    background-color: #ffffff;
+}
+/*具有日程的标志*/
+.today-flag{
+    background: #00C2B1;
+    color: #fff;
+}
+.today-schedule{
+    position: relative;
+}
+.today-schedule span:after{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #2b93f5;
+    bottom: 8px;
+    left: 45%;
+}
+.boxshaw{
+    /*box-shadow: 2px 2px 15px 2px #e3e3e3;*/
+}
+.selected-style {
+    background: #2b93f5;
+    color: #ffffff;
+}
+.today-schedule .selected-style:after{
+    background-color: #fff;
+}
+#h3Ele{
+    text-align: center;
+    padding: 10px;
+}

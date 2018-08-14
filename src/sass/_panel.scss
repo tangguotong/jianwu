@@ -1,0 +1,25 @@
+/*蓝色title的panel*/
+@import "assist";
+.panel-has-blue-title{
+  border:$borderGrey;
+  border-radius: 0;
+  .panel-title{
+    position: relative;
+    font-size: 14px;
+    color: #464d5c;
+    font-weight: bold;
+    padding-left: 13px;
+  }
+  .panel-title:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    bottom: 2px;
+    width: 5px;
+    background-color: #2b93f5;
+  }
+  .panel-heading{
+    padding-bottom: 0;
+  }
+}
