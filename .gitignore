@@ -1,2 +1,4 @@
 ﻿*.git
-*.css
+*.idea
+*.xml
+css
