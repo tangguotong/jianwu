@@ -1,5 +1,167 @@
+@import "assist";
 /*---------头部的消息弹出框---------*/
 .message-hidden-box{
   display: none;
+  width: 400px;
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  z-index: 999;
+  .panel-heading{
+    .tab-search{
+      margin: 0 -15px;
+      .nav-my-style{
+        margin: 0;
+        li{
+          margin-right: 15px;
+          padding: 10px 35px 0 35px;
+          p{
+            width: 100%;
+            height: 30px;
+            //background-color: #fff;
+            background:url("../images/header_message_icon.png") no-repeat;
+            -webkit-background-size: 30px auto;
+            background-size: 30px auto;
+            background-position: center 0;
+          }
+          .message2{
+            background-position: center -41px;
+          }
 
+          .message3{
+            background-position: center -83px;
+          }
+        }
+      }
+    }
+  }
+  .header-message-list{
+    .list-item{
+      border-bottom:$borderGrey ;
+      padding: 15px 0;
+      font-size: 13px;
+      &:first-child{
+        padding-top: 0;
+      }
+      .item-title,.no-start{
+        color: #464d5c;
+      }
+      .expire-soon{
+        color: #cd1c00;
+      }
+      .time-out{
+        color: #ffa800;
+      }
+      .doing{
+        color: #2b93f5;
+      }
+      .item-content{
+        font-size: 12px;
+        color: #868e9a;
+      }
+      &>div:first-child{
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .clear-message{
+    font-size: 12px;
+    color: #868e9a;
+    text-decoration: none;
+  }
+}
+.user-center-pop{
+  &>li>a{
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 0;
+    i{
+      margin-right: 10px;
+    }
+    &:hover{
+      color: #2b93f6;
+      text-decoration: none;
+      background-color: #f4f4f4;
+    }
+  }
+}
+/*--------首页右下角的编辑和删除------*/
+.popover{
+  border-radius: 0;
+}
+.delEdit{
+  font-size: 12px;
+  margin: -11px -16px;
+  i{
+    margin-right: 5px;
+  }
+}
+.delEdit >div{
+  cursor: pointer;
+  padding: 5px 20px;
+}
+.delEdit >div:hover{
+  background-color: #3199fe;
+  color: #ffffff;
+}
+.delEdit >div:last-child{
+  //border-top: 1px solid #ededed;
+}
+
+
+/*新建日程*/
+.input-box-border{
+  font-size: 13px;
+  padding:5px 10px;
+  border: $borderGrey;
+  color: #b5b5b5;
+  input{
+    border: none;
+    outline: none;
+    height: 18px;
+  }
+  span.fa{
+    line-height: 18px;
+  }
+}
+.set-day-plan-pop{
+  .form-group:last-child{
+    margin-bottom: 0;
+  }
+  label{
+    font-size: 14px;
+    color: #333333;
+    font-weight: normal;
+  }
+  textarea{
+    width: 100%;
+    height: 100px;
+    border: $borderGrey;
+    color: #b5b5b5;
+    font-size: 13px;
+    outline: none;
+    padding: 10px;
+  }
+}
+.modal-new {
+  .modal-content{
+    border-radius: 2px;
+    .modal-header{
+      background-color: #2b93f6;
+      .close{
+        color: #FFF;
+        opacity: 0.9;
+        font-weight: normal;
+        font-size: 24px;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+      .modal-title{
+        font-size: 16px;
+        color: #ffffff;
+      }
+    }
+
+  }
 }

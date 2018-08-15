@@ -232,7 +232,7 @@
 
             <p class="text-center mb0 btn-box">
                 <button class="btn btn-blue-gradient"> 受理</button>
-                <button class="btn btn-blue-gradient">不受理</button>
+                <button class="btn btn-blue-gradient" data-toggle="modal" data-target="#acceptNo">不受理</button>
                 <button class="btn btn-border-blue">受理并指派</button>
             </p>
         </div>
@@ -243,7 +243,37 @@
         <p>Copyright 2018 中科点击（北京）技术有限公司提供技术支持</p>
     </footer>
 </div>
+<!--不予受理弹窗start-->
+<div class="modal fade modal-new" id="acceptNo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">该案件不予受理反馈理由</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal set-day-plan-pop" role="form">
+                    <div class="form-group mb35">
+                        <div class="col-sm-12">
+                            <textarea id="dayContent" class="area-box" placeholder="请输入不予受理理由，140汉字内"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class=" col-sm-6 text-right">
+                            <button type="submit" class="btn btn-blue-gradient btn-min-width">确 认</button>
+                        </div>
+                        <div class=" col-sm-6 text-left">
+                            <button type="submit" class="btn btn-grey btn-min-width" data-dismiss="modal">取 消</button>
+                        </div>
+                    </div>
+                </form>
+                ​
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
 
+<!--不予受理弹窗end-->
 </body>
 <script>
 

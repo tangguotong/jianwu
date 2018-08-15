@@ -1,6 +1,8 @@
 /*按钮*/
 .btn{
   font-size: 12px;
+  border-radius: 2px;
+  outline: none;
 }
 .glyphicon{
   margin-right: 5px;
@@ -17,6 +19,10 @@
   color:#2b93f5 ;
 }
 
+.btn-min-width{
+  min-width: 90px;
+}
+
 .btn-blue{
   border:  1px solid #2b93f5;
   background-color: #2b93f5;
@@ -27,6 +33,18 @@
 .btn-blue:focus,
 .btn-blue:active{
   color:#fff ;
+}
+
+.btn-grey{
+  border:  1px solid #d5d4d4;
+  background-color: #f6f5f5;
+  color:#666666 ;
+}
+.btn-grey:hover,
+.btn-grey:visited,
+.btn-grey:focus,
+.btn-grey:active{
+  color:#666666 ;
 }
 
 .btn-blue-gradient{
@@ -264,6 +282,15 @@
   margin: 10px 5px;
   display: inline-block;
   height: 100px;
+  .other{
+    z-index: 100;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: inline-block;
+    padding-bottom: 20px;
+    cursor: pointer;
+  }
 }
 
 .yy-slide:hover, .yy-slide:visited, .yy-slide:focus {
@@ -298,15 +325,7 @@
     }
   }
 }
-.other{
-  z-index: 100;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  display: inline-block;
- padding-bottom: 20px;
-  cursor: pointer;
-}
+
 .look-forward{
   text-align: center;
   height: 62px;
@@ -425,21 +444,3 @@
   cursor: pointer;
 }
 
-/*小提示*/
-
-.delEdit{
-  margin: -11px -16px;
-  border-radius: 9px;
-  overflow: hidden;
-}
-.delEdit >div{
-  cursor: pointer;
-  padding: 5px 20px;
-}
-.delEdit >div:hover{
-  background-color: #3199fe;
-  color: #ffffff;
-}
-.delEdit >div:last-child{
-  border-top: 1px solid #ededed;
-}

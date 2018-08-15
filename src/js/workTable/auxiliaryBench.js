@@ -1,5 +1,5 @@
 $(function () {
-
+    setPopEditAndDel();
     //头条滚动
     setInterval(function () {
         $(".animation-list").animate({"margin-top":"-34px"},function () {
@@ -35,5 +35,30 @@ $(function () {
             alert('日期：'+y+'-'+m+'-'+d);
         }
     });
+    setDayPlanDate();
 });
+
+//新建日程的日期
+function setDayPlanDate() {
+    jeDate("#date1",{
+        format:"YYYY-MM-DD",
+        isTime:false,
+        // minDate:"2014-09-19 00:00:00"
+    });
+    jeDate("#time1",{
+        format:"hh:mm:ss",
+        // isTime:false,
+        // minDate:"2014-09-19 00:00:00"
+    });
+    jeDate("#date2",{
+        format:"YYYY-MM-DD",
+        isTime:false,
+        // minDate:"2014-09-19 00:00:00"
+    });
+    jeDate("#time2",{
+        format:"hh:mm:ss",
+        // isTime:false,
+        // minDate:"2014-09-19 00:00:00"
+    })
+}
 

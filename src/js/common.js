@@ -1,5 +1,7 @@
 $(function () {
-    setPopEditAndDel();
+    showHeaderMessage();//头部消息盒子的显示
+
+
 
 });
 
@@ -10,7 +12,7 @@ function setPopEditAndDel(dom) {
         toggle:"popover",
         container:"body",
         html:true,
-        content:"<div class='delEdit'><div>编辑</div><div>删除</div></div>",
+        content:"<div class='delEdit'><div class='edit'><i class='fa fa-edit'></i>编辑</div> <div class='del'> <i class='fa fa-trash-o'></i>删除</div></div>",
         placement:"bottom"
     });
     dom.on('shown.bs.popover', function (e) {
@@ -19,7 +21,8 @@ function setPopEditAndDel(dom) {
             if($(e.target).parents(".popover").length != 1){
                 dom.popover('hide');
             }else{
-                alert("嘿嘿");
+                alert($(e.target).attr('class'));
+                dom.popover('hide');
             }
         });
     })
@@ -37,4 +40,15 @@ function setleftFileShowHide() {
     });
 }
 
+function showHeaderMessage() {
+    $(document).on("click",function (e) {
+        if($(e.target).parents('.message-hidden-box').length == 0){
+            $(".message-hidden-box").fadeOut();
+        }
+    });
+    $("#showMessageBox").on("click",function (e) {
+        e.stopPropagation()
+        $(".message-hidden-box").fadeToggle();
+    });
+}
 
