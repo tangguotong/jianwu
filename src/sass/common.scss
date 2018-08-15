@@ -1,7 +1,10 @@
 @import "../vonder/font-awesome-4.7.0/scss/font-awesome";
+@import "popWindow";//弹窗的样式
+@import "public";//其他样式
 @import "headerLeft";
 @import "workTable";//辅助工作台样式
 @import "openCases";//案件受理样式
+@import "examineArrest";//审查批准逮捕样式
 
 
 
