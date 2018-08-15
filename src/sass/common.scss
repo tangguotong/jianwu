@@ -12,6 +12,9 @@
 body{
   font-family: "微软雅黑";
 }
+li{
+  list-style: none;
+}
 .wrapper{
   position: relative;
   padding: $topHeight 0 0 20%;
