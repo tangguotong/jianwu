@@ -1,4 +1,5 @@
 $(function () {
+    setleftFileShowHide();//左侧文件夹图标的切换
 //        bootstrapTable
     $("#checkTable").bootstrapTable({
         pagination:true,
