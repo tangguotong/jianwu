@@ -46,12 +46,16 @@
 }
 .penalyt-item{
     padding-left:30px;
+    > div{
+        height:40px;
+        line-height: 40px;
+    }
 }
 .penalyt-item:before{
     content: "";
     position: absolute;
     left: 15px;
-    top: 2px;
+    top: 10px;
     bottom: 2px;
     width: 15px;
     height: 15px;
