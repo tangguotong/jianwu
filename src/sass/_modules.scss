@@ -49,7 +49,7 @@
 
 .btn-blue-gradient{
   border:  1px solid transparent;
-  background: -webkit-linear-gradient(right,#3e92ff, #2fadff);
+  background: -webkit-linear-gradient(right,#2fadff,#3e92ff);
   //background-color: (0deg, #3e92ff,#2fadff);
   //background-image: (0deg, #3e92ff,#2fadff);
   color:#fff ;
@@ -58,7 +58,23 @@
 .btn-blue-gradient:visited,
 .btn-blue-gradient:focus,
 .btn-blue-gradient:active{
-  background: -webkit-linear-gradient(right,#3e92ff, #2fadff);
+  background: -webkit-linear-gradient(right,#2fadff,#3e92ff);
+  color:#fff ;
+}
+
+
+.btn-orange-gradient{
+  border:  1px solid transparent;
+  background: -webkit-linear-gradient(right,#f9822b, #f9b74c);
+  background-color: (0deg, #f9822b,#f9b74c);
+  background-image: (0deg, #f9822b,#f9b74c);
+  color:#fff ;
+}
+.btn-orange-gradient:hover,
+.btn-orange-gradient:visited,
+.btn-orange-gradient:focus,
+.btn-orange-gradient:active{
+  background: -webkit-linear-gradient(right,#f9822b, #f9b74c);
   color:#fff ;
 }
 

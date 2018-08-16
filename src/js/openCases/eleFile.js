@@ -105,7 +105,7 @@ $(function () {
     });
     //全选和反选
     $('#checkAll').on('ifUnchecked', function (event) {
-        $(".checkboxs").prop("checked",true);
+        $(".checkboxs").prop("checked",false);
         $(".check-item").removeClass("checked");
     });
     $('#checkAll').on('ifChecked', function (event) {

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <title>案件提交</title>
+    <!--<link rel="stylesheet" href="../../vonder/jquerySelect/css/select-addl.min.css">
+    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select-krajee.min.css">
+    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select.min.css">-->
+    <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vonder/bootstrap-select-1.12.4/dist/css/bootstrap-select.min.css">
+
+
+    <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../vonder/bootstrap-select-1.12.4/dist/js/bootstrap-select.min.js"></script>
+    <!--<script src="../../vonder/jquerySelect/js/select2.full.min.js"></script>
+    <script src="../../vonder/jquerySelect/js/select2-krajee.min.js"></script>-->
+    <style>
+        .main_content_center{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000000;
+        }
+        .parent-dlg{position: absolute;width:400px; height:20px; border:1px solid #aaaaaa;border-radius:3px;top:30%;left:50%;z-index:9999;margin-left:-200px;display:none;}
+        .parent-dlg .progress-label{position: absolute;left: 50%;top: 4px;font-weight: bold;text-shadow: 1px 1px 0 #fff;}
+        .parent-dlg .son {width:0; height:100%; background-color:#cccccc; text-align:center; line-height:20px; font-size:16px; font-weight:bold;}
+    </style>
+
+
+</head>
+<body>
+<div class="parent-dlg" >
+    <div class="progress-label">0%</div>
+    <div class="son"></div>
+</div>
+<div class="main_content_center"></div>
+<script>
+    var dz = $('#main_content_center');
+    dz.ondragover = function(ev) {
+        //阻止浏览器默认打开文件的操作
+        ev.preventDefault();
+    }
+
+    dz.ondrop = function(ev) {
+        ev.preventDefault();
+        var files = ev.dataTransfer.files;
+        var len = files.length,i = 0;
+        while (i < len) {
+            var filesName=files[i].name;
+            var extStart=filesName.lastIndexOf(".");
+            var ext=filesName.substring(extStart,filesName.length).toUpperCase();
+            if(ext!=".JPG"&&ext!=".PNG"&&ext!=".XML"){ //判断是否是需要的问件类型
+                TS.errorAlert("请选择.jpg、.png、.xml类型的文件上传！");
+                return false;
+            }else{
+                test(files[i]);
+            }
+            i++;
+        }
+        $(".parent-dlg").show();
+    }
+
+    function test(a){
+        var formData = new FormData();
+        formData.append("name", a.name);
+        formData.append("size", a.size);
+        formData.append("data", a);
+        $.ajax({
+            url:'',
+            type:'post',
+            data:formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            xhr: function(){
+                var xhr = $.ajaxSettings.xhr();
+                if(onprogress && xhr.upload) {
+                    xhr.upload.addEventListener("progress" , onprogress, false);
+                    return xhr;
+                }
+            }
+        })
+    };
+    function onprogress(evt){
+        var loaded = evt.loaded;     //已经上传大小情况
+        var tot = evt.total;      //附件总大小
+        var per = Math.floor(100*loaded/tot);  //已经上传的百分比
+        $(".progress-label").html( per +"%" );
+        $(".son").css("width" , per +"%");
+        if(per>=100){
+            $(".parent-dlg").hide();
+
+
+        }
+    }
+</script>
+
+</body>
+</html>

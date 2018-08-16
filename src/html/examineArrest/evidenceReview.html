@@ -14,21 +14,12 @@
     <link rel="stylesheet" href="../../vonder/iCheck/skins/square/blue.css">
     <link rel="stylesheet" href="../../css/common.css">
     <style>
-        .bg-grey{
-            background-color: #f4f4f4;
-            margin-top: -21px;
-            margin-left: -35px;
-            padding-left: 15px;
-            /*border-top: 1px solid #dedede;*/
-        }
-        .bg-grey .panel-group{
-            margin-bottom: 0;
-        }
+
     </style>
 
     <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
     <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <!--<script src="../../vonder/bootstrap-select-1.12.4/dist/js/bootstrap-select.min.js"></script>-->
+    <script src="../../vonder/bootstrap-select-1.12.4/dist/js/bootstrap-select.min.js"></script>
     <script src="../../vonder/bootstrap-table/bootstrap-table.min.js"></script>
     <script src="../../vonder/jqueryStep/js/jquery.step.min.js"></script>
     <script src="../../vonder/iCheck/icheck.min.js"></script>
@@ -177,7 +168,7 @@
     <!--内容-->
     <div class="content">
         <div class="one-content">
-            <div class="case-message clearfix">
+            <div class="case-message  clearfix">
                 <div class="message-logo">
                     <img src="../../images/openCases/su_icon.png" alt="">
                 </div>
@@ -199,184 +190,240 @@
                     </div>
                 </div>
                 <div class="message-btn pull-right">
-                    <button class="btn btn-grey mr20">下一步</button>
+                    <button class="btn btn-orange-gradient mr20">下一步</button>
                     <button class="btn btn-blue-gradient">电子卷宗</button>
                 </div>
             </div>
             <div class="step" id="step"></div>
         </div>
-        <div class="one-content pb0 relative">
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="bg-grey">
-
-                        <div class="left-file-details mb10">
-                            <p class="file-title">电子卷宗：王晓斌盗窃案</p>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-blue-gradient">分类卷宗</button>
-                                <button type="button" class="btn btn-default">原始卷宗</button>
-                                <button type="button" class="btn btn-default">未分类</button>
-                            </div>
-                        </div>
-                        <div class="file-left">
-                            <div class="panel-group" id="accordion">
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" href="#collapseOne">
+        <div class="second-screen">
+            <div class="bg-grey">
+                <div class="left-file-details">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-blue-gradient">分类卷宗</button>
+                        <button type="button" class="btn btn-default">原始卷宗</button>
+                        <button type="button" class="btn btn-default">未分类</button>
+                    </div>
+                </div>
+                <div class="file-left scroll-style">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" href="#collapseOne">
 
                             <span class="title-icon-text">
                                 <i class="fa fa-caret-down"></i>
                                 <span class="file-icon"></span>
                                 <span class="text-title">证明案件来源</span>
                             </span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ul class="list-group">
-                                                <li class=""><a href="#" class="list-group-item active"><i class="fa fa-file-text-o"></i>报案材料(4)</a></li>
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>移送案件材料(2)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class=""><a href="#" class="list-group-item active"><i class="fa fa-file-text-o"></i>报案材料(4)</a></li>
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>移送案件材料(2)</a></li>
+                                    </ul>
                                 </div>
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse"
-                                               href="#collapseTwo">
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse"
+                                       href="#collapseTwo">
                             <span class="title-icon-text">
                                 <i class="fa fa-caret-down"></i>
                                 <span class="file-icon"></span>
                                 <span class="text-title">犯罪嫌疑人基本情况</span>
                             </span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseTwo" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ul class="list-group">
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>户籍证明(4)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>户籍证明(4)</a></li>
+                                    </ul>
                                 </div>
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse"
-                                               href="#collapseThree">
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse"
+                                       href="#collapseThree">
                             <span class="title-icon-text">
                                 <i class="fa fa-caret-down"></i>
                                 <span class="file-icon"></span>
                                 <span class="text-title">犯罪嫌疑人供述或辩解</span>
                             </span>
 
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseThree" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ul class="list-group">
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>犯罪嫌疑人亲笔供词(4)</a></li>
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>讯问笔录(4)</a></li>
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>辨认笔录(4)</a></li>
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>指认现场笔录(4)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>犯罪嫌疑人亲笔供词(4)</a></li>
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>讯问笔录(4)</a></li>
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>辨认笔录(4)</a></li>
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>指认现场笔录(4)</a></li>
+                                    </ul>
                                 </div>
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse"
-                                               href="#collapseFour">
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse"
+                                       href="#collapseFour">
 
                             <span class="title-icon-text">
                                 <i class="fa fa-caret-down"></i>
                                 <span class="file-icon"></span>
                                 <span class="text-title">被害人陈达材料</span>
                             </span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseFour" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ul class="list-group">
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>询问笔录(4)</a></li>
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>讯问笔录(4)</a></li>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>询问笔录(4)</a></li>
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>讯问笔录(4)</a></li>
 
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </ul>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse"
-                                               href="#collapseFive">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse"
+                                       href="#collapseFive">
 
                             <span class="title-icon-text">
                                 <i class="fa fa-caret-down"></i>
                                 <span class="file-icon"></span>
                                 <span class="text-title">证人证言</span>
                             </span>
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseFive" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <ul class="list-group">
-                                                <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>询问笔录(4)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>询问笔录(4)</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8">
-
-                    <div class="clearfix">
-                        <div class="btn-box pull-left">
-                            <button class="btn btn-blue-gradient">证据录入</button>
-                            <button class="btn btn-default">移动到</button>
-                            <button class="btn btn-default">删除</button>
-                            <button class="btn btn-default">导出阅卷笔记</button>
+            </div>
+            <div class="right-discern heightP100 relative">
+                <div class="clearfix absolute">
+                    <div class="btn-box">
+                        <button class="btn btn-blue-gradient">证据录入</button>
+                        <button class="btn btn-default">移动到</button>
+                        <button class="btn btn-default">删除</button>
+                        <button class="btn btn-default">导出阅卷笔记</button>
+                    </div>
+                    <div class="search-code">
+                        <div class="input-group pull-left">
+                            <input type="text" class="" placeholder="请输入证据关键词">
+                            <span class=""> <i class="glyphicon glyphicon-search"></i></span>
                         </div>
-                        <div class="pull-right search-code">
-                            <div class="input-group pull-left">
-                                <input type="text" class="" placeholder="请输入证据关键词">
-                                <span class=""> <i class="glyphicon glyphicon-search"></i></span>
+                        <!--<div class="btn-group bootstrap-select pull-right"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="" title="每行显示3张"><span class="filter-option pull-left">每行显示3张</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">每行显示3张</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">2</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">3</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="pull-right selectpicker" name="" tabindex="-98">
+                            <option value="">每行显示3张</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select></div>-->
+                        <select name="" id="" class="selectpicker">
+                            <option value="">每行显示3页</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row heightP100">
+                    <div class="col-md-9 scroll-style">
+
+
+                        <div class="choose-box">
+                            <p class="choose-title">
+                                <input type="checkbox" id="checkAll">全选
+                                <span class="ml20 mr10">已选中<span class="fc-blue">3</span>项</span>
+                                <span class="fc-blue">取消</span>
+                            </p>
+
+                            <div class="check-group">
+                                <table id="checkTable"></table>
                             </div>
-                            <div class="btn-group bootstrap-select pull-right"><button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="" title="每行显示3张"><span class="filter-option pull-left">每行显示3张</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open" role="combobox"><ul class="dropdown-menu inner" role="listbox" aria-expanded="false"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="true"><span class="text">每行显示3张</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">2</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false"><span class="text">3</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div><select class="pull-right selectpicker" name="" tabindex="-98">
-                                <option value="">每行显示3张</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                            </select></div>
+                        </div>
 
+                    </div>
+                    <div class="col-md-3 discern-box">
+                        <p class="discern-title-first">已识别要素</p>
+
+                        <div class="heightP100 pb5">
+                            <div class="discern-item">
+                                <div class="full-text-box">
+                                    <div class="panel panel-full-text">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">全文快照</p>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p class="full-content">
+                                                大约是 <span class="fc-orange">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span>
+                                            </p>
+                                            <p class="text-from">证据要素出自：<a href="#">《犯罪嫌疑人供述》（第一次）</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>作案时间 :</p>
+                                <textarea >2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
+                            </div>
+                            <div class="discern-item">
+                                <div class="full-text-box">
+                                    <div class="panel panel-full-text">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">全文快照</p>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p class="full-content">
+                                                大约是 <span class="fc-orange">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span>
+                                            </p>
+                                            <p class="text-from">证据要素出自：<a href="#">《犯罪嫌疑人供述》（第一次）</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>作案时间 :</p>
+                                <textarea >2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
+                            </div>
+                            <div class="discern-item">
+                                <div class="full-text-box">
+                                    <div class="panel panel-full-text">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">全文快照</p>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p class="full-content">
+                                                大约是 <span class="fc-orange">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span>
+                                            </p>
+                                            <p class="text-from">证据要素出自：<a href="#">《犯罪嫌疑人供述》（第一次）</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>作案时间 :</p>
+                                <textarea >2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="choose-box">
-                        <p class="choose-title">
-                            <input type="checkbox" id="checkAll">全选
-                            <span class="ml20 mr10">已选中<span class="fc-blue">3</span>项</span>
-                            <span class="fc-blue">取消</span>
-                        </p>
-
-                        <div class="check-group">
-                            <table id="checkTable"></table>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="col-md-2">
-                    1
-                </div>
+
             </div>
         </div>
     </div>

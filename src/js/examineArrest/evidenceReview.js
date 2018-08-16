@@ -1,4 +1,7 @@
 $(function () {
+    setSecondScreenHeight();
+    showNext();//监听屏幕滚动.显示固定头部的下一步
+    showFullTextBox();
     var $step = $("#step");
     $step.step({
         index: 0,
@@ -91,3 +94,18 @@ $(function () {
         increaseArea: '20%' // optional
     });
 });
+
+
+//计算第二屏高度
+function setSecondScreenHeight() {
+    $('.second-screen').css('height',parseInt($(".wrapper").css('min-height')) - 62 -55);
+}
+
+//显示全文快照的函数
+function showFullTextBox() {
+    $('.discern-item').hover(function (e) {
+        $(this).find('.full-text-box').fadeIn();
+    },function () {
+        $(this).find('.full-text-box').fadeOut();
+    });
+}

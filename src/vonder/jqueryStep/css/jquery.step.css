@@ -24,7 +24,7 @@ body {
 
 .ui-step-wrap .ui-step-bg {
 	width: 100%;
-	background: #ddd;
+	background: #dcdfe6;
 }
 
 .ui-step-wrap .ui-step-progress {
@@ -58,16 +58,21 @@ body {
 }
 
 .ui-step-wrap .ui-step .ui-step-item .ui-step-item-num {
-	margin-top: 8px;
+	margin-top: 9px;
 }
 
 .ui-step-wrap .ui-step .ui-step-item .ui-step-item-num span {
 	display: inline-block;
 	width: 26px;
-	height: 26px;
-	line-height: 26px;
+	height: 22px;
+	font-size: 13px;
+	color: #464d5c;
+	line-height: 22px;
 	border-radius: 50%;
-	background: #dad9d9;
+	background: #dcdfe6;
+	border: 2px solid #ffffff;
+	border-top: 0;
+	border-bottom: 0;
 }
 
 .ui-step-wrap .ui-step .ui-step-item.active .ui-step-item-num span {

@@ -2,8 +2,10 @@
 /*--------------案件受理报告页面--------------*/
 //案件信息
 .case-message{
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: $borderGrey;
+  background-color: #fff;
+  z-index: 999;
   >div{
     float: left;
     height: 60px;
@@ -31,8 +33,52 @@
     }
   }
 }
+.simple-case-message{
+  position: fixed;
+  width: 100%;
+  top: 70px;
+  left: 0;
+  padding: 15px;
+  height: 62px;
+  .case-message-title{
+    margin-bottom: 0;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+  &:after{
+    content: '';
+    height: 62px;
+    width: 100%;
+  }
+  >div{
+    height: auto;
+  }
+  .message-logo{
+    display: none;
+  }
+
+  .message-classify{
+    display: none;
+  }
+}
+.case-message2{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 70px;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 999;
+  >div{
+    height: auto;
+  }
+  .case-message-title{
+    margin-bottom: 0;
+    line-height: 30px;
+  }
+}
 .step{
-  padding: 20px 0 0 0;
+  padding: 15px 0 0 0;
 }
 
 .first-level-title{
@@ -126,6 +172,7 @@
         left: 0;
         right: 0;
         font-size: 13px;
+        font-weight: normal;
       }
       .check-img{
         position: absolute;
@@ -174,3 +221,6 @@
     };
   }
 }
+
+
+/*-------------案件提交页面-----------------*/

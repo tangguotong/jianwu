@@ -159,10 +159,71 @@
         }
       }
       .modal-title{
-        font-size: 16px;
+        font-size: 14px;
         color: #ffffff;
       }
     }
 
+  }
+}
+
+
+/*全文快照弹窗*/
+.panel-full-text{
+  width: 100%;
+  height:100%;
+  border-radius: 0;
+  background-color: #fff;
+  font-size: 12px;
+  border: $borderGrey;
+  -moz-box-shadow:2px 2px 5px #d6d6d6;
+  -webkit-box-shadow:2px 2px 5px #d6d6d6;
+  box-shadow:2px 2px 5px #d6d6d6;
+  .panel-heading{
+    border-bottom: $borderGrey;
+    .panel-title{
+      font-size: 14px;
+      color: #464d5c;
+    }
+  }
+  .full-content{
+    color: #464d5c;
+  }
+  .text-from{
+    color: #868e9a;
+    margin-bottom:0;
+    a{
+      color: #2b93f5;
+      text-decoration: none;
+    }
+
+  }
+
+}
+.results-sentencing{
+  .modal-dialog{
+    width: 445px;
+    .result-box{
+      padding:5px 20px 20px 20px;
+      >p{
+        font-size: 14px;
+        color: #333333;
+        i{
+          margin-right: 5px;
+        }
+        .orange-num{
+          font-size: 22px;
+          color: #ffa800;
+          font-weight: bold;
+          padding: 0 8px;
+        }
+        .orange-num:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          color: #666666;
+        }
+      }
+    }
   }
 }

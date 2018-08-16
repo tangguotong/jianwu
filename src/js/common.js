@@ -1,10 +1,14 @@
 $(function () {
     showHeaderMessage();//头部消息盒子的显示
+    setMinHeight();
 
 
 
 });
-
+//设置wrapper的最小高度
+function setMinHeight() {
+    $(".wrapper").css("min-height", $(window).height() - 70);
+}
 //设置小时间轴的弹窗
 function setPopEditAndDel(dom) {
     var dom = dom || $(".pop-img");
@@ -51,4 +55,19 @@ function showHeaderMessage() {
         $(".message-hidden-box").fadeToggle();
     });
 }
+
+//滚动到一定程度,显示下一步
+function showNext() {
+    window.addEventListener("scroll",function(e){
+        var t =document.documentElement.scrollTop||document.body.scrollTop;
+        console.log(t);
+        if(t > $('.case-message').height()){
+            $('.case-message').addClass('simple-case-message');
+        }else if(t < $('.case-message').height()){
+            $('.case-message').removeClass('simple-case-message');
+
+        }
+    });
+}
+
 
