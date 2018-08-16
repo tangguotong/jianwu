@@ -1,0 +1,77 @@
+
+
+/*-----------检察办案页面-------------*/
+.panel-title{
+    font-size: 14px;
+    margin:14px;
+}
+.panel-blue-title{
+    padding-left: 12px;
+    position: relative;
+    width:100%;
+    height: auto;;
+}
+.panel-title:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    bottom: 2px;
+    width: 5px;
+    background-color: #2b93f5;
+}
+.panel-body{
+    .row{
+        margin: 0;
+    }
+}
+.circle-title{
+    position:relative;
+    font-size: 14px;
+    color: #2b93f5;
+    font-weight: bold;
+    padding-left: 13px;
+    margin: 14px;
+}
+.circle-title:before{
+    content: "";
+    position:absolute;
+    left: 0;
+    top: 7px;
+    bottom: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #2b93f5;
+}
+.penalyt-item{
+    padding-left:30px;
+}
+.penalyt-item:before{
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    bottom: 2px;
+    width: 15px;
+    height: 15px;
+    background: url(../images/openCases/info.png);
+}
+input[type=range]{ 
+         margin-top: 8px;
+             outline: none; 
+         -webkit-appearance: none;/*清除系统默认样式*/  
+         width:56% !important;  
+         background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;  
+             background-size: 30% 100%;/*设置左右宽度比例*/  
+        height: 3px;/*横条的高度*/  
+} 
+ /*拖动块的样式*/  
+   input[type=range]::-webkit-slider-thumb {  
+     -webkit-appearance: none;/*清除系统默认样式*/  
+    height:16px;/*拖动块高度*/  
+        width: 16px;/*拖动块宽度*/  
+        background: #fff;/*拖动块背景*/  
+    border-radius: 50%; /*外观设置为圆形*/  
+     border: solid 1px #ddd; /*设置边框*/  
+}
