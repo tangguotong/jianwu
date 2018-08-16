@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <title>事实审定</title>
+
+
+
+    <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vonder/bootstrap-table/bootstrap-table.min.css">
+
+    <link rel="stylesheet" href="../../vonder/jqueryStep/css/jquery.step.css">
+	<link rel="stylesheet" href="../../vonder/iCheck/skins/square/blue.css">
+	<link rel="stylesheet" href="../../vonder/iCheck/skins/all.css">
+    <link rel="stylesheet" href="../../css/common.css">
+
+    <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+    <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../vonder/bootstrap-table/bootstrap-table.min.js"></script>
+
+    <script src="../../vonder/jqueryStep/js/jquery.step.min.js"></script>
+    <script src="../../vonder/iCheck/icheck.min.js"></script>
+    <script src="../../js/common.js"></script>
+	
+    <script src="../../js/openCases/caseReport.js"></script>
+    <script src="../../js/examineArrest/examineArrest.js"></script>
+
+</head>
+<body>
+<!--头-->
+<header >
+    <nav class="navbar-fixed-top navbar navbar-default nav-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../workTable/auxiliaryBench.html">
+                    <span>
+                        <img src="../../images/work-table/logo.png" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="link">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../workTable/auxiliaryBench.html">检察办案</a></li>
+                    <li><a href="../workTable/jianwuCenter.html">检务中心</a></li>
+                    <li><a href="#">检务大屏</a></li>
+
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="mr10 ">
+                    <div class="input-group nav-input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" class="form-control" placeholder="请输入关键字">
+                    </div>
+                </li>
+                <li><a id="showMessageBox" href="#" class="relative">
+                    <span class="fa fa-bell-o"></span>
+
+                    <span class="badge badge-header-right">3</span>
+                    消息
+                </a></li>
+                <li>
+                    <img class="user-header" src="../../images/work-table/user_header.png" alt="">
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        检察官  林俊杰
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu user-center-pop">
+                        <li><a href="#"><i class="fa fa-user"></i>个人中心</a></li>
+                        <li><a href="#"><i class="fa fa-gear"></i>系统设置</a></li>
+                        <li><a href="#"><i class="fa fa-desktop"></i>配置平台</a></li>
+                        <li><a href="#"><i class="fa fa-power-off"></i>退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="message-hidden-box">
+        <div class="panel panel-has-blue-title">
+            <div class="panel-heading">
+                <div class="tab-search clearfix">
+                    <ul id="myTab" class="nav nav-tabs pull-left nav-my-style ">
+                        <li class="active">
+                            <a href="#tab0" data-toggle="tab" aria-expanded="false">
+                                <p class="message1"></p>
+                                <span>通知(4)</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="#tab1" data-toggle="tab" aria-expanded="true">
+                                <p class="message2"></p>
+                                消息(4)
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#tab2" data-toggle="tab" aria-expanded="false">
+                                <p class="message3"></p>
+                                待办(4)</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="tab0">
+                        <ul class="header-message-list">
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right no-start">未开始</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right expire-soon">马上到期</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right time-out">耗时8天</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right doing">进行中</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="text-center mb0">
+                            <a href="#" class="clear-message">清空待办</a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade " id="tab1">
+                        		消息(4)
+                    </div>
+                    <div class="tab-pane fade" id="tab2">
+                       			 待办
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--头end-->
+
+<div class="wrapper pl0">
+    <!--内容-->
+    <div class="content">
+        <div class="one-content">
+            <div class="case-message clearfix">
+                <div class="message-logo">
+                    <img src="../../images/openCases/su_icon.png" alt="">
+                </div>
+                <div class="message-details">
+                    <p class="case-message-title">王某某等3人盗窃案</p>
+                    <div class="message-classify">
+                            <span>
+                                案件类型：<b>提请批准逮捕</b>
+                            </span>
+                        <span>
+                                涉嫌罪名：<b>盗窃</b>
+                            </span>
+                        <span>
+                                犯罪类型：<b>多人一罪</b>
+                            </span>
+                        <span>
+                                侦查机构：<b>太原市公安局万柏林分局</b>
+                            </span>
+                    </div>
+                </div>
+                <div class="message-btn pull-right">
+                	<!--<button class="btn btn-border-blue next">下一步</button>
+                    <button class="btn btn-border-blue dossier">电子卷宗</button>-->
+                    <button class="btn btn-grey mr20">下一步</button>
+                    <button class="btn btn-blue-gradient">电子卷宗</button>
+                </div>
+            </div>
+            <div class="step" id="step"></div>
+        </div>
+	<!--逮捕必要性评估开始-->
+        <div class="one-content">
+            <div class="first-level-titles">
+                <span>逮捕必要性评估总览</span>
+                <div class="right">
+                	<img src="../../images/examineArrest/up.png" alt="" />
+                	收起面板
+                </div>
+            </div>
+            <div class="first-content hideer">
+            	<ul class="first-content-ul">
+            		<li class="first-content-li one">
+            			<div class="firstleft">
+            				<div class="top">
+            					<img class="user-header" src="../../images/examineArrest/user.png" alt="">
+            				</div>
+            				<div class="username">王晓斌</div>
+            			</div>
+            			<div class="firstcenter">
+            				<div class="top">
+            					--
+            				</div>
+            				<div class="bottom">
+            					评估分值
+            				</div>
+            			</div>
+            			<div class="firstright">
+            				<div class="top">
+            					--
+            				</div>
+            				<div class="bottom">
+            					批捕建议
+            				</div>
+            			</div>
+            		</li>
+            		<li class="first-content-li">
+            			<div class="firstleft">
+            				<div class="top">
+            					<img class="user-header" src="../../images/examineArrest/user.png" alt="">
+            				</div>
+            				<div class="username">李兰兰</div>
+            			</div>
+            			<div class="firstcenter">
+            				<div class="top sizeblue">
+            					65分
+            				</div>
+            				<div class="bottom">
+            					评估分值
+            				</div>
+            			</div>
+            			<div class="firstright">
+            				<div class="top sizeyellow">
+            					建议批捕
+            				</div>
+            				<div class="bottom">
+            					批捕建议
+            				</div>
+            			</div>
+            		</li>
+            		<li class="first-content-li">
+            			<div class="firstleft">
+            				<div class="top">
+            					<img class="user-header" src="../../images/examineArrest/user.png" alt="">
+            					
+            				</div>
+            				<div class="username">张鹏鹏</div>
+            			</div>
+            			<div class="firstcenter">
+            				<div class="top sizeblue">
+            					未评估
+            				</div>
+            				<div class="bottom">
+            					评估分值
+            				</div>
+            			</div>
+            			<div class="firstright">
+            				<div class="top">
+            					--
+            				</div>
+            				<div class="bottom">
+            					批捕建议
+            				</div>
+            			</div>
+            		</li>
+            	</ul>
+            </div>
+        </div>
+        <!--逮捕必要性评估结束-->
+        <!--选项卡开始-->
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active">
+		    	<a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+		    		<i class="fa fa-user"></i>
+		    		王晓斌
+		    	</a>
+		    </li>
+		    <li role="presentation">
+		    	<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+		    		<i class="fa fa-user"></i>
+		    		王思聪
+		    	</a>
+		    </li>
+		    <li role="presentation">
+		    	<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+		    		<i class="fa fa-user"></i>
+		    		王小二
+		    	</a>
+		    </li>
+		  </ul>
+		
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+		    <div role="tabpanel" class="tab-pane active" id="home">
+		    	<!--警告-->
+		    	<div class="prompt">
+		    		<img src="../../images/examineArrest/jinggao.png" alt="" />
+		    		<span class="promptspan">根据《中华人民共和国刑事诉讼法》及有关司法解释，参照山西省高级人民法院制定的《人民法院量刑指导意见实施细则》，结合工作实际，制定本标准。</span>
+		    	</div>
+		    	<!--因素-->
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">应当批捕条件</p>
+			    			<p class="biaoti"><span class="num">1.</span>可能实施新的犯罪</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>曾经故意伤害
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全、
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>故意犯罪
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">2.</span>可能对被害人、举报人、控告人实施打击报复</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>曾经故意伤害
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">3.</span>危害国家安全、公共安全或社会秩序</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">4.</span>可能毁灭证据、伪造证据，干扰证人作证或者串供</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>聋哑人或者其他残疾人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>限制刑事责任能力的精神病人
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">逮捕必要性共性因素</p>
+			    			<p class="biaoti"><span class="num">1.</span>自身情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>未成年人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盲人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>聋哑人或者其他残疾人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>限制刑事责任能力的精神病人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>六十五岁以上老人
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">2.</span>社会背景情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>在校学生
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>在本地长期有固定住所
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有稳定职业、收入
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>无稳定职业，流窜作案
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>未成年人不具备监护帮就条件
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">3.</span>案件情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪预备
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪未遂
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪中止
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>从犯或者谢协同犯
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>自首
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有立功表现
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>防卫过当或者避险过当
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>初犯
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>主观上有悔改认错
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有预谋的实施犯罪
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">逮捕必要性个性因素</p>
+			    			<p class="biaoti"><span class="num">1.</span>盗窃罪</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃家庭成员近亲属财物
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>确因生活，学习，治病急需而签窃
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>症款物已返还者被公安机关扣押
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>被害入明确丧示凉解
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>入户溘窃、携需凶器盗窃、窃一次且数在500元以下
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>入户盗窃、帶凶盗窃、损窃一次且数额在100元以上
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃對物数1000元以上
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>以破坏性手段盗窃造成公私对产损失
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>为实施吸毒、博等其他违法犯罪活动而盗窃
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<p class="text-center btn-box mt20 mb20">
+	                <button class="btn btn-blue-gradient">评估该犯罪嫌疑人</button>
+            	</p>
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="profile">
+		    	<!--警告-->
+		    	<div class="prompt">
+		    		<img src="../../images/examineArrest/jinggao.png" alt="" />
+		    		<span class="promptspan">根据《中华人民共和国刑事诉讼法》及有关司法解释，参照山西省高级人民法院制定的《人民法院量刑指导意见实施细则》，结合工作实际，制定本标准。</span>
+		    	</div>
+		    	<!--因素-->
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">应当批捕条件</p>
+			    			<p class="biaoti"><span class="num">1.</span>可能实施新的犯罪</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>曾经故意伤害
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全、
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>故意犯罪
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">2.</span>可能对被害人、举报人、控告人实施打击报复</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>曾经故意伤害
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">3.</span>危害国家安全、公共安全或社会秩序</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">4.</span>可能毁灭证据、伪造证据，干扰证人作证或者串供</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>聋哑人或者其他残疾人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>限制刑事责任能力的精神病人
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">逮捕必要性共性因素</p>
+			    			<p class="biaoti"><span class="num">1.</span>自身情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>未成年人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盲人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>聋哑人或者其他残疾人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>限制刑事责任能力的精神病人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>六十五岁以上老人
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">2.</span>社会背景情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>在校学生
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>在本地长期有固定住所
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有稳定职业、收入
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>无稳定职业，流窜作案
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>未成年人不具备监护帮就条件
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">3.</span>案件情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪预备
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪未遂
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪中止
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>从犯或者谢协同犯
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>自首
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有立功表现
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>防卫过当或者避险过当
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>初犯
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>主观上有悔改认错
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有预谋的实施犯罪
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">逮捕必要性个性因素</p>
+			    			<p class="biaoti"><span class="num">1.</span>盗窃罪</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃家庭成员近亲属财物
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>确因生活，学习，治病急需而签窃
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>症款物已返还者被公安机关扣押
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>被害入明确丧示凉解
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>入户溘窃、携需凶器盗窃、窃一次且数在500元以下
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>入户盗窃、帶凶盗窃、损窃一次且数额在100元以上
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃對物数1000元以上
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>以破坏性手段盗窃造成公私对产损失
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>为实施吸毒、博等其他违法犯罪活动而盗窃
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<p class="text-center btn-box mt20 mb20">
+	                <button class="btn btn-blue-gradient">评估该犯罪嫌疑人</button>
+            	</p>
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="messages">
+		    	<!--警告-->
+		    	<div class="prompt">
+		    		<img src="../../images/examineArrest/jinggao.png" alt="" />
+		    		<span class="promptspan">根据《中华人民共和国刑事诉讼法》及有关司法解释，参照山西省高级人民法院制定的《人民法院量刑指导意见实施细则》，结合工作实际，制定本标准。</span>
+		    	</div>
+		    	<!--因素-->
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">应当批捕条件</p>
+			    			<p class="biaoti"><span class="num">1.</span>可能实施新的犯罪</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>曾经故意伤害
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全、
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>故意犯罪
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">2.</span>可能对被害人、举报人、控告人实施打击报复</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>曾经故意伤害
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">3.</span>危害国家安全、公共安全或社会秩序</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="radio" id="icheck"/>犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">4.</span>可能毁灭证据、伪造证据，干扰证人作证或者串供</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>聋哑人或者其他残疾人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>限制刑事责任能力的精神病人
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">逮捕必要性共性因素</p>
+			    			<p class="biaoti"><span class="num">1.</span>自身情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>未成年人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盲人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>聋哑人或者其他残疾人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>限制刑事责任能力的精神病人
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>六十五岁以上老人
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">2.</span>社会背景情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>在校学生
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>在本地长期有固定住所
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有稳定职业、收入
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>无稳定职业，流窜作案
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>未成年人不具备监护帮就条件
+			    			</label>
+			    		</div>
+			    		
+			    		<div class="factorcontent">
+			    			<p class="biaoti"><span class="num">3.</span>案件情况</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪预备
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪未遂
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>犯罪中止
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>从犯或者谢协同犯
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>自首
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有立功表现
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>防卫过当或者避险过当
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>初犯
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>主观上有悔改认错
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>有预谋的实施犯罪
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<div class="factor">
+		    		<div class="factorbox">
+			    		<div class="factorcontent">
+			    			<p class="title">逮捕必要性个性因素</p>
+			    			<p class="biaoti"><span class="num">1.</span>盗窃罪</p>
+			    		</div>
+			    		<div class="sentencingDiv">
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃家庭成员近亲属财物
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>确因生活，学习，治病急需而签窃
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>症款物已返还者被公安机关扣押
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>被害入明确丧示凉解
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>入户溘窃、携需凶器盗窃、窃一次且数在500元以下
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>入户盗窃、帶凶盗窃、损窃一次且数额在100元以上
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃對物数1000元以上
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>以破坏性手段盗窃造成公私对产损失
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物
+			    			</label>
+			    			<label for="" class="sentencingSlide" name="yaosu">
+			    				<input type="checkbox" id="icheck"/>为实施吸毒、博等其他违法犯罪活动而盗窃
+			    			</label>
+			    		</div>
+		    		</div>
+		    	</div>
+		    	
+		    	<p class="text-center btn-box mt20 mb20">
+	                <button class="btn btn-blue-gradient">评估该犯罪嫌疑人</button>
+            	</p>
+		    </div>
+		  </div>
+        <!--选项卡结束-->
+    </div>
+    <!--内容end-->
+
+    <footer class="blue-footer">
+        <p>Copyright 2018 中科点击（北京）技术有限公司提供技术支持</p>
+    </footer>
+</div>
+
+<script>
+	jQuery(document).ready(function($) {
+	        $('input').iCheck({
+	            checkboxClass: 'icheckbox_minimal-blue',
+	            radioClass: 'iradio_minimal-blue',
+	            increaseArea: '20%'
+	        });
+      })
+</script>
+</body>
+</html>
