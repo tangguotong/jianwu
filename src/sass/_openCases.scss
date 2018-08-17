@@ -230,6 +230,10 @@
   margin: 0 auto;
   max-width: 1200px;
   padding-bottom: 55px;
+  padding-top: 15px;
+  .row{
+    margin: 0 -15px;
+  }
 }
 .form-base-info{
   .row{
