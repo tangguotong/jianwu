@@ -176,7 +176,7 @@
     <div class="content">
         <div class="one-content">
             <div class="panel-blue-title">
-            		<p class="panel-title">量刑情节计算辅助设置</p>
+            		<p class="panel-titles">量刑情节计算辅助设置</p>
             </div>
             <div class="panel panel-has-blue-title">
                 <div class="panel-heading">
@@ -465,11 +465,11 @@
 	                <div class="col-md-6 penalyt-item">
 	                    <div class="col-md-6 ">
 	                    	<span id="">
-	                    		≥75岁老年人故意犯罪
+	                    		≥75岁老年人故意犯罪1
 	                    	</span>
 	                    </div>
 	                    <div class="col-md-4">
-							<input type="range" id="range_1"  class="range_item"/>
+							<input type="text" id="range_1"  class="range_item"/>
 	                    </div>
 	               </div>
 	            </div>
@@ -493,14 +493,16 @@ $(document).ready(function(){
 	$(".range_item").ionRangeSlider({
 		min: 0,
 		max: 100,
-		from:25,
+		from:24,
 		to: 69,
 		type: 'double',//设置类型
 		step: 1,
 		prefix: "",//设置数值前缀
 		postfix: "%",//设置数值后缀
 		prettify: false,
-		hasGrid: false
+		hasGrid: false,
+		hide_min_max:true,
+		disable: true
 	});
 	$("#selectStyle").change(function(){
 			$("#styleSrc").attr("href",$(this).val());
