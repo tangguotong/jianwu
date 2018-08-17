@@ -224,3 +224,181 @@
 
 
 /*-------------案件提交页面-----------------*/
+
+.container-center{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-bottom: 55px;
+}
+.form-base-info{
+  .row{
+    margin: 0 -15px!important;
+  }
+  label{
+    font-weight: normal;
+    text-align: left;
+    font-size: 14px;
+  }
+  .radio-inline{
+    font-size: 12px;
+  }
+
+  .radio-inline{
+    margin-left: 0;
+  }
+  .form-button-box{
+    text-align: center;
+    button:first-child{
+      margin-right: 20px;
+    }
+  }
+  .base-info-input{
+    width: 100%!important;
+    height: 31px;
+    outline: none;
+    font-size: 12px;
+    padding-left: 12px;
+    border: 1px solid #ccc;
+    color: #000;
+  }
+  .width-p-100{
+    width:100%!important;
+  }
+  .bootstrap-select>select{
+    display: none!important;
+  }
+  .spy-type-box{
+    padding: 15px 20px;
+    background-color: #fbfbfb;
+    border: $borderGrey;
+    .form-group:last-child{
+      margin-bottom: 0;
+    }
+    label{
+      font-size: 12px;
+    }
+  }
+  .crime-details-box{
+    .opera{
+      display: none;
+    }
+      .spy-type-box{
+        margin-bottom: 20px;
+        margin-right: -15px;
+      }
+  }
+  .more-people{
+    position: relative;
+    .opera{
+      position: absolute;
+      display: block;
+      top: 0;
+      right: -35px;
+      padding: 1px 5px;
+      text-align: center;
+      background-color: #2b93f5;
+      color: #ffffff;
+      border-radius: 5px;
+      border: $borderGrey;
+      i{
+        margin-right: 0;
+      }
+    }
+    
+    
+    /*下拉框select2*/
+    .select2-container--krajee
+    .select2-selection:focus,
+    .select2-container--krajee.select2-container--open .select2-selection{
+      box-shadow: none;
+      border:1px solid #ccc;
+    }
+    .select2-container--krajee .select2-selection{
+      border-radius: 2px;
+      font-size: 12px;
+    }
+    .select2-container .select2-selection--multiple{
+      height: 31px;
+      //font-size: 0;
+      .select2-selection__rendered{
+        padding: 0;
+      }
+    }
+    .select2-container--krajee .select2-selection--multiple .select2-search--inline .select2-search__field{
+      //height: 31px;
+      padding-bottom: -5px;
+
+    }
+    .select2-container--krajee .select2-selection--multiple .select2-selection__choice{
+      background-color: #eeeeee!important;
+      color: #000!important;
+    }
+  
+  }
+}
+.require span{
+  position: relative;
+  &:after{
+    content: '*';
+    position: absolute;
+    font-size: 14px;
+    color: #ff4242;
+    right: -10px;
+    top: 0
+  }
+}
+.file-upload{
+  width: 100%;
+  height: 96px;
+  display: table;
+  background-color: #fbfbfb;
+  border: 1px dashed #d7dde4;
+  &>div{
+    width: 80%;
+    padding-left: 50px;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    .upload-title{
+      .fc-blue{
+        cursor: pointer;
+      }
+    }
+    i{
+      position: absolute;
+      color: #2b93f5;
+      font-size: 38px;
+      left: -55px;
+      top:-10px;
+    }
+  }
+}
+.progress-box{
+  margin-top: 20px;
+  .progress-item{
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom:0;
+    }
+    .progress-title{
+      font-size: 12px;
+      color: #868e9a;
+      margin-bottom: 5px;
+      i{
+        margin-right: 5px;
+        font-size: 15px;
+      }
+    }
+    .progress{
+      height: 4px;
+      background-color: #f4f4f4;
+      .progress-bar{
+        background-color: #2b93f5;
+      }
+    }
+  }
+}
+

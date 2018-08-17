@@ -32,13 +32,13 @@
     }
 
 .iradio_square-blue {
-    background-position: -120px 0;
+    background-position: -143px 0;
 }
     .iradio_square-blue.hover {
-        background-position: -144px 0;
+        background-position: -108px 0;
     }
     .iradio_square-blue.checked {
-        background-position: -168px 0;
+        background-position: -126px 0;
     }
     .iradio_square-blue.disabled {
         background-position: -192px 0;
