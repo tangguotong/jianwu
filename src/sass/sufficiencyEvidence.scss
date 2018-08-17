@@ -15,24 +15,16 @@
     padding:7px 25px;
     margin-left:20px;
 }
-.btn-grey{
-    background-image: linear-gradient(to right, #f9822a,#ffa91f);
-    color:#fff;
-}
-.btn-grey:hover{
-    background-image: linear-gradient(to right, #f9822a,#ffa91f);
-    color:#fff;
-}
 /*逮捕必要性评估总览*/
-.first-level-titles{
+.first-level-titlec{
   width:100%;
   margin-bottom: 18px;
   display: table;
   border-left:5px solid #2b93f5;
   padding-left:5px;
-  span{
-    display: table-cell;
-    vertical-align: middle;
+  :first-child{
+//  display: table-cell;
+    vertical-align: left;
     font-size: 16px;
     color: #464d5c;
     font-weight: bold;
@@ -49,35 +41,218 @@
 .first-content{
     width:100%;
     height:120px;
-    border: 2px solid #f3f4f7;
+    border:2px solid #f3f4f7;
     .first-content-ul{
     width:100%;
     height:100%;
+    overflow:hidden;
         .first-content-li{
         width:33.333%;
         height:100%;
         float:left;
-        }
-        .one{
-        border-right:2px solid #f3f4f7;
+        border-right:1px solid #f3f4f7;
         }
     }
 }
-
+.firstLeft{
+    float:left;
+    width:33.33%;
+    height:100%;
+    .top{
+        width:100%;
+        height:50%;
+        position: relative;
+        img{
+        height:85%;
+        position: absolute;
+        top:20px;
+        left:40%;
+        }
+    }
+    .username{
+    font-family: "微软雅黑";
+    font-size: 16px;
+    text-align: center;
+    line-height: 70px;
+    color:#464d5c;
+    }
+}
+.firstCenter{
+    float: left;
+    width:33.333%;
+    height:100%;
+    padding:25px 20px;
+    overflow-y: scroll;
+    .firstCenterli{
+        width:100%;
+        font-family: "微软雅黑";
+        font-size: 13px;
+        color:#464d5c;
+        list-style: disc;
+        margin-bottom: 6px;
+    }
+}
+.firstCenter::-webkit-scrollbar {display:none}
+.firstRight{
+    float: left;
+    width:33.333%;
+    height:100%;
+    padding:25px 20px;
+    overflow-y: scroll;
+    .firstRightli{
+        width:100%;
+        font-family: "微软雅黑";
+        font-size: 13px;
+        color:#464d5c;
+        margin-bottom: 6px;
+        text-align: left;
+        .texts{
+            font-size: 16px;
+            color:#fd8b04;
+        }
+    }
+}
+.firstRight::-webkit-scrollbar {display:none}
 //选项卡
 .nav-tabs{
     padding:0 25px;
 }
+.tab-content{
+    background: #fff;
+    padding:0 20px;
+}
+.border-bottom{
+    border-bottom: 1px solid #e7e9f0;
+    padding:10px 0;
+}
 .pd0{
-    padding:0
+    padding:0;
+}
+.margin020{
+    margin: 20px 0;
 }
 .lefts{
     justify-content:left;
 }
+
 .pl0{
     padding-left:0;
+}
+#hist_cases{
+    color:#fd8b04;
+    font-size: 13px;
 }
 .tab-content-all{
     background: #fff;
     padding:0;
+}
+.border-no{
+    border-bottom:none;
+    margin-left:0;
+}
+.analysis{
+    height:auto;
+    .top{
+        height:60px;
+        width:100%;
+        border-bottom: 1px solid #e7e9f0;
+        .chance-box{
+            line-height: 60px;
+            img{
+                margin:0 4px 0 24px;
+                width:18px;
+                height:17px;
+            }
+            .chance{
+                font-size: 20px;
+                color:#fd8b04;
+            }
+        }
+        .next-box{
+            line-height: 60px;
+            background: none;
+            margin-right:20px;
+        }
+    }
+    .bottom{
+        height:auto;
+        padding-top:10px;
+        ul{
+            :first-child{
+                 color:#464d5c;
+            }
+            li{
+                padding:10px 20px;
+                text-align:left;
+                font-size: 12px;
+                color:#fd942b;
+            }
+        }
+    }
+}
+.prove_icon{
+    li{
+        vertical-align: middle;
+        float: left;
+        padding-right:20px;
+        img{
+            margin:0 10px;
+            margin-bottom: 2px;
+        }
+    }
+}
+.matrix{
+    table{
+        width:100%;
+        thead{
+            th{
+                padding:15px 0;
+                text-align: center;
+               border-bottom:1px solid #ddd!important; 
+               width:11%
+            }
+            :first-child{ 
+                text-align: left;  
+                border-right:1px solid #eee;
+                padding-left:10px;
+            }
+        
+        }
+        tbody{
+            tr{
+                td{
+                    text-align: center;
+                    width:11%;
+                    height:42px;
+                    padding:5px;
+                    >div{
+                        width:100%;height:100%;
+                        min-height: 42px;
+                        line-height: 42px;
+                    }
+                }
+                td:first-of-type{
+                        font-weight: bold;
+                        border-right:1px solid #eee;
+                        text-align: left;
+                        padding-left:10px;
+                    }
+                .nothing_bg{
+                    background: #e5e5e5;
+                }
+                .reinforce_bg{
+                    background: #addcfd;
+                }
+                .sap_bg{
+                    background: #fec581;
+                }
+            }
+            tr:first-of-type{
+                td{
+                    padding-top:20px;
+                }
+            }
+        }
+    }
+    
 }
