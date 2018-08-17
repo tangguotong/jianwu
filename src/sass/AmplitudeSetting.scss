@@ -2,27 +2,24 @@
 
 /*-----------检察办案页面-------------*/
 .panel-titles{
+    position: relative;
     font-size: 14px;
     margin:14px;
-}
-.panel-blue-title{
-    padding-left: 12px;
-    position: relative;
-    width:100%;
-    height: auto;;
 }
 .panel-titles:before{
     content: "";
     position: absolute;
-    left: 0;
+    left: -14px;
     top: 3px;
     bottom: 2px;
     width: 5px;
+//  height:20px;
     background-color: #2b93f5;
 }
+
 .panel-body{
-    .row{
-        margin: 0;
+    .margin0{
+        margin:0!important;    
     }
 }
 .circle-title{
