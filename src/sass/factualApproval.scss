@@ -15,14 +15,6 @@
     padding:7px 25px;
     margin-left:20px;
 }
-.btn-grey{
-    background-image: linear-gradient(to right, #f9822a,#ffa91f);
-    color:#fff;
-}
-.btn-grey:hover{
-    background-image: linear-gradient(to right, #f9822a,#ffa91f);
-    color:#fff;
-}
 /*逮捕必要性评估总览*/
 .first-level-titles{
   width:100%;
@@ -46,13 +38,14 @@
       cursor: pointer;
   }
 }
-.first-content{
+.first-contents{
     width:100%;
-    min-height: 120px;
+    height:120px;
 	border: 2px solid #f3f4f7;
 	.first-content-ul{
 	width:100%;
 	height:100%;
+	overflow: hidden;
 		.first-content-li{
 		width:33.333%;
 		height:100%;
@@ -61,7 +54,7 @@
 		}
 	}
 }
-.firstleft{
+.firstlefts{
 	float:left;
 	width:33.33%;
 	height:100%;
@@ -72,9 +65,9 @@
 	    img{
 	    height:85%;
         position: absolute;
-        top:10px;
-        left:32%;
-    }
+        top:20px;
+        left:40%;
+        }
 	}
 	.username{
 	font-family: "微软雅黑";
@@ -84,7 +77,7 @@
 	color:#464d5c;
 	}
 }
-.firstcenter{
+.firstcenters{
     float: left;
     width:33.333%;
     height:100%;
@@ -99,8 +92,8 @@
         margin-bottom: 6px;
     }
 }
-.firstcenter::-webkit-scrollbar {display:none}
-.firstright{
+.firstcenters::-webkit-scrollbar {display:none}
+.firstrights{
     float: left;
     width:33.333%;
     height:100%;
@@ -118,7 +111,7 @@
         }
     }
 }
-.firstright::-webkit-scrollbar {display:none}
+.firstrights::-webkit-scrollbar {display:none}
 //选项卡
 .nav-tabs{
     padding:0 25px;

@@ -15,14 +15,6 @@
     padding:7px 25px;
     margin-left:20px;
 }
-.btn-grey{
-    background-image: linear-gradient(to right, #f9822a,#ffa91f);
-    color:#fff;
-}
-.btn-grey:hover{
-    background-image: linear-gradient(to right, #f9822a,#ffa91f);
-    color:#fff;
-}
 /*逮捕必要性评估总览*/
 .first-level-titles{
   width:100%;
@@ -74,8 +66,8 @@
 	    img{
 	    height:85%;
         position: absolute;
-        top:10px;
-        left:32%;
+        top:20px;
+        left:40%;
     }
 	}
 	.username{
