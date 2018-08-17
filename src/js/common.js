@@ -7,7 +7,7 @@ $(function () {
 });
 //设置wrapper的最小高度
 function setMinHeight() {
-    $(".wrapper").css("min-height", $(window).height() - 70);
+    $(".wrapper").css("min-height", $(window).height());
 }
 //设置小时间轴的弹窗
 function setPopEditAndDel(dom) {

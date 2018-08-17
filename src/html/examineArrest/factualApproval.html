@@ -24,6 +24,7 @@
 	
     <script src="../../js/openCases/caseReport.js"></script>
     <script src="../../js/examineArrest/examineArrest.js"></script>
+    <script src="../../js/examineArrest/factualApproval.js"></script>
 
 </head>
 <body>
@@ -333,9 +334,9 @@
 		  <div class="tab-content pd0">
 		    <div role="tabpanel" class="tab-pane active" id="home">
 		    	<div class="panel panel-has-blue-title">
-                <div class="panel-heading">
+                <div class="panel-heading" style="border:1px solid #e7e9f0 ">
                     <div class="tab-search clearfix">
-                        <ul id="myTab" class="nav nav-tabs pull-left nav-my-style lefts">
+                        <ul id="myTab" class="nav nav-tabs pull-left nav-my-style lefts" style="border:none">
                             <li class="active pl0">
                                 <a href="#tab0" data-toggle="tab" aria-expanded="false">
                                     	盗窃罪
@@ -352,10 +353,170 @@
                         </ul>
                     </div>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body pd0">
                     <div id="myTabContent" class="tab-content tab-content-all">
                         <div class="tab-pane fade active in" id="tab0">
-                            	盗窃罪
+                            	<div class="tab0left">
+                            		<div class="ystitle">审阅要素</div>
+                            		<ul class="tab0ul">
+                            			<li class="tab0li activetwo">
+                            				<div class="circle activethree">1</div>
+                            				作案时间
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">2</div>
+                            				作案地点
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">3</div>
+                            				侵害物
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">4</div>
+                            				序号
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">5</div>
+                            				作案工具
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">6</div>
+                            				作案现场
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">7</div>
+                            				嫌疑目标
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">8</div>
+                            				销赃情况
+                            			</li>
+                            			<li class="tab0li">
+                            				<div class="circle">9</div>
+                            				赃物下落
+                            			</li>
+                            		</ul>
+                            	</div>
+                            	<div class="tab0right">
+                            		<!--基准证据-->
+                            		<div class="jzevidence">
+                            			<div class="jsleft">
+                            				基准证据:
+                            			</div>
+                            			<div class="jsright">
+                            				<p class='jzevidencep'>嫌疑人供述</p>
+	                            			<form action="" class="jsform">
+	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入嫌疑人供述">大约是2107年12月6日星期一，我刚下班。</textarea>
+	                            			</form>
+	                            			<div class="jsrights">
+	                            				<p class="jsp">基准证据:</p>
+	                            				<form action="">
+	                            					<label for="" class="jslabel" name="">
+			    										<input type="radio" id="icheck"/>有罪供述
+			    									</label>
+			    									<label for="" class="jslabel" name="">
+			    										<input type="radio" id="icheck" checked/>无罪供述
+			    									</label>
+	                            				</form>
+	                            			</div>
+                            			</div>
+                            		</div>
+                            		<!--证据链条-->
+                            		<div class="ltevidence">
+                            			<div class="ltleft">
+                            				证据链条:
+                            			</div>
+                            			
+                            			<div class="ltright">
+                            				<p class='ltevidencep'>被害人陈述</p>
+	                            			<form action="" class="ltform">
+	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入被害人供述">017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
+	                            			</form>
+	                            			<div class="ltrights">
+	                            				<form action="">
+	                            					<button class="btn btn-blue-blueone">补强证明</button>
+	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
+	                            				</form>
+	                            			</div>
+                            			</div>
+                            		</div>
+                            		
+                            		<div class="ltevidence">
+                            			<div class="ltleft">
+                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            			</div>
+                            			
+                            			<div class="ltright">
+                            				<p class='ltevidencep'>证人证言(一)</p>
+	                            			<form action="" class="ltform">
+	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，我们一起回的家</textarea>
+	                            			</form>
+	                            			<div class="ltrights">
+	                            				<form action="">
+	                            					<button class="btn btn-blue-blueone">补强证明</button>
+	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
+	                            				</form>
+	                            			</div>
+                            			</div>
+                            		</div>
+                            		
+                            		<div class="ltevidence">
+                            			<div class="ltleft">
+                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            			</div>
+                            			
+                            			<div class="ltright">
+                            				<p class='ltevidencep'>证人证言(二)</p>
+	                            			<form action="" class="ltform">
+	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，一个东西丢失了</textarea>
+	                            			</form>
+	                            			<div class="ltrights">
+	                            				<form action="">
+	                            					<button class="btn btn-blue-bluetwo">补强证明</button>
+	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
+	                            				</form>
+	                            			</div>
+                            			</div>
+                            		</div>
+                            		
+                            		<div class="ltevidence">
+                            			<div class="ltleft">
+                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            			</div>
+                            			
+                            			<div class="ltright">
+                            				<p class='ltevidencep'>证人证言(三)</p>
+	                            			<form action="" class="ltform">
+	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
+	                            			</form>
+	                            			<div class="ltrights">
+	                            				<form action="">
+	                            					<button class="btn btn-blue-bluetwo">补强证明</button>
+	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
+	                            				</form>
+	                            			</div>
+                            			</div>
+                            		</div>
+                            		
+                            		<div class="ltevidence">
+                            			<div class="ltleft">
+                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            			</div>
+                            			
+                            			<div class="ltright">
+                            				<p class='ltevidencep'>证人证言(三)</p>
+	                            			<form action="" class="ltform">
+	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
+	                            			</form>
+	                            			<div class="ltrights">
+	                            				<form action="">
+	                            					<button class="btn btn-blue-green">绝对证明</button>
+	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
+	                            				</form>
+	                            			</div>
+                            			</div>
+                            		</div>
+                            	</div>
 						</div>
                         <div class="tab-pane fade" id="tab1">
                             	故意伤害罪

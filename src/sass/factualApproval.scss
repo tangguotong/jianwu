@@ -133,3 +133,192 @@
     background: #fff;
     padding:0;
 }
+//tab内容
+.tab0left{
+    width:14%;
+    height:765px;
+    background: #fafafb;
+    border:2px solid #f3f4f7;
+    float: left;
+    overflow-y:scroll;
+    .ystitle{
+        width:100%;
+        height:60px;
+        font-family: "微软雅黑";
+        font-size: 16px;
+        text-align:left;
+        line-height: 60px;
+        padding-left: 25px;
+    }
+    .tab0ul{
+        width:100%;
+    }
+    .tab0li{
+        width:100%;
+        padding:10px 25px;
+        margin-bottom: 10px;
+        font-family: "微软雅黑";
+        font-size: 14px;
+        cursor: pointer;
+        color:#464d5c;
+        .circle{
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 20px;
+            background:#b1b6bd;
+            color:#fff;
+            float: left;
+            margin-right: 20px;
+        }
+    }
+    .activetwo{
+        background: #fff;
+        color:#2b93f5;
+        font-weight: bold;
+        font-family: "微软雅黑";
+        border-bottom:3px solid #f5f6f8;
+        border-right:5px solid #2b93f5;
+    }
+    .activethree{
+        background: #2b93f5 !important;
+    }
+    .tab0li:hover{
+        background: #fff;
+        color:#2b93f5;
+        font-weight: bold;
+        font-family: "微软雅黑";
+        border-bottom:3px solid #f5f6f8;
+        border-right:5px solid #2b93f5;
+    }
+}
+.tab0left::-webkit-scrollbar {display:none}
+.tab0right{
+    width:86%;
+    max-height:765px;
+    float:left;
+    padding:30px 20px;
+    overflow-y:scroll;
+//  基准证据
+    .jzevidence{
+        width:100%;
+        overflow: hidden;
+       .jzevidencep{
+           font-family: "微软雅黑";
+           font-size: 14px;
+           color:#464d5c;
+           line-height: 20px;
+       }
+        .jsleft{
+            float: left;
+            width:8%;
+            height:100%;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            color:#464d5c;
+            line-height: 20px;
+        }
+        .jsright{
+            float: left;
+            width:92%;
+            .jsp{
+               font-family: "微软雅黑";
+               font-size: 14px;
+               color:#464d5c;
+            }
+            .jsform{
+                width:70%;
+                float:left;
+            }
+            .jsrights{
+                width:30%;
+                float:left;
+                padding:20px 30px;
+                .jslabel{
+                    margin-right: 20px;
+                }
+            }
+        }
+       .textareaw{
+           width:100%;
+           text-align: left;
+       }
+    }
+    
+//  证据链条
+    .ltevidence{
+        width:100%;
+        overflow: hidden;
+       .ltevidencep{
+           font-family: "微软雅黑";
+           font-size: 14px;
+           color:#464d5c;
+           line-height: 20px;
+       }
+        .ltleft{
+            float: left;
+            width:8%;
+            height:100%;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            color:#464d5c;
+            line-height: 20px;
+        }
+        .ltright{
+            float: left;
+            width:92%;
+            .ltp{
+               font-family: "微软雅黑";
+               font-size: 14px;
+               color:#464d5c;
+            }
+            .ltform{
+                width:70%;
+                float:left;
+            }
+            .ltrights{
+                width:30%;
+                float:left;
+                padding:20px 30px;
+                .ltlabel{
+                    margin-right: 20px;
+                }
+            }
+        }
+       .textareaw{
+           width:100%;
+           text-align: left;
+       }
+    }
+}
+.tab0right::-webkit-scrollbar {display:none}
+//按钮
+.btn-blue-blueone{
+    border: 1px solid #5aabf7;
+    background: #e7f4fd;
+    color: #2b93f5;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.btn-blue-bluetwo{
+    background: #2b93f5;
+    color: #fff;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.btn-blue-green{
+    background: #33CC99;
+    color: #fff;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.btn-blue-yellowone{
+    border: 1px solid #feba37;
+    background: #fcf1db;
+    color: #ff9600;
+    margin-top: 20px;
+}

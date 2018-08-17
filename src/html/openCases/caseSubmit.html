@@ -4,97 +4,419 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
     <title>案件提交</title>
-    <!--<link rel="stylesheet" href="../../vonder/jquerySelect/css/select-addl.min.css">
+
+    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select-addl.min.css">
     <link rel="stylesheet" href="../../vonder/jquerySelect/css/select-krajee.min.css">
-    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select.min.css">-->
+    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select.min.css">
     <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../vonder/bootstrap-select-1.12.4/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../vonder/iCheck/skins/square/blue.css">
+    <link rel="stylesheet" href="../../css/common.css">
 
+
+    <!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
 
     <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
     <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="../../vonder/bootstrap-select-1.12.4/dist/js/bootstrap-select.min.js"></script>
-    <!--<script src="../../vonder/jquerySelect/js/select2.full.min.js"></script>
-    <script src="../../vonder/jquerySelect/js/select2-krajee.min.js"></script>-->
-    <style>
-        .main_content_center{
-            width: 500px;
-            height: 500px;
-            border: 1px solid #000000;
-        }
-        .parent-dlg{position: absolute;width:400px; height:20px; border:1px solid #aaaaaa;border-radius:3px;top:30%;left:50%;z-index:9999;margin-left:-200px;display:none;}
-        .parent-dlg .progress-label{position: absolute;left: 50%;top: 4px;font-weight: bold;text-shadow: 1px 1px 0 #fff;}
-        .parent-dlg .son {width:0; height:100%; background-color:#cccccc; text-align:center; line-height:20px; font-size:16px; font-weight:bold;}
-    </style>
+    <script src="../../vonder/jquerySelect/js/select2.full.min.js"></script>
+    <script src="../../vonder/jquerySelect/js/select2-krajee.min.js"></script>
+    <script src="../../vonder/iCheck/icheck.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/openCases/caseSubmit.js"></script>
+
+
 
 
 </head>
 <body>
-<div class="parent-dlg" >
-    <div class="progress-label">0%</div>
-    <div class="son"></div>
+<!--头-->
+<header >
+    <nav class="navbar-fixed-top navbar navbar-default nav-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../workTable/auxiliaryBench.html">
+                    <span>
+                        <img src="../../images/work-table/logo.png" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="link">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../workTable/auxiliaryBench.html">检察办案</a></li>
+                    <li><a href="../workTable/jianwuCenter.html">检务中心</a></li>
+                    <li><a href="#">检务大屏</a></li>
+
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="mr10 ">
+                    <div class="input-group nav-input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" class="form-control" placeholder="请输入关键字">
+                    </div>
+                </li>
+                <li><a id="showMessageBox" href="#" class="relative">
+                    <span class="fa fa-bell-o"></span>
+
+                    <span class="badge badge-header-right">3</span>
+                    消息
+                </a></li>
+                <li>
+                    <img class="user-header" src="../../images/work-table/user_header.png" alt="">
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        检察官  林俊杰
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu user-center-pop">
+                        <li><a href="#"><i class="fa fa-user"></i>个人中心</a></li>
+                        <li><a href="#"><i class="fa fa-gear"></i>系统设置</a></li>
+                        <li><a href="#"><i class="fa fa-desktop"></i>配置平台</a></li>
+                        <li><a href="#"><i class="fa fa-power-off"></i>退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="message-hidden-box">
+        <div class="panel panel-has-blue-title">
+            <div class="panel-heading">
+                <div class="tab-search clearfix">
+                    <ul id="myTab" class="nav nav-tabs pull-left nav-my-style ">
+                        <li class="active">
+                            <a href="#tab00" data-toggle="tab" aria-expanded="false">
+                                <p class="message1"></p>
+                                <span>通知(4)</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="#tab01" data-toggle="tab" aria-expanded="true">
+                                <p class="message2"></p>
+                                消息(4)
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#tab02" data-toggle="tab" aria-expanded="false">
+                                <p class="message3"></p>
+                                待办(4)</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="tab00">
+                        <ul class="header-message-list">
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right no-start">未开始</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right expire-soon">马上到期</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right time-out">耗时8天</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <div class="clearfix">
+                                    <span class="pull-left item-title">王晓斌盗窃案</span>
+                                    <span class="pull-right doing">进行中</span>
+                                </div>
+                                <div class="item-content">
+                                    冠霖提交于 2017-01-06，需在2017-01-07 前完成代码 变更任务
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="text-center mb0">
+                            <a href="#" class="clear-message">清空待办</a>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade " id="tab01">
+                        消息(4)
+                    </div>
+                    <div class="tab-pane fade" id="tab02">
+                        待办
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--头end-->
+
+<div class="wrapper pl0">
+    <!--内容-->
+    <div class="container-center">
+        <div class="panel panel-has-blue-title mb0 border-none">
+            <div class="panel-heading">
+                <p class="panel-title">案件基本信息</p>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form class="form-horizontal form-base-info" role="form">
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="caseName" class="col-sm-2 control-label require">
+                                        <span>案件名称</span>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="base-info-input" id="caseName" placeholder="案件名称，30汉字以内 ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label  class="col-sm-2 control-label">案件类型</label>
+                                    <div class="col-sm-10">
+                                        <label class="radio-inline col-md-4">
+                                            <input type="radio"  value="option1" name="anjianGroup" checked> 提请批准逮捕
+                                        </label>
+                                        <label class="radio-inline col-md-4">
+                                            <input type="radio"  value="option2" name="anjianGroup"> 移送审查起诉
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-sm-2 control-label require">
+                                        <span>侦查机构</span>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <select name="" class="selectpicker width-p-100" title="请选择侦查机构" >
+                                            <option value="">1</option>
+                                            <option value="">1</option>
+                                            <option value="">1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <label for="" class="col-sm-2 control-label require">犯罪类型</label>
+                                    <div class="col-sm-10">
+                                        <label class="radio-inline col-md-3">
+                                            <input type="radio" value="option1"  name="fanzuiGroup"> 一人一罪
+                                        </label>
+                                        <label class="radio-inline col-md-3">
+                                            <input type="radio"  value="option2" name="fanzuiGroup"> 一人多罪
+                                        </label>
+                                        <label class="radio-inline col-md-3">
+                                            <input type="radio"  value="option2" name="fanzuiGroup"> 多人一罪
+                                        </label>
+                                        <label class="radio-inline col-md-3">
+                                            <input type="radio"  value="option2" name="fanzuiGroup" checked> 多人多罪
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="crime-details-box">
+                                <div class="spy-type-box more-people">
+                                    <div class="opera">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="criminalPerson1" class="col-sm-2 control-label require">
+                                                <span>嫌疑人</span>
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <input type="text" class="base-info-input" id="criminalPerson1" placeholder="犯罪嫌疑人">
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select  title="请选择罪行" class="width-p-100 multiple-select"  multiple size="4">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="2">2</option>
+                                                            <option value="2">2</option>
+                                                            <option value="2">2</option>
+                                                        </select>
+                                                       <!-- <select name="" title="请选择罪行" class="selectpicker width-p-100" multiple="multiple">
+                                                            <option value="1">2</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">2</option>
+                                                        </select>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="victim" class="col-sm-2 control-label require">
+                                                <span>受害人</span>
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="base-info-input" id="victim" placeholder="受害人姓名">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="witness" class="col-sm-2 control-label require">
+                                                <span>证人</span>
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="base-info-input" id="witness" placeholder="证人姓名">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" spy-type-box more-people">
+                                    <div class="opera">
+                                        <i class="fa fa-minus"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="criminalPerson" class="col-sm-2 control-label require">
+                                                <span>嫌疑人</span>
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <input type="text" class="base-info-input" id="criminalPerson" placeholder="犯罪嫌疑人">
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <select  title="请选择罪行" class="width-p-100 multiple-select"  multiple size="4">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="2">2</option>
+                                                            <option value="2">2</option>
+                                                            <option value="2">2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="victim" class="col-sm-2 control-label require">
+                                                <span>受害人</span>
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="base-info-input" id="victim" placeholder="受害人姓名">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="">
+                                            <label for="witness" class="col-sm-2 control-label require">
+                                                <span>证人</span>
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="base-info-input" id="witness" placeholder="证人姓名">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="from-group">
+                                <div class="form-button-box">
+                                    <button class="btn btn-blue-gradient btn-min-width">确认提交</button>
+                                    <button class="btn btn-grey btn-min-width">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <p class="require"><span class="">电子卷宗</span></p>
+                        <div class="file-upload text-center" id="fileUpload">
+                            <div class="">
+                                <span class="relative upload-title">
+                                    <i class="fa fa-cloud-upload"></i>
+                                    拖拽或 <span class="fc-blue" id="load">点击上传</span>电子卷宗到此处
+                                    <input type="file" id="load_xls" name="file" style="display:none" onchange ="uploadFile()">
+                                </span>
+                                <p class="mb0 fc-gray-light">支持扩展名:zip</p>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <div class="progress-item">
+                                <p class="progress-title clearfix">
+                                    <span class="pull-left"> <i class="fa fa-paperclip"></i>文档.docx</span>
+                                    <span class="pull-right">
+                                    <i class="fa fa-remove"></i>
+                                </span>
+                                </p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                        <span class="sr-only">40% 完成</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <p class="progress-title clearfix">
+                                    <span class="pull-left"> <i class="fa fa-paperclip"></i>文档.docx</span>
+                                    <span class="pull-right">
+                                    <i class="fa fa-remove"></i>
+                                </span>
+                                </p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                        <span class="sr-only">40% 完成</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <p class="progress-title clearfix">
+                                    <span class="pull-left"> <i class="fa fa-paperclip"></i>文档.docx</span>
+                                    <span class="pull-right">
+                                    <i class="fa fa-remove"></i>
+                                </span>
+                                </p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                        <span class="sr-only">40% 完成</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--内容end-->
+
+    <footer class="blue-footer absolute">
+        <p>Copyright 2018 中科点击（北京）技术有限公司提供技术支持</p>
+    </footer>
 </div>
-<div class="main_content_center"></div>
-<script>
-    var dz = $('#main_content_center');
-    dz.ondragover = function(ev) {
-        //阻止浏览器默认打开文件的操作
-        ev.preventDefault();
-    }
 
-    dz.ondrop = function(ev) {
-        ev.preventDefault();
-        var files = ev.dataTransfer.files;
-        var len = files.length,i = 0;
-        while (i < len) {
-            var filesName=files[i].name;
-            var extStart=filesName.lastIndexOf(".");
-            var ext=filesName.substring(extStart,filesName.length).toUpperCase();
-            if(ext!=".JPG"&&ext!=".PNG"&&ext!=".XML"){ //判断是否是需要的问件类型
-                TS.errorAlert("请选择.jpg、.png、.xml类型的文件上传！");
-                return false;
-            }else{
-                test(files[i]);
-            }
-            i++;
-        }
-        $(".parent-dlg").show();
-    }
-
-    function test(a){
-        var formData = new FormData();
-        formData.append("name", a.name);
-        formData.append("size", a.size);
-        formData.append("data", a);
-        $.ajax({
-            url:'',
-            type:'post',
-            data:formData,
-            cache: false,
-            processData: false,
-            contentType: false,
-            xhr: function(){
-                var xhr = $.ajaxSettings.xhr();
-                if(onprogress && xhr.upload) {
-                    xhr.upload.addEventListener("progress" , onprogress, false);
-                    return xhr;
-                }
-            }
-        })
-    };
-    function onprogress(evt){
-        var loaded = evt.loaded;     //已经上传大小情况
-        var tot = evt.total;      //附件总大小
-        var per = Math.floor(100*loaded/tot);  //已经上传的百分比
-        $(".progress-label").html( per +"%" );
-        $(".son").css("width" , per +"%");
-        if(per>=100){
-            $(".parent-dlg").hide();
-
-
-        }
-    }
-</script>
 
 </body>
+<script>
+
+</script>
 </html>
