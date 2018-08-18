@@ -2,13 +2,29 @@ $(function () {
     setSecondScreenHeight();
     showNext();//监听屏幕滚动.显示固定头部的下一步
     showFullTextBox();
+    //初始化流程进度条
     var $step = $("#step");
     $step.step({
         index: 0,
         time: 500,
         title: ["案件受理", "证据审查", "事实认定", "证据充分性判断", "量刑计算","逮捕必要性评估","案案件监督"]
     });
+    //电子卷宗按钮点击事件
+    $('#eleFile').on('click',function () {
+        //计算电子卷宗的高和top值
+        var top = ($(window).height()-$(window).height()*0.8)/2 +35;
+        var height = $(window).height()*0.8;
+        $('.ele-pop-box').css({
+            "height":$(window).height()*0.8,
+            "top":top
+        });
+        $('.ele-pop-box').fadeIn();
 
+        //退出按钮点击事件
+        $('.exit-img').on('click',function () {
+            $('.ele-pop-box').fadeOut();
+        });
+    });
     setleftFileShowHide();//左侧文件夹图标的切换
 //        bootstrapTable
     $("#checkTable").bootstrapTable({
@@ -98,7 +114,7 @@ $(function () {
 
 //计算第二屏高度
 function setSecondScreenHeight() {
-    $('.second-screen').css('height',parseInt($(".wrapper").css('min-height')) - 62 -55);
+    $('.second-screen').css('height',parseInt($(".wrapper").css('min-height')) - 62 -55 -70);
 }
 
 //显示全文快照的函数

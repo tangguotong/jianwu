@@ -9,7 +9,6 @@
 @import "AmplitudeSetting";//量刑计算情节辅助设置
 @import "factualApproval";//事实审定样式
 @import "sufficiencyEvidence";//证据充分性判断样式
-@import "SentencingCalculation";//量刑计算
 
 /*内容*/
 body{
@@ -71,6 +70,7 @@ li{
 //滚动条样式
 .scroll-style{
   overflow: auto;
+  padding-right: 5px;
   &::-webkit-scrollbar {/*滚动条整体样式*/
     width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
     height: 4px;
@@ -196,8 +196,14 @@ li{
     }
   }
 }
-
-
+/*-----------------电子卷宗查看页面---------------*/
+.rich-text-box{
+  margin: 0 -15px;
+  &>div:first-child{
+    border-right: $borderGrey;
+    margin-top: -19px;
+  }
+}
 
 
 

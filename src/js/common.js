@@ -37,10 +37,10 @@ function setPopEditAndDel(dom) {
 //文件类型右侧的展开和合并,小箭头的改变
 function setleftFileShowHide() {
     $('.panel-collapse').on('show.bs.collapse', function () {
-        $(this).parents('.panel').find('.fa').addClass('fa-caret-down').removeClass("fa-caret-right")
+        $($(this).parents('.panel')[0]).find('.fa').addClass('fa-caret-down').removeClass("fa-caret-right")
     });
     $('.panel-collapse').on('hide.bs.collapse', function () {
-        $(this).parents('.panel').find('.fa').addClass('fa-caret-right').removeClass("fa-caret-down")
+        $($(this).parents('.panel')[0]).find('.fa').addClass('fa-caret-right').removeClass("fa-caret-down")
     });
 }
 
