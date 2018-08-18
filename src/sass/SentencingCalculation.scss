@@ -1,0 +1,154 @@
+*{
+	list-style:none;
+}
+/*按钮*/
+.next{
+	border:none;
+    background-image: linear-gradient(to right, #f9822a,#ffa91f);
+    color: #fff;
+    padding:7px 25px;
+}
+.dossier{
+	border:none;
+    background-image: linear-gradient(to right, #3e92ff,#2eadff);
+    color: #fff;
+    padding:7px 25px;
+    margin-left:20px;
+}
+/*逮捕必要性评估总览*/
+.first-level-titles{
+  width:100%;
+  margin-bottom: 18px;
+  display: table;
+  border-left:5px solid #2b93f5;
+  padding-left:5px;
+  span{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #464d5c;
+    font-weight: bold;
+    .ems{
+        font-size: 14px;
+        color: #868e9a;
+    }
+    .colors{
+        color:#fd8b04;
+    }
+  }
+  .right{
+      float:right;
+      cursor: pointer;
+  }
+  .show{
+      float:right;
+      cursor: pointer;
+  }
+}
+.first-contents{
+    width:100%;
+    height:120px;
+	border: 2px solid #f3f4f7;
+	.first-content-ul{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+		.first-content-li{
+		width:33.333%;
+		height:100%;
+		float:left;
+		border-right:1px solid #f3f4f7;
+		}
+	}
+}
+.firstlefts{
+	float:left;
+	width:33.33%;
+	height:100%;
+	.top{
+	    width:100%;
+	    height:50%;
+	    position: relative;
+	    img{
+	    height:85%;
+        position: absolute;
+        top:20px;
+        left:40%;
+        }
+	}
+	.username{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	text-align: center;
+	line-height: 70px;
+	color:#464d5c;
+	}
+}
+.firstcenters{
+    float: left;
+    width:33.333%;
+    height:100%;
+    padding:25px 20px;
+    overflow-y: scroll;
+    .firstcenterli{
+        width:100%;
+        font-family: "微软雅黑";
+        font-size: 13px;
+        color:#464d5c;
+        list-style: disc;
+        margin-bottom: 6px;
+    }
+}
+.firstcenters::-webkit-scrollbar {display:none}
+.firstrights{
+    float: left;
+    width:33.333%;
+    height:100%;
+    padding:25px 20px;
+    overflow-y: scroll;
+    .firstrightli{
+        width:100%;
+        font-family: "微软雅黑";
+        font-size: 13px;
+        color:#464d5c;
+        margin-bottom: 6px;
+        text-align: center;
+        .texts{
+            margin-left: 10px;
+        }
+        .orange{
+            color:#fd8b04;
+        }
+        .blues{
+            color:#2b93f5;
+        }
+    }
+    .textl{
+        text-align: left;
+    }
+}
+.firstrights::-webkit-scrollbar {display:none}
+//选项卡
+.nav-tabs{
+    padding:0 25px;
+}
+.tab-content{
+    background: #fff;
+    padding:0 20px;
+}
+.pd0{
+    padding:0;
+}
+.lefts{
+    justify-content:left;
+}
+.pl0{
+    padding-left:0;
+}
+.tab-content-all{
+    background: #fff;
+    padding:0;
+}
+.pd40{
+    padding:20px 40px !important;
+}

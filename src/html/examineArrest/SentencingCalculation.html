@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
-    <title>事实审定</title>
+    <title>量刑计算</title>
 
 
     <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -165,7 +165,7 @@
 
 <div class="wrapper pl0">
     <!--内容-->
-    <div class="content">
+    <div class="content" style="border-bottom: none;"> 
         <div class="one-content">
             <div class="case-message clearfix">
                 <div class="message-logo">
@@ -198,7 +198,7 @@
 	<!--逮捕必要性评估开始-->
         <div class="one-content">
             <div class="first-level-titles">
-                <span>逮捕必要性评估总览</span>
+                <span>逮捕必要性评估总览<em class="ems">(量刑结果幅度太大？试试<font class="colors">调整量刑幅度</font>吧！)</em></span>
                 <div class="right">
                 	<img src="../../images/examineArrest/up.png" alt="" />
                 	收起面板
@@ -223,18 +223,22 @@
             				<li class="firstcenterli">
             					掩饰隐瞒犯罪所得
             				</li>
+            				<li class="firstcenterli">
+            					总量刑
+            				</li>
             			</ul>
             			<ul class="firstrights">
-            				<li class="firstrightli">
-            					<img src="../../images/examineArrest/kai.png" alt="" />
-            					<span class="texts">已审核</span>
-            				</li>
-            				<li class="firstrightli">
-            					<img src="../../images/examineArrest/off.png" alt="" />
-            					<span class="texts">未审核</span>
-            				</li>
-            				<li class="firstrightli">
+            				<li class="firstrightli textl">
             					<span class="texts">---</span>
+            				</li>
+            				<li class="firstrightli textl">
+            					<span class="texts">---</span>
+            				</li>
+            				<li class="firstrightli textl">
+            					<span class="texts blues">2.0到12.0个</span>
+            				</li>
+            				<li class="firstrightli textl">
+            					<span class="texts blues">2.0到12.0个月</span>
             				</li>
             			</ul>
             		</li>
@@ -255,18 +259,22 @@
             				<li class="firstcenterli">
             					掩饰隐瞒犯罪所得
             				</li>
+            				<li class="firstcenterli">
+            					总量刑
+            				</li>
             			</ul>
             			<ul class="firstrights">
-            				<li class="firstrightli">
-            					<img src="../../images/examineArrest/kai.png" alt="" />
-            					<span class="texts">已审核</span>
+            				<li class="firstrightli textl">
+            					<span class="texts blues">2.0到12.0个月</span>
             				</li>
-            				<li class="firstrightli">
-            					<img src="../../images/examineArrest/off.png" alt="" />
-            					<span class="texts">未审核</span>
-            				</li>
-            				<li class="firstrightli">
+            				<li class="firstrightli textl">
             					<span class="texts">---</span>
+            				</li>
+            				<li class="firstrightli textl">
+            					<span class="texts">---</span>
+            				</li>
+            				<li class="firstrightli textl">
+            					<span class="texts blues">2.0到12.0个月</span>
             				</li>
             			</ul>
             		</li>
@@ -288,18 +296,22 @@
             				<li class="firstcenterli">
             					掩饰隐瞒犯罪所得
             				</li>
+            				<li class="firstcenterli">
+            					总量刑
+            				</li>
             			</ul>
             			<ul class="firstrights">
-            				<li class="firstrightli">
-            					<img src="../../images/examineArrest/kai.png" alt="" />
-            					<span class="texts">已审核</span>
+            				<li class="firstrightli textl">
+            					<span class="texts">2.0到12.0个月</span>
             				</li>
-            				<li class="firstrightli">
-            					<img src="../../images/examineArrest/off.png" alt="" />
-            					<span class="texts">未审核</span>
-            				</li>
-            				<li class="firstrightli">
+            				<li class="firstrightli textl">
             					<span class="texts">---</span>
+            				</li>
+            				<li class="firstrightli textl">
+            					<span class="texts orange">未计算</span>
+            				</li>
+            				<li class="firstrightli textl">
+            					<span class="texts blues">2.0到12.0个月</span>
             				</li>
             			</ul>
             		</li>
@@ -333,7 +345,7 @@
 		  <!-- Tab panes -->
 		  <div class="tab-content pd0">
 		    <div role="tabpanel" class="tab-pane active" id="home">
-		    	<div class="panel panel-has-blue-title">
+		    	<div class="panel panel-has-blue-title" style="border-bottom: none;margin-bottom: 0;">
                 <div class="panel-heading" style="border:1px solid #e7e9f0 ">
                     <div class="tab-search clearfix">
                         <ul id="myTab" class="nav nav-tabs pull-left nav-my-style lefts" style="border:none">
@@ -356,169 +368,235 @@
                 <div class="panel-body pd0">
                     <div id="myTabContent" class="tab-content tab-content-all">
                         <div class="tab-pane fade active in" id="tab0">
-                            	<div class="tab0left">
-                            		<div class="ystitle">审阅要素</div>
-                            		<ul class="tab0ul">
-                            			<li class="tab0li activetwo">
-                            				<div class="circle activethree">1</div>
-                            				作案时间
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">2</div>
-                            				作案地点
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">3</div>
-                            				侵害物
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">4</div>
-                            				序号
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">5</div>
-                            				作案工具
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">6</div>
-                            				作案现场
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">7</div>
-                            				嫌疑目标
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">8</div>
-                            				销赃情况
-                            			</li>
-                            			<li class="tab0li">
-                            				<div class="circle">9</div>
-                            				赃物下落
-                            			</li>
-                            		</ul>
-                            	</div>
-                            	<div class="tab0right">
-                            		<!--基准证据-->
-                            		<div class="jzevidence">
-                            			<div class="jsleft">
-                            				基准证据:
-                            			</div>
-                            			<div class="jsright">
-                            				<p class='jzevidencep'>嫌疑人供述</p>
-	                            			<form action="" class="jsform">
-	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入嫌疑人供述">大约是2107年12月6日星期一，我刚下班。</textarea>
-	                            			</form>
-	                            			<div class="jsrights">
-	                            				<p class="jsp">基准证据:</p>
-	                            				<form action="">
-	                            					<label for="" class="jslabel" name="">
-			    										<input type="radio" id="icheck"/>有罪供述
-			    									</label>
-			    									<label for="" class="jslabel" name="">
-			    										<input type="radio" id="icheck" checked/>无罪供述
-			    									</label>
-	                            				</form>
-	                            			</div>
-                            			</div>
-                            		</div>
-                            		<!--证据链条-->
-                            		<div class="ltevidence">
-                            			<div class="ltleft">
-                            				证据链条:
-                            			</div>
-                            			
-                            			<div class="ltright">
-                            				<p class='ltevidencep'>被害人陈述</p>
-	                            			<form action="" class="ltform">
-	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入被害人供述">017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-	                            			</form>
-	                            			<div class="ltrights">
-	                            				<form action="">
-	                            					<button class="btn btn-blue-blueone">补强证明</button>
-	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
-	                            				</form>
-	                            			</div>
-                            			</div>
-                            		</div>
-                            		
-                            		<div class="ltevidence">
-                            			<div class="ltleft">
-                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            			</div>
-                            			
-                            			<div class="ltright">
-                            				<p class='ltevidencep'>证人证言(一)</p>
-	                            			<form action="" class="ltform">
-	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，我们一起回的家</textarea>
-	                            			</form>
-	                            			<div class="ltrights">
-	                            				<form action="">
-	                            					<button class="btn btn-blue-blueone">补强证明</button>
-	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
-	                            				</form>
-	                            			</div>
-                            			</div>
-                            		</div>
-                            		
-                            		<div class="ltevidence">
-                            			<div class="ltleft">
-                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            			</div>
-                            			
-                            			<div class="ltright">
-                            				<p class='ltevidencep'>证人证言(二)</p>
-	                            			<form action="" class="ltform">
-	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，一个东西丢失了</textarea>
-	                            			</form>
-	                            			<div class="ltrights">
-	                            				<form action="">
-	                            					<button class="btn btn-blue-bluetwo">补强证明</button>
-	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
-	                            				</form>
-	                            			</div>
-                            			</div>
-                            		</div>
-                            		
-                            		<div class="ltevidence">
-                            			<div class="ltleft">
-                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            			</div>
-                            			
-                            			<div class="ltright" style="position: relative;">
-                            				
-                            				<p class='ltevidencep'>证人证言(三)</p>
-	                            			<form action="" class="ltform">
-	                            				<textarea name="jzzj" rows="" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-	                            			</form>
-	                            			<div class="ltrights">
-	                            				<form action="">
-	                            					<button class="btn btn-blue-bluetwo">补强证明</button>
-	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
-	                            				</form>
-	                            			</div>
-                            			</div>
-                            		</div>
-                            		
-                            		<div class="ltevidence">
-                            			<div class="ltleft">
-                            				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            			</div>
-                            			
-                            			<div class="ltright">
-                            				<p class='ltevidencep'>证人证言(三)</p>
-	                            			<form action="" class="ltform">
-	                            				<textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-	                            			</form>
-	                            			<div class="ltrights">
-	                            				<form action="">
-	                            					<button class="btn btn-blue-green">绝对证明</button>
-	                            					<button class="btn btn-blue-yellowone">削弱证明</button>
-	                            				</form>
-	                            			</div>
-                            			</div>
-                            		</div>
-                            	</div>
-						</div>
+                          <div class="one-content">	
+			                <div class="factor">
+					    		<div class="factorbox">
+						    		<div class="factorcontent">
+						    			<p class="title">案件涉及金额</p>
+						    		</div>
+						    		<div class="sentencingDiv">
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				涉案金额：<input type="number" placeholder="请输入涉案金额"/>（元）
+						    			</label>
+						    		</div>
+					    		</div>
+					    	</div>
+					    	
+					    	<div class="factor">
+					    		<div class="factorbox">
+						    		<div class="factorcontent">
+						    			<p class="title">选择案件情节</p>
+						    		</div>
+						    		<div class="sentencingDiv">
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="radio" id="icheck"/>多次盗贼
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="radio" id="icheck"/>二条1到8项
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="radio" id="icheck"/>普通盗贼
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="radio" id="icheck"/>扒窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="radio" id="icheck"/>入户盗贼
+						    			</label>
+						    		</div>
+					    		</div>
+					    	</div>
+					    	
+					    	<div class="factor">
+					    		<div class="factorbox">
+						    		<div class="factorcontent">
+						    			<p class="title">酌定从轻处罚的情节</p>
+						    		</div>
+						    		<div class="sentencingDiv">
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>配合追缴违法所得，挽回较大损失
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>被害人有过错
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>取得谅解
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>积极赔偿
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>退赃、退赔
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>盗窃近亲属财务
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>缺因生活、学习、治病急需而盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>初次、偶然
+						    			</label>
+						    		</div>
+					    		</div>
+					    	</div>
+					    	
+					    	<div class="factor">
+					    		<div class="factorbox">
+						    		<div class="factorcontent">
+						    			<p class="title">酌定从重处罚的情节</p>
+						    		</div>
+						    		<div class="sentencingDiv">
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>犯罪对象为弱势人员
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>在自然、事故、安全突发事件发生地盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>组织、控制未成年人盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>曾因盗窃受到刑事处罚
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>前科
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>入户盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>在医院盗窃病人及亲友
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>盗窃7种特定款物
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>因盗窃造成严重后果
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>携带凶器盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>多次盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>采用破坏性手段盗窃，造成其他财务损失
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>为吸毒、赌博等违法活动盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>一年内曾因盗窃受过行政处罚
+						    			</label>
+						    		</div>
+					    		</div>
+					    	</div>
+					    	
+					    	<div class="factor">
+					    		<div class="factorbox">
+						    		<div class="factorcontent">
+						    			<p class="title">法定从重处罚的情节</p>
+						    		</div>
+						    		<div class="sentencingDiv">
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>犯罪对象为弱势人员
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>在自然、事故、安全突发事件发生地盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>组织、控制未成年人盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>曾因盗窃受到刑事处罚
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>前科
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>入户盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>在医院盗窃病人及亲友
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>盗窃7种特定款物
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>因盗窃造成严重后果
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>携带凶器盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>多次盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>采用破坏性手段盗窃，造成其他财务损失
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>为吸毒、赌博等违法活动盗窃
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>一年内曾因盗窃受过行政处罚
+						    			</label>
+						    		</div>
+					    		</div>
+					    	</div>
+					    	
+					    	<div class="factor">
+					    		<div class="factorbox">
+						    		<div class="factorcontent">
+						    			<p class="title">法定从轻、减轻情节</p>
+						    		</div>
+						    		<div class="sentencingDiv">
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>盲人、聋哑人犯罪
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>老年人犯罪
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>未成年人犯罪
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>限制行为能力犯罪
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>预备犯
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>中止犯
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>未遂犯
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>从犯
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>胁从犯
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>自首
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>立功
+						    			</label>
+						    			<label for="" class="sentencingSlide" name="yaosu">
+						    				<input type="checkbox" id="icheck"/>坦白
+						    			</label>
+						    		</div>
+					    		</div>
+					    	</div>
+					    	
+					        <p class="text-center mt20 mb0 btn-box">
+				                <button class="btn btn-blue-gradient">计算该罪名</button>
+				                <button class="btn btn-grey">修正结果</button>
+				            </p>
+                          </div>
+                        </div>
                         <div class="tab-pane fade" id="tab1">
                             	故意伤害罪
                         </div>
