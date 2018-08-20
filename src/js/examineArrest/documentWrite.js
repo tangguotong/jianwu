@@ -4,11 +4,17 @@ $(function () {
     $step.step({
         index: 0,
         time: 500,
-        title: ["案件受理", "证据审查", "事实认定", "证据充分性判断", "量刑计算","逮捕必要性评估","案案件监督"]
+        title: ["案件受理", "证据审查", "事实审定", "证据充分性判断", "量刑计算","文书编写","案件监督"]
     });
+    $step.toStep(5);//调到第六步
 
     showNext();
 
+    //初始化编辑器
+    var E = window.wangEditor
+    var editor2 = new E('.right-written')
+    editor2.create();
+    editor2.txt.html('<h2 class="text-center">用 JS 设置的内容</h2>');
 
     //电子卷宗的点击事件
     $('#eleFile').on('click',function () {

@@ -198,10 +198,33 @@ li{
 }
 /*-----------------电子卷宗查看页面---------------*/
 .rich-text-box{
-  margin: 0 -15px;
-  &>div:first-child{
-    border-right: $borderGrey;
-    margin-top: -19px;
+  position: relative;
+  padding-left: 215px;
+  .left-btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 215px;
+    padding-right: 25px;
+    //border-right: $borderGrey;
+    display: table;
+    button{
+      height:40px;
+      display: table-cell;
+      width: 100%;
+      text-align: left;
+      padding-left: 35px;
+      margin-bottom: 20px;
+      vertical-align: middle;
+      i{
+        font-size: 14px;
+        margin-right: 6px;
+      }
+    }
+  }
+  .right-written{
+    width: 100%;
+    z-index: 2;
   }
 }
 
