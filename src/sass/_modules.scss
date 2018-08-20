@@ -170,6 +170,9 @@
     background:url("../images/openCases/table-title-icon.png") no-repeat;
     background-size:18px auto;
   }
+  span.icons1{
+    background-position: 0 -22px;
+  }
   b{
     color: #f17905;
   }
@@ -263,7 +266,7 @@
 
 @media screen and (min-width:1441px) and (max-width:1920px){
   .my-app-item{
-    width: 20%;
+    width: 25%;
   }
 }
 
@@ -337,7 +340,9 @@
     display: table-cell;
     vertical-align: middle;
     img{
-      width: 80%;
+      height: 43px;
+      max-width: 43px;
+      min-width: 36px;
     }
   }
 }
@@ -397,6 +402,7 @@
 }
 .task-box .task-left >p:last-child{
   font-size: 14px;
+  color: #868e9a!important;
 }
 .task-box .task-left:after{
   content: '';

@@ -1,4 +1,4 @@
-$topHeight : 70px;
+$topHeight : 60px;
 
 /*头*/
 .nav-top{
@@ -6,24 +6,20 @@ $topHeight : 70px;
   border: none;
   background-image: linear-gradient(to right, #2747ce, #2a61dd,#329bfe);    /*从左到右的渐变*/
   .navbar-header{
-    width: 20%;
-    .navbar-brand{
-      width: 100%;
-      height:70px;
-      display: table;
-      span{
-        display: table-cell;
-        vertical-align: middle;
-      }
+    margin-right: 10%;
+    a{
+      display: inline-block;
+      line-height: 60px;
+      height: 60px;
       img{
-        width: 80%;
-        line-height: 70px;
+        height: 45px;
       }
     }
+
   }
   .link {
     .navbar-nav >li>a{
-      padding: 25px;
+      padding: 20px 25px;
     }
   }
 }
@@ -35,8 +31,12 @@ $topHeight : 70px;
   color: #fff;
   background-color: transparent;
   font-size: 16px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .fa{
+    margin-right: 10px;
+    font-size: 15px;
+  }
 
 }
 .nav-top  .navbar-nav>li>a:hover,
@@ -57,14 +57,19 @@ $topHeight : 70px;
   height: 4px;
   background-color: #02e3ea;
 }
+.nav-top .navbar-right > li > a, .nav-top .navbar-right .active > a{
+  font-size: 12px;
+}
 
 
 
 /*右上角输入框*/
 .nav-input-group{
   width: 160px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 15px;
+  .form-control{
+    font-size: 12px;
+  }
 }
 .nav-input-group .input-group-addon{
   background-color: transparent;
@@ -94,7 +99,7 @@ $topHeight : 70px;
   width: 36px;
   height: 36px;
   border-right: 50px;
-  margin-top: 17px;
+  margin-top: 12px;
   margin-left: 20px;
 }
 
@@ -209,7 +214,7 @@ $topHeight : 70px;
 
 
 /*左*/
-.nav-left-title{
+.left-box{
   position: fixed;
   left: 0;
   top: $topHeight;
@@ -218,22 +223,96 @@ $topHeight : 70px;
   overflow:auto;
   bottom: 0;
   background-color: #f4f4f4;
+  overflow: hidden;
   border-right: 1px solid #dadada;
 }
-/*左一时间*/
-.date-box{
-  height: 95px;
-  .left-slide {
-   height: 100%;
-    .yy-slide{
-      height: 100%;
-      font-size: 14px;
-      padding: 15px 35px;
-      p{
-        color: #000;
+.badge-red{
+  background-color: #ff3600;
+  color: #fff;
+  font-weight: normal;
+}
+
+.nav-left-title{
+  height: 95%;
+  overflow: scroll;
+  padding: 0;
+  .this-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  .left-slide{
+    position: relative;
+    height: 95px;
+    border-bottom:  1px solid #e4e4e4;
+    padding-left: 25px;
+    .slide-box{
+      display: table;
+      height:100%;
+      padding: 20px 0;
+
+      >div{
+        display: table-cell;
+        vertical-align: middle;
+        height:100%;
       }
-      div{
-        text-align: center;
+      .slide-left{
+        .app-logo{
+          width: 46px;
+          height: 46px;
+          border-radius: 15px;
+          //background-color: #ff8c04;
+          color: #ffffff;
+          font-size: 25px;
+          text-align: center;
+          line-height: 46px;
+        }
+      }
+      .slide-middle{
+        float: left;
+        padding-left: 20px;
+          .middle-title{
+            font-size: 14px;
+            color: #464d5c;
+          }
+        .middle-content{
+          font-size: 12px;
+          color: #868e9a;
+          margin-bottom: 0;
+        }
+      }
+      .slide-right{
+        position: absolute;
+        right: 8px;
+        top: 0;
+        line-height: 95px;
+        height: 100%;
+        color: #bfc3c8;
+        font-size: 24px;
+      }
+    }
+  }
+  .date-box{
+    height: 80px;
+    .left-slide{
+      display: table;
+      height: 100%;
+      width: 100%;
+      padding: 0 25px;
+      font-size: 14px;
+      box-shadow: none;
+      >div{
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        p{
+          margin-bottom: 0;
+          font-size: 13px;
+        }
       }
       .time{
         font-size: 31px;
@@ -246,79 +325,28 @@ $topHeight : 70px;
         }
         height: 34px;
         line-height: 34px;
+        color: #464d5c;
+        font-size: 13px;
       }
-
-    }
-  }
-}
-
-.nav-left-title .yy-slide{
-  border-top: none;
-  box-shadow: none;
-  border-right: none;
-}
-.nav-left-title .yy-right{
-  padding: 15px 15px 0 0;
-}
-.nav-left-title .yy-btns > img{
-  width:11px;
-}
-.nav-stacked>li+li {
-   margin-top: 0;
-  margin-left: 0;
-}
-.this-link{
-  z-index: 99;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.nav-left-title .yy-slide h4{
-  font-weight: normal;
-}
-.left-slide .yy-slide{
-  margin: 0;
-  height: 95px;
-  padding: 20px 0;
-}
-.badge-red{
-  background-color: #ff3600;
-  color: #fff;
-  font-weight: normal;
-}
-
-.nav-left-title .app-logo{
-  height: 55px;
-  display: table;
-  span{
-    display: table-cell;
-    vertical-align: middle;
-    img{
-      width: 85%;
     }
   }
 
 }
-.nav-left-title .logo1{
-  background-position: 0 0;
+.bg-orange{
+  background-color: #ff9a0d;
 }
-.nav-left-title .logo2{
-  background-position: 0 -66px;
+.bg-sky-blue{
+  background-color: #17ccd7;
 }
-.nav-left-title .logo3{
-  background-position: 0 -132px;
+.bg-green{
+  background-color: #30d583;
 }
-.nav-left-title .logo4{
-  background-position: 0 -198px;
+.bg-blue{
+  background-color: #1595fd;
 }
-.nav-left-title .logo5{
-  background-position: 0 -264px;
-}
-.nav-left-title .logo6{
-  background-position: 0 -330px;
-}
+
+
+
 
 /*左end*/
 
