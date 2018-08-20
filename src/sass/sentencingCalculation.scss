@@ -25,7 +25,7 @@
   span{
     display: table-cell;
     vertical-align: middle;
-    font-size: 16px;
+    font-size: 14px;
     color: #464d5c;
     font-weight: bold;
     .ems{
@@ -33,7 +33,7 @@
         color: #868e9a;
     }
     .colors{
-        color:#fd8b04;
+        color:#2c92f6;
     }
   }
   .right{
@@ -47,7 +47,8 @@
 }
 .first-contents{
     width:100%;
-    height:120px;
+//  height:120px;
+    //min-height: 150px;
 	border: 2px solid #f3f4f7;
 	.first-content-ul{
 	width:100%;
@@ -67,7 +68,7 @@
 	height:100%;
 	.top{
 	    width:100%;
-	    height:50%;
+	    height:60px;
 	    position: relative;
 	    img{
 	    height:85%;
@@ -88,8 +89,9 @@
     float: left;
     width:33.333%;
     height:100%;
-    padding:25px 20px;
-    overflow-y: scroll;
+    //padding:25px 20px;
+    padding:13px 20px;
+    line-height: 20px;
     .firstcenterli{
         width:100%;
         font-family: "微软雅黑";
@@ -104,8 +106,9 @@
     float: left;
     width:33.333%;
     height:100%;
-    padding:25px 20px;
-    overflow-y: scroll;
+    //padding:25px 20px;
+    padding:13px 20px;
+    line-height: 20px;
     .firstrightli{
         width:100%;
         font-family: "微软雅黑";

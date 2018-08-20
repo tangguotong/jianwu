@@ -38,9 +38,8 @@
       cursor: pointer;
   }
 }
-.first-contents{
+.first-contenttwo{
     width:100%;
-    height:120px;
 	border: 2px solid #f3f4f7;
 	.first-content-ul{
 	width:100%;
@@ -54,14 +53,15 @@
 		}
 	}
 }
-.firstlefts{
+.firstleftstwo{
 	float:left;
 	width:33.33%;
 	height:100%;
 	.top{
 	    width:100%;
-	    height:50%;
+	    height:60px;
 	    position: relative;
+	    margin-top:10%;
 	    img{
 	    height:85%;
         position: absolute;
@@ -77,12 +77,13 @@
 	color:#464d5c;
 	}
 }
-.firstcenters{
+.firstcenterstwo{
     float: left;
     width:33.333%;
     height:100%;
-    padding:25px 20px;
-    overflow-y: scroll;
+    //padding:25px 20px;
+    padding:20px 20px;
+    line-height: 30px;
     .firstcenterli{
         width:100%;
         font-family: "微软雅黑";
@@ -93,12 +94,13 @@
     }
 }
 .firstcenters::-webkit-scrollbar {display:none}
-.firstrights{
+.firstrightstwo{
     float: left;
     width:33.333%;
     height:100%;
-    padding:25px 20px;
-    overflow-y: scroll;
+    //padding:25px 20px;
+    padding:20px 20px;
+    line-height: 30px;
     .firstrightli{
         width:100%;
         font-family: "微软雅黑";
@@ -246,6 +248,13 @@
        .textareaw{
            width:100%;
            text-align: left;
+            height: 100%;
+            border: 1px solid #d5d5d5;
+            font-size: 11px;
+            color: #464d5c;
+            outline: none;
+            padding: 5px;
+            cursor: pointer;
        }
     }
     
@@ -253,6 +262,7 @@
     .ltevidence{
         width:100%;
         overflow: hidden;
+        margin-top:20px;
        .ltevidencep{
            font-family: "微软雅黑";
            font-size: 14px;
@@ -294,6 +304,12 @@
            width:100%;
            height:138px;
            text-align: left;
+            border: 1px solid #d5d5d5;
+            font-size: 11px;
+            color: #464d5c;
+            outline: none;
+            padding: 5px;
+            cursor: pointer;
        }
     }
 }
