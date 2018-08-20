@@ -232,7 +232,8 @@
 
 /*--------电子卷宗查看页面-------*/
 .ele-pop-box{
-  //display: none;
+  display: none;
+  z-index: 10002!important;
   position: fixed;
   left: 15%;
   width: 70%;
@@ -467,4 +468,8 @@
 }
 .w-p100{
   width: 100%!important;
+}
+
+#addFlag{
+  z-index: 1000000;
 }
