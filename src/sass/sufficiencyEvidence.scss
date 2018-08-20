@@ -150,6 +150,16 @@
     border-bottom:none;
     margin-left:0;
 }
+.btn-sure-gradient{
+    border: 1px solid #2b93f5;
+    background: #edf5fc;
+    color: #53a2f6;
+}
+.btn-feedback-gradient{
+    border: 1px solid #d5d5d5;
+    background: #f6f5f5;
+    color: #464d5c;
+}
 .analysis{
     height:auto;
     .top{
@@ -238,13 +248,13 @@
                         padding-left:10px;
                     }
                 .nothing_bg{
-                    background: #e5e5e5;
+                    background: #f7f7f7;
                 }
                 .reinforce_bg{
-                    background: #addcfd;
+                    background: #e4f2fe;
                 }
                 .sap_bg{
-                    background: #fec581;
+                    background: #fdead3;
                 }
             }
             tr:first-of-type{
