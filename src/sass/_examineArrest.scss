@@ -216,3 +216,22 @@ input{
 label{
     font-weight: normal !important;
 }
+
+
+.slh {
+    display: inline-block;
+    width: 330px;
+    height:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    color:#464d5c;
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color:#464d5c;
+}
+.slh:hover {
+    text-decoration: none;
+    color:#464d5c;
+}
