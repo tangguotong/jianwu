@@ -9,9 +9,9 @@ ul{
     /*width: 320px;*/
     height: 100%;
     margin: 0 auto;
-    padding:15px 0;
+    /*padding:15px 0;*/
     font-size: 13px;
-    border-bottom: 1px solid #dadada;
+    /*border-bottom: 1px solid #dadada;*/
 }
 .schedule-hd{
     width: 40%;
@@ -20,9 +20,15 @@ ul{
     padding: 0 15px;
     margin-bottom: 20px;
 }
-.today{
+.schedule-hd >div{
+    font-size: 20px;
+}
+.schedule-hd .today{
     flex: 1;
     text-align: center;
+    font-size: 16px;
+    color: #464d5c;
+    line-height: 28px;
 }
 .ul-box{
     overflow: hidden;
@@ -32,6 +38,8 @@ ul{
     width: 14.28%;
     text-align: center;
     padding: 3px 0;
+    font-size: 13px;
+    font-weight: bold;
 }
 .other-month{
     color: #999999;
@@ -40,7 +48,9 @@ ul{
     visibility: hidden;
 }
 .current-month{
-    color: #333333;
+    color: #34495e;
+    font-weight:normal!important;
+    font-size: 14px!important;
 }
 .today-style{
     border-radius: 50%;

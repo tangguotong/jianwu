@@ -35,8 +35,9 @@
 }
 .simple-case-message{
   position: fixed;
+  z-index: 1000000;
   width: 100%;
-  top: 70px;
+  top: 60px;
   left: 0;
   padding: 15px;
   height: 62px;
@@ -159,13 +160,17 @@
     }
   }
   .check-group{
-   /* margin-right:-10px;
-    margin-left: -10px;*/
+
     .check-item{
       position: relative;
       border: $borderGrey;
       padding: 10px;
+      cursor: pointer;
       //margin: 0 10px;
+      &:hover{
+        box-shadow: 0 0 5px #868e9a;
+        //margin: -15px;
+      }
       .check-message{
         position: absolute;
         bottom: -40px;
