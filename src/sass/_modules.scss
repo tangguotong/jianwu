@@ -252,13 +252,14 @@
       background-color: #fff!important;
       border: 0;
       font-size:14px;
+      font-weight: normal!important;
       &:after{
         content: '';
         position: absolute;
         bottom: 0;
         left: 0;
         right:0;
-        height: 4px;
+        height: 2px;
         background-color: #2b93f5;
       }
     }

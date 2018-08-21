@@ -12,8 +12,7 @@
 
     <link rel="stylesheet" href="../../vonder/jqueryStep/css/jquery.step.css">
 	<link rel="stylesheet" href="../../vonder/iCheck/skins/square/blue.css">
-	<link rel="stylesheet" href="../../vonder/iCheck/skins/all.css">
-    <link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/common.css">
 
     <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
     <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -23,8 +22,8 @@
     <script src="../../vonder/iCheck/icheck.min.js"></script>
     <script src="../../js/common.js"></script>
 	
-    <script src="../../js/openCases/caseReport.js"></script>
-    <script src="../../js/examineArrest/examineArrest.js"></script>
+    <!--<script src="../../js/openCases/caseReport.js"></script>-->
+    <script src="../../js/examineArrest/arrestAssessment.js"></script>
 
 </head>
 <body>
@@ -314,20 +313,22 @@
 		    	</div>
 		    	<!--因素-->
 		    	<div class="factor">
-		    		<div class="factorbox">
+		    		<div class="factorbox factorbox-auto">
 			    		<div class="factorcontent">
 			    			<p class="title">应当批捕条件</p>
 			    			<p class="biaoti"><span class="num">1.</span>可能实施新的犯罪</p>
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>曾经故意伤害
+			    				<input type="radio" id="icheck" name="yaosuo1"/><span class="slh">曾经故意伤害</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全
+			    				<input type="radio" id="icheck" name="yaosuo1"/>
+								<span class="slh">他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全</span>
+
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>故意犯罪
+			    				<input type="radio" id="icheck" name="yaosuo1"/><span class="slh">曾经故意伤害</span>
 			    			</label>
 			    		</div>
 			    		
@@ -336,7 +337,7 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosu2"/>曾经故意伤害
+			    				<input type="radio" id="icheck" name="yaosu2"/><span class="slh">曾经故意伤害</span>
 			    			</label>
 			    		</div>
 			    		
@@ -345,7 +346,9 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosu3"/>犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为
+			    				<input type="radio" id="icheck" name="yaosu3"/>
+								<span class="slh">犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为</span>
+
 			    			</label>
 			    		</div>
 			    		
@@ -354,10 +357,10 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide" >
-			    				<input type="checkbox" id="icheck" name="yaosu4"/><a href="#" class="slh">聋哑人或者其他残疾人</a>
+			    				<input type="checkbox" id="icheck" name="yaosu4"/><span class="slh">聋哑人或者其他残疾人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="yaosu4"/><a href="#" class="slh">限制刑事责任能力的精神病人</a>
+			    				<input type="checkbox" id="icheck" name="yaosu4"/><span class="slh">限制刑事责任能力的精神病人</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -371,19 +374,19 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">未成年人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">未成年人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">盲人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">盲人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">聋哑人或者其他残疾人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">聋哑人或者其他残疾人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">限制刑事责任能力的精神病人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">限制刑事责任能力的精神病人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">六十五岁以上老人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">六十五岁以上老人</span>
 			    			</label>
 			    		</div>
 			    		
@@ -392,19 +395,19 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide" >
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">在校学生</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">在校学生</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">在本地长期有固定住所</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">在本地长期有固定住所</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">有稳定职业、收入</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">有稳定职业、收入</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">无稳定职业，流窜作案</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">无稳定职业，流窜作案</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">未成年人不具备监护帮就条件</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">未成年人不具备监护帮就条件</span>
 			    			</label>
 			    		</div>
 			    		
@@ -413,34 +416,34 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪预备</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪预备</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪未遂</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪未遂</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪中止</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪中止</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">从犯或者谢协同犯</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">从犯或者谢协同犯</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">自首</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">自首</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">有立功表现</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">有立功表现</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">防卫过当或者避险过当</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">防卫过当或者避险过当</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">初犯</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">初犯</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">主观上有悔改认错</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">主观上有悔改认错</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">有预谋的实施犯罪</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">有预谋的实施犯罪</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -454,34 +457,34 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃家庭成员近亲属财物</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃家庭成员近亲属财物</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">确因生活，学习，治病急需而签窃</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">确因生活，学习，治病急需而签窃</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">症款物已返还者被公安机关扣押</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">症款物已返还者被公安机关扣押</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">被害入明确丧示凉解</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">被害入明确丧示凉解</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">入户溘窃、携需凶器盗窃、窃一次且数在500元以下</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">入户溘窃、携需凶器盗窃、窃一次且数在500元以下</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">入户盗窃、帶凶盗窃、损窃一次且数额在100元以上</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">入户盗窃、帶凶盗窃、损窃一次且数额在100元以上</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃對物数1000元以上</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃對物数1000元以上</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">以破坏性手段盗窃造成公私对产损失</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">以破坏性手段盗窃造成公私对产损失</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">为实施吸毒、博等其他违法犯罪活动而盗窃</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">为实施吸毒、博等其他违法犯罪活动而盗窃</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -499,7 +502,7 @@
 		    		<span class="promptspan">根据《中华人民共和国刑事诉讼法》及有关司法解释，参照山西省高级人民法院制定的《人民法院量刑指导意见实施细则》，结合工作实际，制定本标准。</span>
 		    	</div>
 		    	<!--因素-->
-		    	<div class="factor">
+		    	<div class="factor factorbox-auto">
 		    		<div class="factorbox">
 			    		<div class="factorcontent">
 			    			<p class="title">应当批捕条件</p>
@@ -507,13 +510,15 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>曾经故意伤害
+			    				<input type="radio" id="icheck" name="yaosuo1"/>
+								<span  class="slh">曾经故意伤害</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全
+			    				<input type="radio" id="icheck" name="yaosuo1"/>
+								<span  class="slh">他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>故意犯罪
+			    				<input type="radio" id="icheck" name="yaosuo1"/><span  class="slh">故意犯罪</span>
 			    			</label>
 			    		</div>
 			    		
@@ -522,7 +527,7 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosu2"/>曾经故意伤害
+			    				<input type="radio" id="icheck" name="yaosu2"/><span  class="slh">曾经故意伤害</span>
 			    			</label>
 			    		</div>
 			    		
@@ -531,7 +536,7 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosu3"/>犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为
+			    				<input type="radio" id="icheck" name="yaosu3"/><span  class="slh">犯罪嫌疑人供述预谋实施危害国家安全</span>、公共安全或者社会秩序等违法犯罪行为
 			    			</label>
 			    		</div>
 			    		
@@ -540,10 +545,10 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide" >
-			    				<input type="checkbox" id="icheck" name="yaosu4"/><a href="#" class="slh">聋哑人或者其他残疾人</a>
+			    				<input type="checkbox" id="icheck" name="yaosu4"/><span class="slh">聋哑人或者其他残疾人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="yaosu4"/><a href="#" class="slh">限制刑事责任能力的精神病人</a>
+			    				<input type="checkbox" id="icheck" name="yaosu4"/><span class="slh">限制刑事责任能力的精神病人</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -557,19 +562,19 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">未成年人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span  class="slh">未成年人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">盲人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span  class="slh">盲人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">聋哑人或者其他残疾人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span  class="slh">聋哑人或者其他残疾人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">限制刑事责任能力的精神病人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span  class="slh">限制刑事责任能力的精神病人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">六十五岁以上老人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span  class="slh">六十五岁以上老人</span>
 			    			</label>
 			    		</div>
 			    		
@@ -578,19 +583,19 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide" >
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">在校学生</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span  class="slh">在校学生</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">在本地长期有固定住所</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span  class="slh">在本地长期有固定住所</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">有稳定职业、收入</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span  class="slh">有稳定职业、收入</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">无稳定职业，流窜作案</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span  class="slh">无稳定职业，流窜作案</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">未成年人不具备监护帮就条件</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span  class="slh">未成年人不具备监护帮就条件</span>
 			    			</label>
 			    		</div>
 			    		
@@ -599,34 +604,34 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪预备</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪预备</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪未遂</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪未遂</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪中止</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪中止</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">从犯或者谢协同犯</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">从犯或者谢协同犯</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">自首</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">自首</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">有立功表现</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">有立功表现</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">防卫过当或者避险过当</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">防卫过当或者避险过当</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">初犯</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">初犯</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">主观上有悔改认错</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">主观上有悔改认错</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">有预谋的实施犯罪</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">有预谋的实施犯罪</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -640,34 +645,34 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃家庭成员近亲属财物</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃家庭成员近亲属财物</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">确因生活，学习，治病急需而签窃</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">确因生活，学习，治病急需而签窃</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">症款物已返还者被公安机关扣押</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">症款物已返还者被公安机关扣押</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">被害入明确丧示凉解</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">被害入明确丧示凉解</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">入户溘窃、携需凶器盗窃、窃一次且数在500元以下</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">入户溘窃、携需凶器盗窃、窃一次且数在500元以下</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">入户盗窃、帶凶盗窃、损窃一次且数额在100元以上</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">入户盗窃、帶凶盗窃、损窃一次且数额在100元以上</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃對物数1000元以上</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃對物数1000元以上</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">以破坏性手段盗窃造成公私对产损失</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">以破坏性手段盗窃造成公私对产损失</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">为实施吸毒、博等其他违法犯罪活动而盗窃</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">为实施吸毒、博等其他违法犯罪活动而盗窃</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -685,7 +690,7 @@
 		    		<span class="promptspan">根据《中华人民共和国刑事诉讼法》及有关司法解释，参照山西省高级人民法院制定的《人民法院量刑指导意见实施细则》，结合工作实际，制定本标准。</span>
 		    	</div>
 		    	<!--因素-->
-		    	<div class="factor">
+		    	<div class="factor factorbox-auto">
 		    		<div class="factorbox">
 			    		<div class="factorcontent">
 			    			<p class="title">应当批捕条件</p>
@@ -693,13 +698,15 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide positionr">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>曾经故意伤害
+			    				<input type="radio" id="icheck" name="yaosuo1"/><span class="slh">曾经故意伤害</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全
+			    				<input type="radio" id="icheck" name="yaosuo1"/>
+								<span class="slh">他人证实犯罪嫌疑人有危害国家安全、公共安全或者社会秩序等违法犯罪行为他人证实犯罪嫌疑人有危害国家安全</span>
+
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosuo1"/>故意犯罪
+			    				<input type="radio" id="icheck" name="yaosuo1"/><span class="slh">故意犯罪</span>
 			    			</label>
 			    		</div>
 			    		
@@ -708,7 +715,7 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosu2"/>曾经故意伤害
+			    				<input type="radio" id="icheck" name="yaosu2"/><span class="slh">曾经故意伤害</span>
 			    			</label>
 			    		</div>
 			    		
@@ -717,7 +724,9 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="radio" id="icheck" name="yaosu3"/>犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为
+			    				<input type="radio" id="icheck" name="yaosu3"/>
+								<span class="slh">犯罪嫌疑人供述预谋实施危害国家安全、公共安全或者社会秩序等违法犯罪行为</span>
+
 			    			</label>
 			    		</div>
 			    		
@@ -726,10 +735,10 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide" >
-			    				<input type="checkbox" id="icheck" name="yaosu4"/><a href="#" class="slh">聋哑人或者其他残疾人</a>
+			    				<input type="checkbox" id="icheck" name="yaosu4"/><span class="slh">聋哑人或者其他残疾人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="yaosu4"/><a href="#" class="slh">限制刑事责任能力的精神病人</a>
+			    				<input type="checkbox" id="icheck" name="yaosu4"/><span class="slh">限制刑事责任能力的精神病人</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -743,19 +752,19 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">未成年人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">未成年人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">盲人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">盲人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">聋哑人或者其他残疾人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">聋哑人或者其他残疾人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">限制刑事责任能力的精神病人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">限制刑事责任能力的精神病人</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing1"/><a href="#" class="slh">六十五岁以上老人</a>
+			    				<input type="checkbox" id="icheck" name="gongxing1"/><span class="slh">六十五岁以上老人</span>
 			    			</label>
 			    		</div>
 			    		
@@ -764,19 +773,19 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide" >
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">在校学生</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">在校学生</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">在本地长期有固定住所</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">在本地长期有固定住所</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">有稳定职业、收入</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">有稳定职业、收入</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">无稳定职业，流窜作案</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">无稳定职业，流窜作案</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing2"/><a href="#" class="slh">未成年人不具备监护帮就条件</a>
+			    				<input type="checkbox" id="icheck" name="gongxing2"/><span class="slh">未成年人不具备监护帮就条件</span>
 			    			</label>
 			    		</div>
 			    		
@@ -785,34 +794,34 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪预备</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪预备</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪未遂</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪未遂</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">犯罪中止</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">犯罪中止</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">从犯或者谢协同犯</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">从犯或者谢协同犯</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">自首</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">自首</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">有立功表现</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">有立功表现</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">防卫过当或者避险过当</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">防卫过当或者避险过当</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">初犯</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">初犯</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">主观上有悔改认错</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">主观上有悔改认错</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gongxing3"/><a href="#" class="slh">有预谋的实施犯罪</a>
+			    				<input type="checkbox" id="icheck" name="gongxing3"/><span class="slh">有预谋的实施犯罪</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -826,34 +835,34 @@
 			    		</div>
 			    		<div class="sentencingDiv">
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃家庭成员近亲属财物</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃家庭成员近亲属财物</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">确因生活，学习，治病急需而签窃</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">确因生活，学习，治病急需而签窃</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">症款物已返还者被公安机关扣押</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">症款物已返还者被公安机关扣押</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">被害入明确丧示凉解</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">被害入明确丧示凉解</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">入户溘窃、携需凶器盗窃、窃一次且数在500元以下</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">入户溘窃、携需凶器盗窃、窃一次且数在500元以下</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">入户盗窃、帶凶盗窃、损窃一次且数额在100元以上</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">入户盗窃、帶凶盗窃、损窃一次且数额在100元以上</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃對物数1000元以上</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃對物数1000元以上</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">以破坏性手段盗窃造成公私对产损失</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">以破坏性手段盗窃造成公私对产损失</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">盗窃残疾人、孤京毫人，成年人或者用于紧急、治病的款物</span>
 			    			</label>
 			    			<label for="" class="sentencingSlide">
-			    				<input type="checkbox" id="icheck" name="gexing1"/><a href="#" class="slh">为实施吸毒、博等其他违法犯罪活动而盗窃</a>
+			    				<input type="checkbox" id="icheck" name="gexing1"/><span class="slh">为实施吸毒、博等其他违法犯罪活动而盗窃</span>
 			    			</label>
 			    		</div>
 		    		</div>
@@ -875,13 +884,7 @@
 </div>
 
 <script>
-	jQuery(document).ready(function($) {
-	        $('input').iCheck({
-	            checkboxClass: 'icheckbox_minimal-blue',
-	            radioClass: 'iradio_minimal-blue',
-	            increaseArea: '20%'
-	        });
-      })
+
 </script>
 </body>
 </html>
