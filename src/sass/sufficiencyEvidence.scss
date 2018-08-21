@@ -46,12 +46,12 @@
 .firstContent{
     width:100%;
     height:auto;
-    
+    min-height: 78px;
+    overflow-x: didden;
     border:2px solid #f3f4f7;
     .first-content-ul{
-    width:100%;
-    height:100%;
-    overflow:hidden;
+//  width:auto;
+        overflow: hidden;
         .first-content-li{
         width:33.333%;
         height:auto;
@@ -92,8 +92,8 @@
     float: left;
     width:33.333%;
     height:auto;
+    min-height: 78px;
     padding:25px 20px;
-    overflow-y: scroll;
     .firstCenterli{
         width:100%;
         font-family: "微软雅黑";
@@ -109,7 +109,6 @@
     width:33.333%;
     height:auto;
     padding:25px 20px;
-    overflow-y: scroll;
     .firstRightli{
         width:100%;
         font-family: "微软雅黑";
