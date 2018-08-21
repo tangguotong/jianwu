@@ -10,5 +10,12 @@ $(function () {
       });
     $(".jzevidence .textareaw").blur(function(){
            $(this).parents().find(".contrast").fadeOut();
+    });
+    
+     $(".ltevidence .textareaws").focus(function(){
+           $(this).siblings().find(".contrasts").fadeIn();
+      });
+    $(".ltevidence .textareaws").blur(function(){
+           $(this).parents().find(".contrasts").fadeOut();
      });
 });
