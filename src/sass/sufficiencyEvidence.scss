@@ -97,13 +97,15 @@
     margin-left: 33.333%;
     float: left;
     width:33.333%;
-    height:auto;
+    height:100%;
     min-height: 78px;
     padding:25px 20px;
     .firstCenterli{
         width:100%;
         font-family: "微软雅黑";
+        height: 22px;
         font-size: 13px;
+        vertical-align: middle;
         color:#464d5c;
         list-style: disc;
         margin-bottom: 6px;
@@ -113,11 +115,13 @@
 .firstRight{
     float: left;
     width:33.333%;
-    height:auto;
+    height:100%;
     padding:25px 20px;
     .firstRightli{
         width:100%;
         font-family: "微软雅黑";
+        height: 22px;
+        vertical-align: middle;
         font-size: 13px;
         color:#464d5c;
         margin-bottom: 6px;
