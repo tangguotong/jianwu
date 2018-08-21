@@ -1,6 +1,9 @@
 *{
     list-style:none;
 }
+.font-grey{
+    color:#999;
+}
 /*按钮*/
 .next{
     border:none;
@@ -26,7 +29,6 @@
 //  display: table-cell;
     vertical-align: left;
     font-size: 16px;
-    color: #464d5c;
     font-weight: bold;
   }
   .right{
@@ -38,9 +40,13 @@
       cursor: pointer;
   }
 }
-.first-content{
+.pl5{
+    padding-left: 5px;
+}
+.firstContent{
     width:100%;
-    height:120px;
+    height:auto;
+    
     border:2px solid #f3f4f7;
     .first-content-ul{
     width:100%;
@@ -48,8 +54,9 @@
     overflow:hidden;
         .first-content-li{
         width:33.333%;
-        height:100%;
+        height:auto;
         float:left;
+        position: relative;
         border-right:1px solid #f3f4f7;
         }
     }
@@ -57,30 +64,34 @@
 .firstLeft{
     float:left;
     width:33.33%;
-    height:100%;
+    height:auto;
+    position: absolute;
+    top:50%;
+    left:0;right:0;
+    margin-top:-39px;
     .top{
-        width:100%;
-        height:50%;
-        position: relative;
+        margin:auto;
+        width:80%;
+        height:auto;
+        text-align: center;
         img{
-        height:85%;
-        position: absolute;
-        top:20px;
-        left:40%;
+            text-align: center;
+            wdith:48px;
+            height:58px;
+            display: block;
+            margin:auto;
+        }
+        span{
+            display: block;
         }
     }
-    .username{
-    font-family: "微软雅黑";
-    font-size: 16px;
-    text-align: center;
-    line-height: 70px;
-    color:#464d5c;
-    }
 }
+
 .firstCenter{
+    margin-left: 33.333%;
     float: left;
     width:33.333%;
-    height:100%;
+    height:auto;
     padding:25px 20px;
     overflow-y: scroll;
     .firstCenterli{
@@ -96,7 +107,7 @@
 .firstRight{
     float: left;
     width:33.333%;
-    height:100%;
+    height:auto;
     padding:25px 20px;
     overflow-y: scroll;
     .firstRightli{
@@ -138,8 +149,9 @@
 .pl0{
     padding-left:0;
 }
-#hist_cases{
-    color:#fd8b04;
+.hist_cases{
+    color:#fd8b04!important;
+    padding:0 5px;
     font-size: 13px;
 }
 .tab-content-all{
@@ -187,12 +199,13 @@
     .bottom{
         height:auto;
         padding-top:10px;
+        padding-bottom:16px;
         ul{
             :first-child{
                  color:#464d5c;
             }
             li{
-                padding:10px 20px;
+                padding:9px 20px;
                 text-align:left;
                 font-size: 12px;
                 color:#fd942b;
@@ -214,38 +227,59 @@
 .matrix{
     table{
         width:100%;
+        table-layout: fixed;
         thead{
-            th{
+            tr{
+                th{
                 padding:15px 0;
+                height:42px;
                 text-align: center;
-               border-bottom:1px solid #ddd!important; 
-               width:11%
+                border-bottom:1px solid #ddd!important; 
+                font-weight: normal;
+                border-top:1px solid #e7e9f0;
+                }
+                :first-child{ 
+                    width:142px;
+                    text-align: left;  
+                    border-right:1px solid #eee;
+                    padding-left:10px;
+                }
             }
-            :first-child{ 
-                text-align: left;  
-                border-right:1px solid #eee;
-                padding-left:10px;
-            }
+            
         
         }
         tbody{
             tr{
                 td{
                     text-align: center;
-                    width:11%;
+                    width:142px;
                     height:42px;
                     padding:5px;
+                    font-size: 12px;
                     >div{
                         width:100%;height:100%;
-                        min-height: 42px;
+                        padding:0 5px;
+                        height: 42px;
                         line-height: 42px;
+                        display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
                     }
                 }
                 td:first-of-type{
+                        
+                        width:142px;
+                        font-size: 13px;
                         font-weight: bold;
                         border-right:1px solid #eee;
                         text-align: left;
                         padding-left:10px;
+                        div{
+                            line-height: 20px;
+                            display:block;white-space:normal; overflow:visible; text-overflow:clip;
+                        }
+                    }
+                td:first-of-type
+                .fs15{
+                        font-size: 15px;
                     }
                 .nothing_bg{
                     background: #f7f7f7;
@@ -255,6 +289,9 @@
                 }
                 .sap_bg{
                     background: #fdead3;
+                    :hover{
+                        display: initial
+                    }
                 }
             }
             tr:first-of-type{

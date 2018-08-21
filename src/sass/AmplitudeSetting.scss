@@ -7,6 +7,15 @@
 .irs-max{
     display: none!important;
 }
+.irs-from, .irs-to, .irs-single {
+    color: #464d5c;
+    font-size: 10px;
+    line-height: 1.333;
+    text-shadow: none;
+    padding: 1px 5px;
+    background: none;
+    border-radius: 3px;
+}
 .panel-titles{
     position: relative;
     font-size: 14px;
