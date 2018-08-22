@@ -70,4 +70,103 @@ function showNext() {
     });
 }
 
+function showEleFilePop() {
+    //计算电子卷宗的高和top值
+    var top = ($(window).height()-$(window).height()*0.8)/2 +35;
+    var height = $(window).height()*0.8;
+    $('.ele-pop-box').css({
+        "height":height,
+        "top":top
+    });
+    $('.ele-pop-box').fadeIn();
+    $('body').addClass('modal-open');
+
+    //计算高度
+    $('.panel-ele >.panel-body').height(height - 78-30);
+
+    //声明图片对象
+    var imgobj = refreshImgObj();
+    //全屏
+    $('.img-tools span').eq(0).on('click',function () {
+       imgobj.fullScreen();
+    });
+    //放大
+    $('.img-tools >span').eq(1).on('click',function () {
+        imgobj.imgLarge();
+    });
+    //缩小
+    $('.img-tools >span').eq(2).on('click',function () {
+        imgobj.imgSmall();
+    });
+    //旋转
+    $('.img-tools >span').eq(3).on('click',function () {
+       imgobj.imgRotate();
+    });
+    //文字识别的点击事件
+    $('.img-tools >span').eq(-1).on('click',function () {
+        $('.recognition').show();
+        setTimeout(function () {
+            $('.recognition').hide();
+            $('.img-tools span').eq(-1).parents('.show-text-img').find('.carousel-inner .active img').hide();
+            $('.img-tools span').eq(-1).parents('.show-text-img').find('.carousel-inner .active .text-box').show();
+        },500);
+    });
+    //退出
+    $('.exit-img').on('click',function () {
+        $('.ele-pop-box').fadeOut();
+        $('body').removeClass('modal-open');
+    });
+    //轮播图切换的时候
+    $('#myCarousel').on('slide.bs.carousel', function () {
+        imgobj.init();//初始化img对象
+    });
+    $('#myCarousel').on('slid.bs.carousel', function () {
+        imgobj = refreshImgObj();//从新选择对象
+    });
+}
+function refreshImgObj() {
+    return {
+        img:$('.show-text-img').find('.item.active img'),
+        current:0,
+        changeSize:20,
+        init:function () {
+            //放大缩小
+            this.img.height("100%");
+            this.img.width("auto");
+            this.img.get(0).style.transform = 'rotate(0deg)';//旋转取消
+        },
+        fullScreen:function () {
+            this.init();//初始化
+            var elem = this.img.parents('.active').get(0);
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();		//IE浏览器
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();			//火狐浏览器
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();			//谷歌浏览器
+
+            }
+        },
+        imgLarge:function () {
+            this.doChangeSize(this.changeSize);
+        },
+        imgSmall:function () {
+            this.doChangeSize(-(this.changeSize));
+        },
+        imgRotate:function () {
+            this.current = (this.current+90)%360;
+            this.img.get(0).style.transform = 'rotate('+this.current+'deg)';
+        },
+        doChangeSize:function (size) {
+            var oWidth = this.img.width(); //取得图片的实际宽度
+            var oHeight = this.img.height(); //取得图片的实际高度
+            this.img.width(oWidth + size);
+            this.img.height(oHeight + size / oWidth * oHeight);
+        },
+        //拖拽实现图片位置改变
+
+    }
+}
+
+
 

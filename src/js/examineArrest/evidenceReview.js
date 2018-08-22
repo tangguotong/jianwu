@@ -11,19 +11,7 @@ $(function () {
     });
     //电子卷宗按钮点击事件
     $('#eleFile').on('click',function () {
-        //计算电子卷宗的高和top值
-        var top = ($(window).height()-$(window).height()*0.8)/2 +35;
-        var height = $(window).height()*0.8;
-        $('.ele-pop-box').css({
-            "height":$(window).height()*0.8,
-            "top":top
-        });
-        $('.ele-pop-box').fadeIn();
-
-        //退出按钮点击事件
-        $('.exit-img').on('click',function () {
-            $('.ele-pop-box').fadeOut();
-        });
+        showEleFilePop();
     });
     setleftFileShowHide();//左侧文件夹图标的切换
 //        bootstrapTable
