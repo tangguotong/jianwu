@@ -86,6 +86,12 @@ function showEleFilePop() {
 
     //声明图片对象
     var imgobj = refreshImgObj();
+    //双击取消缩放和旋转
+    $('.show-text-img').on('dblclick','.item',function () {
+        $(this).find('img').height("100%");
+        $(this).find('img').width("auto");
+        $(this).find('img').get(0).style.transform = 'rotate(0deg)';//旋转取消
+    });
     //全屏
     $('.img-tools span').eq(0).on('click',function () {
        imgobj.fullScreen();
@@ -116,6 +122,7 @@ function showEleFilePop() {
         $('.ele-pop-box').fadeOut();
         $('body').removeClass('modal-open');
     });
+
     //轮播图切换的时候
     $('#myCarousel').on('slide.bs.carousel', function () {
         imgobj.init();//初始化img对象
@@ -130,7 +137,7 @@ function refreshImgObj() {
         current:0,
         changeSize:20,
         init:function () {
-            //放大缩小
+            //放大缩小取消
             this.img.height("100%");
             this.img.width("auto");
             this.img.get(0).style.transform = 'rotate(0deg)';//旋转取消
@@ -163,6 +170,9 @@ function refreshImgObj() {
             this.img.width(oWidth + size);
             this.img.height(oHeight + size / oWidth * oHeight);
         },
+        dobuleClick:function () {
+            this.init();
+        }
         //拖拽实现图片位置改变
 
     }
