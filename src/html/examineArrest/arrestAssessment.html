@@ -187,7 +187,7 @@
                 </div>
                 <div class="message-btn pull-right">
                     <button class="btn btn-orange-gradient mr20">下一步</button>
-                    <button class="btn btn-blue-gradient">电子卷宗</button>
+                    <button class="btn btn-blue-gradient" id="eleFile">电子卷宗</button>
                 </div>
             </div>
             <div class="step" id="step"></div>
@@ -227,6 +227,7 @@
             				</div>
             			</div>
             		</li>
+            		
             		<li class="first-content-li">
             			<div class="firstleft">
             				<div class="top">
@@ -883,8 +884,280 @@
     </footer>
 </div>
 
-<script>
 
-</script>
+
+<!--电子卷宗查看页面start-->
+<div class="ele-pop-box">
+    <img class="exit-img" src="../../images/examineArrest/ele-pop-exit.png" alt="">
+    <div class="row heightP100">
+        <div class="col-md-8 heightP100">
+            <div class="show-text-img">
+                <div class="img-area">
+                    <div class="recognition">
+                        <span>识别中..</span>
+                    </div>
+                    <img src="../../images/openCases/file-img.png" alt="">
+                </div>
+                <div class="img-tools">
+                    <span class="" title="全屏">
+                        <i class="fa fa-arrows-alt"></i>
+                    </span>
+                    <span class="" title="放大">
+                        <i class="fa fa-search-plus"></i>
+                    </span>
+                    <span class="" title="缩小">
+                        <i class="fa fa-search-minus"></i>
+                    </span>
+                    <span class="" title="旋转">
+                        <i class="fa fa-repeat"></i>
+                    </span>
+                    <span class="" title="文字识别">
+                        <b>T</b> 文字识别
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 heightP100">
+            <div class="panel panel-ele heightP100">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        电子卷宗（2/53）
+                    </p>
+                    <p class="file-name">文件名 : <span class="fc-blue">20171227110917.png</span></p>
+                </div>
+                <div class="panel-body">
+                    <div class="file-control-box">
+                        <p>文书目录: <a href="#" class="active">证明案件来源</a> <i class="fa fa-angle-right"></i><a href="#"> 报案材料</a></p>
+                        <div class="small-file-box heightP100" style="padding-right: 2px">
+                            <div class="file-left scroll-style">
+                                <div class="panel-group" id="accordion2">
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#collapseOne2">
+
+                            <span class="title-icon-text">
+                                <i class="fa fa-caret-down"></i>
+                                <span class="file-icon"></span>
+                                <span class="text-title">证明案件来源</span>
+                            </span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne2" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <ul class="list-group">
+                                                    <li class=""><a href="#" class="list-group-item active"><i class="fa fa-file-text-o"></i>报案材料(4)</a></li>
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>移送案件材料(2)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse"
+                                                   href="#collapseTwo2">
+                            <span class="title-icon-text">
+                                <i class="fa fa-caret-down"></i>
+                                <span class="file-icon"></span>
+                                <span class="text-title">犯罪嫌疑人基本情况</span>
+                            </span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo2" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <ul class="list-group">
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>户籍证明(4)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse"
+                                                   href="#collapseThree2">
+                            <span class="title-icon-text">
+                                <i class="fa fa-caret-down"></i>
+                                <span class="file-icon"></span>
+                                <span class="text-title">犯罪嫌疑人供述或辩解</span>
+                            </span>
+
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree2" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <ul class="list-group">
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>犯罪嫌疑人亲笔供词(4)</a></li>
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>讯问笔录(4)</a></li>
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>辨认笔录(4)</a></li>
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>指认现场笔录(4)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse"
+                                                   href="#collapseFour2">
+
+                            <span class="title-icon-text">
+                                <i class="fa fa-caret-down"></i>
+                                <span class="file-icon"></span>
+                                <span class="text-title">被害人陈达材料</span>
+                            </span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour2" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <ul class="list-group">
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>询问笔录(4)</a></li>
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>讯问笔录(4)</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse"
+                                                   href="#collapseFive2">
+
+                            <span class="title-icon-text">
+                                <i class="fa fa-caret-down"></i>
+                                <span class="file-icon"></span>
+                                <span class="text-title">证人证言</span>
+                            </span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive2" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <ul class="list-group">
+                                                    <li class=""><a href="#" class="list-group-item"><i class="fa fa-file-text-o"></i>询问笔录(4)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="file-select-box">
+                        <div class="item">
+                            <div class="col-md-3">
+                                <label for="select1">关联主体</label>
+                            </div>
+                            <div class="col-md-9">
+                                <select name="" class="selectpicker w-p100" id="select1">
+                                    <option value="">于兰兰</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-md-3">
+                                <label for="select2">取得顺序</label>
+                            </div>
+                            <div class="col-md-9">
+                                <select name="" class="selectpicker w-p100" id="select2">
+                                    <option value="">第一次</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-md-3">
+                                <label for="select3">页码校正</label>
+                            </div>
+                            <div class="col-md-9">
+                                <select name="" class="selectpicker w-p100" id="select3">
+                                    <option value="">第一次</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reader-flag">
+                        <p class="clearfix">
+                            <span class="">阅卷标注:</span>
+                            <button class="pull-right btn btn-border-blue" data-toggle="modal" data-target="#addFlag">添加标注</button>
+                        </p>
+                        <div class="small-task scroll-style">
+                            <div class="task-box">
+                                <div class="task-left">
+                                    <p class="mb0">06-04</p>
+                                    <p>16：21</p>
+                                </div>
+                                <div class="task-right">
+                                    <p class="fc-gray-deep ">证据瑕疵点1没有犯罪嫌疑人签字 作案时间模糊</p>
+                                </div>
+                            </div>
+                            <div class="task-box">
+                                <div class="task-left">
+                                    <p class="mb0">06-04</p>
+                                    <p>16：21</p>
+                                </div>
+                                <div class="task-right">
+                                    <p class="fc-gray-deep">证据瑕疵点1没有犯罪嫌疑人签字 作案时间模糊  <i class="fa fa-close"></i></p>
+                                </div>
+                            </div>
+                            <div class="task-box">
+                                <div class="task-left">
+                                    <p class="mb0">06-04</p>
+                                    <p>16：21</p>
+                                </div>
+                                <div class="task-right">
+                                    <p class="fc-gray-deep ">证据瑕疵点1没有犯罪嫌疑人签字 作案时间模糊</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--电子卷宗查看页面end-->
+
+<!--添加阅卷标注弹窗-->
+<div class="modal fade modal-new" id="addFlag" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">添加阅卷标注</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal set-day-plan-pop" role="form">
+                    <div class="form-group mb35">
+                        <div class="col-sm-12">
+                            <textarea id="dayContent" class="area-box" placeholder="">长春公司自从2014年4月起,再生产狂犬疫苗过程中严重违反药品生产质量管理规范和国家药品标准的又关规定,其有的批次混入过期原液,不如实填写日期和批号</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class=" col-sm-6 text-right">
+                            <button type="submit" class="btn btn-blue-gradient btn-min-width">确 认</button>
+                        </div>
+                        <div class=" col-sm-6 text-left">
+                            <button type="submit" class="btn btn-grey btn-min-width" data-dismiss="modal">取 消</button>
+                        </div>
+                    </div>
+                </form>
+                ​
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--添加阅卷标注弹窗-->
+
 </body>
 </html>
