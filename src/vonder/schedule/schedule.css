@@ -100,11 +100,11 @@ ul{
     /*box-shadow: 2px 2px 15px 2px #e3e3e3;*/
 }
 .selected-style {
-    background: #2b93f5;
-    color: #ffffff;
+    background: #ffcb00;
+    color: #34495e;
 }
 .today-schedule .selected-style:after{
-    background-color: #fff;
+    background-color: #34495e;
 }
 #h3Ele{
     text-align: center;

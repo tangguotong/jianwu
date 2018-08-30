@@ -92,10 +92,13 @@
 }
 .delEdit{
   font-size: 12px;
-  margin: -11px -16px;
+  margin: -11px -18px;
   i{
     margin-right: 5px;
   }
+}
+.delEdit .del i{
+  margin-right:6px;
 }
 .delEdit >div{
   cursor: pointer;

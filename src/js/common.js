@@ -1,6 +1,7 @@
 $(function () {
     showHeaderMessage();//头部消息盒子的显示
     setMinHeight();
+    // showEleFilePop();
 
 
 
@@ -86,11 +87,23 @@ function showEleFilePop() {
 
     //声明图片对象
     var imgobj = refreshImgObj();
-    //双击取消缩放和旋转
+    //双击恢复原图
     $('.show-text-img').on('dblclick','.item',function () {
         $(this).find('img').height("100%");
         $(this).find('img').width("auto");
         $(this).find('img').get(0).style.transform = 'rotate(0deg)';//旋转取消
+    });
+    //滚动鼠标放大缩小
+    $('.show-text-img').on('mousewheel','.item',function (evt) {
+        // var evt =evt || window.event;
+        var code = evt.originalEvent.deltaY;
+        if(code<0){
+            //向前滚
+            imgobj.doChangeSize(10);
+        }else{
+            //向后滚
+            imgobj.doChangeSize(-10);
+        }
     });
     //全屏
     $('.img-tools span').eq(0).on('click',function () {
@@ -128,9 +141,12 @@ function showEleFilePop() {
         imgobj.init();//初始化img对象
     });
     $('#myCarousel').on('slid.bs.carousel', function () {
-        imgobj = refreshImgObj();//从新选择对象
+        imgobj = refreshImgObj();//从新选择对象;
     });
 }
+
+
+//img对象
 function refreshImgObj() {
     return {
         img:$('.show-text-img').find('.item.active img'),
@@ -170,10 +186,14 @@ function refreshImgObj() {
             this.img.width(oWidth + size);
             this.img.height(oHeight + size / oWidth * oHeight);
         },
-        dobuleClick:function () {
-            this.init();
+        imgDrag:function (x,y) {
+            var ox = this.img.width(); //取得图片的实际宽度
+            var oy = this.img.height(); //取得图片的实际高度
+            this.img.css({
+                "margin-top":y,
+                "margin-left":y,
+            });
         }
-        //拖拽实现图片位置改变
 
     }
 }

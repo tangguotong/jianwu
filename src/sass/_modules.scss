@@ -16,7 +16,8 @@
 .btn-border-blue:visited,
 .btn-border-blue:focus,
 .btn-border-blue:active{
-  color:#2b93f5 ;
+  color:#fff ;
+  background-color: #2b93f5;
 }
 
 .btn-min-width{
@@ -76,13 +77,13 @@
 
 .btn-orange-gradient{
   border:  1px solid transparent;
-  background: -webkit-gradient(linear, 0 0, 0 0, from(#f9822b), to(#f9b74c));
-  background: -webkit-linear-gradient(right, #f9822b, #f9b74c);
-  background: -moz-linear-gradient(right, #f9822b, #f9b74c);
-  background: -o-linear-gradient(right, #f9822b, #f9b74c);
-  background: -ms-linear-gradient(right, #f9822b, #f9b74c);
-  background: linear-gradient(right, #f9822b, #3e92ff);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = #f9822b, endColorstr = #f9b74c);
+  background: -webkit-gradient(linear, 0 0, 0 0, from(#f9b74c), to(#f9822b));
+  background: -webkit-linear-gradient(right, #f9b74c, #f9822b);
+  background: -moz-linear-gradient(right, #f9b74c, #f9822b);
+  background: -o-linear-gradient(right, #f9b74c, #f9822b);
+  background: -ms-linear-gradient(right, #f9b74c, #f9822b);
+  background: linear-gradient(right, #f9b74c, #f9822b);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = #f9b74c, endColorstr = #f9822b);
   color:#fff ;
 }
 .btn-orange-gradient:hover,
@@ -106,7 +107,7 @@
   background-color: #f4faff;
 }
 .panel-light-blue .panel-title{
-  font-size: 13px;
+  font-size: 14px;
   color: #3199fe;
 }
 
