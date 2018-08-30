@@ -57,7 +57,8 @@
     border:1px solid #ededed;
     .first-content-ul{
 //  width:auto;
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: hidden;
         .first-content-li{
         width:33.333%;
         height:auto;
@@ -93,10 +94,19 @@
     }
 }
 
+.w50{
+    width:50%;
+    h5{
+        padding:0;
+        margin:0;
+        display: inline;
+        color:#fd8b04;
+    }
+}
 .firstCenter{
     margin-left: 33.333%;
     float: left;
-    width:33.333%;
+    width:66.6%;
     height:100%;
     min-height: 78px;
     padding:25px 20px;
