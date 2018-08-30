@@ -120,6 +120,30 @@
         list-style: disc;
         margin-bottom: 6px;
     }
+    .non{
+        list-style: none;
+        margin-bottom: 20px;
+        .nonzileft{
+            width:50%;
+            float: left;
+            text-align: center;
+        }
+        .yellow{
+            font-family: "微软雅黑";
+            font-size: 20px;
+            color:#ff9600;
+        }
+        .blue{
+            font-family: "微软雅黑";
+            font-size: 20px;
+            color:#2b93f5;
+        }
+        .nonziright{
+            width:50%;
+            float: right;
+            text-align: center;
+        }
+    }
 }
 .firstCenter::-webkit-scrollbar {display:none}
 .firstRight{

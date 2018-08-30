@@ -24,6 +24,7 @@
 	
     <!--<script src="../../js/openCases/caseReport.js"></script>-->
     <script src="../../js/examineArrest/arrestAssessment.js"></script>
+    <script type="text/javascript" src="../../js/examineArrest/tab.js"></script>
 
 </head>
 <body>
@@ -193,89 +194,87 @@
             <div class="step" id="step"></div>
         </div>
 	<!--逮捕必要性评估开始-->
-        <div class="one-content">
+        <div class="one-content pb0">
             <div class="first-level-titles">
-                <span>逮捕必要性评估总览</span>
+                <span>充分性判断总览</span>
                 <div class="right" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                 	<img src="../../images/examineArrest/up.png" alt="" />
                 	收起面板
                 </div>
             </div>
-            <div class="first-content panel-collapse collapse in" id="collapseOne">
-            	<ul class="first-content-ul panel-body" style="padding:0;">
-            		<li class="first-content-li one">
-            			<div class="firstleft">
+            <div class="firstContent hideer marB18" id="collapseOne" style="overflow-x: auto;overflow-y: hidden;">
+            	<ul class="first-content-ul">
+            		<li class="first-content-li ">
+            			<div class="firstLeft">
             				<div class="top">
-            					<img class="user-headerm" src="../../images/examineArrest/user.png" alt="">
-            				</div>
-            				<div class="username">王晓斌</div>
-            			</div>
-            			<div class="firstcenter">
-            				<div class="top">
-            					--
-            				</div>
-            				<div class="bottom">
-            					评估分值
+            					<img src="../../images/examineArrest/user.png" alt="">
+            					<span>王晓斌</span>
             				</div>
             			</div>
-            			<div class="firstright">
-            				<div class="top">
-            					--
-            				</div>
-            				<div class="bottom">
-            					批捕建议
-            				</div>
-            			</div>
+            			<ul class="firstCenter">
+            				<li class="firstCenterli non"> 
+            					<span class="nonzileft">--</span>
+            					<span class="nonziright">--</span>
+            				</li>
+            				<li class="firstCenterli non">
+            					<span class="nonzileft">评估分值</span>
+            					<span class="nonziright">建议批捕</span>
+            				</li>
+            			</ul>
             		</li>
-            		
-            		<li class="first-content-li">
-            			<div class="firstleft">
+            		<li class="first-content-li ">
+            			<div class="firstLeft">
             				<div class="top">
-            					<img class="user-headerm" src="../../images/examineArrest/user.png" alt="">
-            				</div>
-            				<div class="username">李兰兰</div>
-            			</div>
-            			<div class="firstcenter">
-            				<div class="top sizeblue">
-            					65分
-            				</div>
-            				<div class="bottom">
-            					评估分值
+            					<img src="../../images/examineArrest/user.png" alt="">
+            					<span>王晓斌</span>
             				</div>
             			</div>
-            			<div class="firstright">
-            				<div class="top sizeyellow">
-            					建议批捕
-            				</div>
-            				<div class="bottom">
-            					批捕建议
-            				</div>
-            			</div>
+            			<ul class="firstCenter">
+            				<li class="firstCenterli non"> 
+            					<span class="nonzileft yellow">65分</span>
+            					<span class="nonziright yellow">建议批捕</span>
+            				</li>
+            				<li class="firstCenterli non">
+            					<span class="nonzileft">--</span>
+            					<span class="nonziright">--</span>
+            				</li>
+            			</ul>
             		</li>
-            		<li class="first-content-li">
-            			<div class="firstleft">
+            		<li class="first-content-li ">
+            			<div class="firstLeft">
             				<div class="top">
-            					<img class="user-headerm" src="../../images/examineArrest/user.png" alt="">
-            					
-            				</div>
-            				<div class="username">张鹏鹏</div>
-            			</div>
-            			<div class="firstcenter">
-            				<div class="top sizeblue">
-            					未评估
-            				</div>
-            				<div class="bottom">
-            					评估分值
+            					<img src="../../images/examineArrest/user.png" alt="">
+            					<span>王晓斌</span>
             				</div>
             			</div>
-            			<div class="firstright">
+            			<ul class="firstCenter">
+            				<li class="firstCenterli non"> 
+            					<span class="nonzileft blue">未评估</span>
+            					<span class="nonziright">--</span>
+            				</li>
+            				<li class="firstCenterli non">
+            					<span class="nonzileft">评估分值</span>
+            					<span class="nonziright">建议批捕</span>
+            				</li>
+            			</ul>
+            		</li>
+            		<li class="first-content-li ">
+            			<div class="firstLeft">
             				<div class="top">
-            					--
-            				</div>
-            				<div class="bottom">
-            					批捕建议
+            					<img src="../../images/examineArrest/user.png" alt="">
+            					<span>王晓斌</span>
             				</div>
             			</div>
+            			<ul class="firstCenter">
+            				<li class="firstCenterli non"> 
+            					<span class="nonzileft">--</span>
+            					<span class="nonziright blue">未评估</span>
+            				</li>
+            				<li class="firstCenterli non">
+            					<span class="nonzileft">评估分值</span>
+            					<span class="nonziright">建议批捕</span>
+            				</li>
+            			</ul>
             		</li>
             	</ul>
             </div>
@@ -1160,4 +1159,32 @@
 <!--添加阅卷标注弹窗-->
 
 </body>
+
+<script>
+	//控制充分性判断总览li高度
+	$(function(){
+		//控制充分性判断总览li高度
+		var liHeight_max=0;
+		var ul_width=0;
+		$( '.firstContent .first-content-ul > li').each(function(){
+			var h = $(this).height(); //获取每个元素的高度，（可根据需要使用outerHeight、innerHeight）
+			liHeight_max = h > liHeight_max ? h : liHeight_max;
+			ul_width += $(this).width()*$(this).length+$(this).length+1
+		})
+		$('first-content-li > .firstCenter').each(function(){
+			var H_fc=(liHeight_max-$(this).height())/2;
+		
+			
+		})
+		$('.firstContent .first-content-ul > li').height(liHeight_max);
+		console.log($('.firstContent .first-content-ul > li').height())
+		$('.firstContent .first-content-ul').height(liHeight_max)
+		var liWidth=($(".firstContent").width()-2)/3;
+		$('.firstContent .first-content-ul > li').eq(-1).css('border','none')
+		$(".first-content-li").width(liWidth).height(liHeight_max).find();
+		var liLegth=$(".first-content-li").length;
+		$(".first-content-ul").width(ul_width)
+		
+	})      
+</script>
 </html>
