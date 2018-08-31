@@ -1102,7 +1102,11 @@
 		$(".first-content-li").width(liWidth).height(liHeight_max).find();
 		var liLegth=$(".first-content-li").length;
 		$(".first-content-ul").width(ul_width)
-		
+		if($( '.firstContent .first-content-ul > li').length<=3){
+			$('.firstContent .first-content-ul').width($('.firstContent').width())
+			
+			
+		}
 	})      
 </script>
 </body>
