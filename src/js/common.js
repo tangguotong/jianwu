@@ -89,9 +89,7 @@ function showEleFilePop() {
     var imgobj = refreshImgObj();
     //双击恢复原图
     $('.show-text-img').on('dblclick','.item',function () {
-        $(this).find('img').height("100%");
-        $(this).find('img').width("auto");
-        $(this).find('img').get(0).style.transform = 'rotate(0deg)';//旋转取消
+        imgobj.init();
     });
     //滚动鼠标放大缩小
     $('.show-text-img').on('mousewheel','.item',function (evt) {
@@ -148,7 +146,7 @@ function showEleFilePop() {
 
 //img对象
 function refreshImgObj() {
-    return {
+    var obj = {
         img:$('.show-text-img').find('.item.active img'),
         current:0,
         changeSize:20,
@@ -157,6 +155,8 @@ function refreshImgObj() {
             this.img.height("100%");
             this.img.width("auto");
             this.img.get(0).style.transform = 'rotate(0deg)';//旋转取消
+            this.img.get(0).style.left = "0px";//拖放位置还原
+            this.img.get(0).style.top = "0px";
         },
         fullScreen:function () {
             this.init();//初始化
@@ -186,16 +186,15 @@ function refreshImgObj() {
             this.img.width(oWidth + size);
             this.img.height(oHeight + size / oWidth * oHeight);
         },
-        imgDrag:function (x,y) {
-            var ox = this.img.width(); //取得图片的实际宽度
-            var oy = this.img.height(); //取得图片的实际高度
-            this.img.css({
-                "margin-top":y,
-                "margin-left":y,
-            });
+        imgDrag:function () {
+            this.img.draggable();
+
         }
 
     }
+    //图片移动
+    obj.imgDrag();
+    return obj;
 }
 
 
