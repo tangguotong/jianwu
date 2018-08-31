@@ -244,7 +244,7 @@
             			</ul>
             			
             		</li>
-            		<li class="first-content-li">
+            		<!--<li class="first-content-li">
             			<div class="firstLeft">
             				<div class="top">
             					<img src="../../images/examineArrest/user.png" alt="">
@@ -331,7 +331,7 @@
             				</li>
             			</ul>
             			
-            		</li>
+            		</li>-->
             	</ul>
             </div>
         </div>
@@ -864,6 +864,9 @@
 		$(".first-content-li").width(liWidth).height(liHeight_max).find();
 		var liLegth=$(".first-content-li").length;
 		$(".first-content-ul").width(ul_width)
+		if($( '.firstContent .first-content-ul > li').length<3){
+			$('.firstContent .first-content-ul').width($('.firstContent')
+		}
 		
 	})      
 </script>
