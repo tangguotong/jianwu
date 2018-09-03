@@ -329,7 +329,7 @@
             <div class="right-discern heightP100 relative">
                 <div class="clearfix absolute">
                     <div class="btn-box">
-                        <button class="btn btn-blue-gradient">证据录入</button>
+                        <button class="btn btn-blue-gradient" data-toggle="modal" data-target="#savePop">证据录入</button>
                         <button class="btn btn-grey">移动到</button>
                         <button class="btn btn-grey">删除</button>
                         <button class="btn btn-grey">导出阅卷笔记</button>
@@ -746,6 +746,82 @@
     </div><!-- /.modal -->
 </div>
 <!--添加阅卷标注弹窗-->
+
+
+
+
+<!--证据录入弹窗start-->
+<div class="modal fade modal-new" id="savePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">证据录入</h4>
+            </div>
+            <div class="modal-body">
+                <div style="width: 80%;margin: 20px auto">
+                    <div class="file-upload text-center" id="fileUpload">
+                        <div class="">
+                                <span class="relative upload-title">
+                                    <i class="fa fa-cloud-upload"></i>
+                                    	拖拽或 <span class="fc-blue" id="load">点击上传</span>电子卷宗到此处
+                                    <input type="file" id="load_xls" name="file" style="display:none" onchange ="uploadFile()">
+                                </span>
+                            <p class="mb0 fc-gray-light">支持扩展名:zip</p>
+                        </div>
+                    </div>
+                    <div class="progress-box">
+                        <div class="progress-item">
+                            <p class="progress-title clearfix">
+                                <span class="pull-left"> <i class="fa fa-paperclip"></i>文档.docx</span>
+                                <span class="pull-right">
+                                    <i class="fa fa-remove"></i>
+                                </span>
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                    <span class="sr-only">40% 完成</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <p class="progress-title clearfix">
+                                <span class="pull-left"> <i class="fa fa-paperclip"></i>文档.docx</span>
+                                <span class="pull-right">
+                                    <i class="fa fa-remove"></i>
+                                </span>
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                    <span class="sr-only">40% 完成</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <p class="progress-title clearfix">
+                                <span class="pull-left"> <i class="fa fa-paperclip"></i>文档.docx</span>
+                                <span class="pull-right">
+                                    <i class="fa fa-remove"></i>
+                                </span>
+                            </p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                    <span class="sr-only">40% 完成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                ​
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--证据录入弹窗end-->
 </body>
 <script>
     $(function () {
