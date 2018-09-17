@@ -225,15 +225,6 @@
 .mb20{
     margin-bottom:20px;
 }
-/*//icheck
-.iradio_minimal-blue{
-    margin-right: 10px !important;
-    margin-bottom: 10px !important;
-}
-.icheckbox_minimal-blue{
-    margin-right: 10px !important;
-    margin-bottom: 10px !important;
-}*/
 input{
      vertical-align: middle !important;
 }
@@ -251,7 +242,6 @@ label{
     text-overflow: ellipsis;
     text-decoration: none;
     color:#464d5c;
-    //margin-top: 10px;
     font-size: 12px;
     font-family: "微软雅黑";
     color:#464d5c;
@@ -260,4 +250,67 @@ label{
 .slh:hover {
     text-decoration: none;
     color:#464d5c;
+}
+
+
+
+/*事实审定页面*/
+.text-center{
+    th{
+        text-align: center;
+        .th-inner{
+            text-align: center;
+        }
+    }
+}
+.icon-box{
+    i{
+        margin-right: 3px;
+        vertical-align: middle;
+    }
+}
+.fc-green{
+    color: #29d295;
+}
+.fc-orange{
+    color: #ff9600;
+}
+.select-grey{
+    //f6f5f5
+    //464d5c
+    .btn-default{
+        background-color: #f6f5f5;
+        color:#464d5c!important;
+        .icon-box{
+            color: #464d5c;
+            .icon-tupian{
+                font-size: 12px;
+            }
+        }
+    }
+}
+.w120{
+    width: 120px!important;
+}
+.base-width{
+    width: 92px!important;
+}
+.nav-page{
+    height: 32px;
+    font-size: 13px;
+    &>li{
+        color: #413835;
+        margin-right: 20px;
+        line-height: 32px;
+        cursor: pointer;
+        vertical-align: middle;
+        .iconfont {
+            font-weight: bold;
+            color: #413835;
+            vertical-align: middle;
+        }
+    }
+}
+.img-page-box{
+
 }
