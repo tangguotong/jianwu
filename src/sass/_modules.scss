@@ -74,11 +74,18 @@
   color:#fff ;
 }
 
-.select-orange{
-  .btn-default{
-    &:hover{
-
-    }
+.btn-lucency-blue{
+  &:hover,&:visited,&:focus,&:active,&{
+    border: 1px solid #2b93f5;
+    background: #e7f4fd;
+    color: #2b93f5;
+  }
+}
+.btn-lucency-orange{
+  &:hover,&:visited,&:focus,&:active,&{
+    border: 1px solid #feba37;
+    background: #fcf1db;
+    color: #ff9600;
   }
 }
 .btn-orange-gradient,.select-orange .btn-default{

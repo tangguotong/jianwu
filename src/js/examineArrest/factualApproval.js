@@ -1,5 +1,6 @@
 $(function () {
     showNext();
+    setImgContainerSize();
 
     var $step = $("#step");
     $step.step({
@@ -8,11 +9,25 @@ $(function () {
         title: ["案件受理", "证据审查", "事实认定", "证据充分性判断", "量刑计算","逮捕必要性评估","案案件监督"]
     });
 
-    $("input").iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
-        increaseArea: '20%' // optional
+    //罪行下拉框选择
+    $('.multiple-select').select2({"theme":"krajee","width":"100%","placeholder":"请选择罪行","language":"zh-CN"})
+
+    
+    $("#addEvi").on("click",function () {
+        $(".hidden-modal-box").fadeToggle();
+
     });
+    $("#closeU").on("click",function () {
+        $(".hidden-modal-box").fadeOut();
+    });
+    $(".evi-box li").on("click",function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active")
+        }else{
+            $(this).addClass("active")
+        }
+    });
+
     var examining = "<span class='icon-box'><i class='icon iconfont icon-yinzhang1 fc-green'></i>正在审查</span>";//正在审查
     var examined = "<span class='icon-box'><i class='icon iconfont icon-time-fill fc-orange'></i>已审查</span>";//已审查
     var noexamine = "<span class='icon-box'><i class='icon iconfont icon-hulve fc-gray-deep'></i>未审查</span>";//未审查
@@ -57,5 +72,13 @@ $(function () {
             ],
             data:data
         })
+    }
+
+    //计算图片容器的大小
+    function setImgContainerSize() {
+        var height = $(window).height() - 62 -55  -52 - 72;
+        $('.img-page-box').css('height', height);
+        $(".text-area-container").css('height', height - 75);
+
     }
 });

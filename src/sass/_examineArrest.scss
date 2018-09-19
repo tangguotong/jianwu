@@ -264,6 +264,7 @@ label{
     }
 }
 .icon-box{
+    cursor: pointer;
     i{
         margin-right: 3px;
         vertical-align: middle;
@@ -312,5 +313,206 @@ label{
     }
 }
 .img-page-box{
+  margin: 0 -25px -20px -25px;
+    //height: 635px;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    &>div{
+        float: left;
+        height: 100%;
+        overflow: hidden;
+        //height: 100%;
+    }
+  .img-page-box-left{
+    width: 27%;
+    padding: 10px;
+    background-color: #f6f5f5;
+      &>div{
+          height: 100%;
+          overflow: hidden;
+      }
+    img{
+      width: 100%;
+    }
+  }
+  .img-page-box-center{
+    width: 48%;
+      border-top: 1px solid #ededed;
+      border-right: 1px solid #ededed;
+      .panel{
+          -webkit-box-shadow: none;
+          box-shadow:none;
+          border: none;
+          .text-area-container{
+              position: relative;
+              padding-bottom: 55px;
+              //overflow: hidden;
+              .add-evi-box{
+                  position: absolute;
+                  width: 100%;
+                  bottom: 8px;
+              }
+             .box-group{
+                 height: 100%;
+                 //overflow: auto;
+                 padding-right: 10px;
+                 margin-right: -10px;
+             }
 
+          }
+      }
+      .panel-heading{
+          border-bottom: 1px solid #ededed;
+          //padding: 15px 15px 0px 15px;
+          padding-left: 0;
+          padding-right: 0;
+          .nav-my-style{
+              display: block;
+
+          }
+      }
+      .tab-pane{
+          padding: 15px 25px;
+          .icon-box{
+              font-size: 12px;
+              color: #2b93f5;
+          }
+          .icon-xiangji{
+              font-size: 20px;
+          }
+      }
+  }
+  .img-page-box-right{
+      width: 25%;
+      padding: 15px 25px;
+  }
+}
+.bold{
+    font-weight: bold!important;
+}
+.text-area-box{
+    .text-area-title{
+        margin-bottom: 8px;
+        .title-left{
+            float: left;
+            font-size: 13px;
+            color: #595e6b;
+        }
+        .title-right{
+            float: right;
+            font-size: 12px;
+            color: #868e9a;
+        }
+    }
+    .text-area-footer{
+        margin-top: 2px;
+        overflow: hidden;
+    }
+    .text-area-default{
+        color: #413835;
+    }
+
+}
+.text-area-default{
+     width: 100%;
+    height: 90px;
+    border: 1px solid #ededed;
+    font-size: 12px;
+    color: #464d5c;
+    outline: none;
+    padding: 5px;
+    cursor: pointer
+}
+.main-management-form-item{
+    height: 300px;
+    overflow: auto!important;
+    &::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 5px;
+        width: 4px;
+        //-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: #c0c0c0;
+    }
+    &::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        //-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        width: 10px;
+        background-color: transparent;
+    }
+    &:hover{
+        overflow: auto;
+    }
+    .crime-details-box{
+        width: 85%;
+        height: 100%;
+    }
+}
+.add-evi-box{
+//    添加证据项
+    position: relative;
+    .hidden-modal-box{
+        display: none;
+        position: absolute;
+        width: 60%;
+        left: 18%;
+        //display: none;
+        bottom: 50px;
+        .modal-body{
+            padding-right: 5px;
+            padding-bottom: 5px;
+        }
+        .evi-box{
+            //margin-right: -10px;
+            width: 100%;
+            li{
+                position: relative;
+                float: left;
+                padding: 3px 8px;
+                margin-bottom: 10px;
+                background-color: #f6f5f5;
+                font-size: 13px;
+                color: #464d5c;
+                border: 1px solid #d5d5d5;
+                margin-right: 10px;
+                cursor: pointer;
+                &.active:after{
+                    content: "";
+                    position: absolute;
+                    right: -5px;
+                    top:-5px;
+                    width: 15px;
+                    height: 15px;
+                    background:url("../images/examineArrest/add_edi_ok.png")no-repeat;
+                    -webkit-background-size: 15px 15px;
+                    background-size: 15px 15px;
+                }
+            }
+        }
+
+    }
+    .btn-grey{
+        border: 1px dashed #d5d5d5!important;
+        color: #2994f4!important;
+        padding: 10px 0;
+        .fa-plus{
+            margin-right: 5px;
+        }
+    }
+
+}
+.select-has-opt{
+//    成组的下拉框
+    .dropdown-header{
+        //padding-left: 20px;
+    }
+    .dropdown-menu>li>a{
+        font-size: 13px;
+        color: #464d5c;
+        &.opt{
+            //padding-left: 20px!important;
+        }
+    }
 }

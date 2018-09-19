@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="../../vonder/bootstrap-select-1.12.4/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="../../vonder/jqueryStep/css/jquery.step.css">
     <link rel="stylesheet" href="../../vonder/iCheck/skins/square/blue.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_799700_hxl6bi5c6ws.css">
+    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select-addl.min.css">
+    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select-krajee.min.css">
+    <link rel="stylesheet" href="../../vonder/jquerySelect/css/select.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_799700_9n2s6fc53q.css">
     <link rel="stylesheet" href="../../css/common.css">
 
 
@@ -161,7 +164,7 @@
                     <img src="../../images/openCases/su_icon.png" alt="">
                 </div>
                 <div class="message-details">
-                    <p class="case-message-title">王某某等3人盗窃案</p>
+                    <p class="case-message-title">王某某等3人盗窃案  <button class="btn btn-lucency-blue ml20" data-toggle="modal" data-target="#mainManagement">涉案主体管理</button></p>
                     <div class="message-classify">
                             <span>
                                 案件类型：<b>提请批准逮捕</b>
@@ -178,10 +181,16 @@
                     </div>
                 </div>
                 <div class="message-btn pull-right">
-                    <select name=""  class="selectpicker select-orange base-width mr20" title="程序流转">
-                        <option value="">12</option>
-                        <option value="">12</option>
-                        <option value="">12</option>
+                    <select name=""  class="selectpicker select-orange base-width mr20 select-has-opt" title="程序流转">
+                        <optgroup label="下一步">
+                            　　　　<option>事实审定</option>
+                            　　</optgroup>
+                        　　<optgroup label="流程回退">
+                        　　　　<option>证据审查</option>
+                        　　　　<option>量刑计算</option>
+                        　　　　<option>逮捕必要性评估</option>
+                        　　　　<option>案件监督</option>
+                        　　</optgroup>
                     </select>
                     <button class="btn btn-blue-gradient base-width">电子卷宗</button>
                 </div>
@@ -204,7 +213,7 @@
         <!--事实审定评估end-->
 
         <!--图片视图内容start-->
-        <div class="one-content">
+        <div id="imgContainer" class="one-content ">
             <div class="clearfix mb20">
                 <select name="" class="selectpicker select-grey w120 pull-left" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
                     <option value="">12</option>
@@ -227,726 +236,183 @@
                 </ul>
 
                 <div class="pull-right btn-box">
-                    <button class="btn btn-grey">补充</button>
-                    <button class="btn btn-grey">删除</button>
+                    <button class="btn btn-grey btn-min-width">补充</button>
+                    <button class="btn btn-grey btn-min-width">删除</button>
                 </div>
             </div>
-            <div class="img-page-box">
-                123
+            <div class="img-page-box clearfix">
+                <div class="img-page-box-left">
+                    <div>
+                        <img src="../../images/examineArrest/img_view.png" alt="">
+                    </div>
+                </div>
+                <div class="img-page-box-center">
+                    <div class="panel panel-has-blue-title border-no mb0" >
+                        <div class="panel-heading">
+                            <div class="tab-search clearfix">
+                                <ul id="" class="nav nav-tabs nav-my-style border-no">
+                                    <li class="active pl0">
+                                        <a href="#imgTab0" data-toggle="tab" aria-expanded="false">
+                                            作案时间
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#imgTab1" data-toggle="tab" aria-expanded="false">作案地点</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#imgTab2" data-toggle="tab" aria-expanded="true">作案手段</a>
+                                    </li>
+
+                                    <li class="">
+                                        <a href="#imgTab3" data-toggle="tab" aria-expanded="true">骗取财物</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body pd0">
+                            <div class="tab-content tab-content-all">
+                                <div class="tab-pane fade active in" id="imgTab0">
+                                    <div class="text-area-container">
+                                       <div class="box-group scroll-style">
+                                           <div class="text-area-box mb20">
+                                               <div class="text-area-title clearfix">
+                                                   <div class="title-left fs12 bold">起诉意见书</div>
+                                                   <div class="title-right">共三个候选项</div>
+                                               </div>
+                                               <div>
+                                                   <textarea name="" class="text-area-default" cols="30" rows="10">大约是2107年12月6日星期一，我刚下班。</textarea>
+                                                   <div class="text-area-footer">
+                                                       <div class="icon-box pull-left">
+                                                           <i class="icon iconfont icon-xiangji"></i>
+                                                           全文快照
+                                                       </div>
+                                                       <div class="pull-right">
+                                                           <button class="btn btn-lucency-blue btn-min-width mr10">印证</button>
+                                                           <button class="btn btn-lucency-orange btn-min-width ">矛盾</button>
+                                                       </div>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="text-area-box mb20">
+                                               <div class="text-area-title clearfix">
+                                                   <div class="title-left fs12 bold">询问笔录</div>
+                                                   <div class="title-right">共三个候选项</div>
+                                               </div>
+                                               <div>
+                                                   <textarea name="" class="text-area-default" cols="30" rows="10">大约是2107年12月6日星期一，我刚下班。</textarea>
+                                                   <div class="text-area-footer">
+                                                       <div class="icon-box pull-left">
+                                                           <i class="icon iconfont icon-xiangji"></i>
+                                                           全文快照
+                                                       </div>
+                                                       <div class="pull-right">
+                                                           <button class="btn btn-lucency-blue btn-min-width mr10">印证</button>
+                                                           <button class="btn btn-lucency-orange btn-min-width ">矛盾</button>
+                                                       </div>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="text-area-box mb20">
+                                               <div class="text-area-title clearfix">
+                                                   <div class="title-left fs12 bold">询问笔录</div>
+                                                   <div class="title-right">共三个候选项</div>
+                                               </div>
+                                               <div>
+                                                   <textarea name="" class="text-area-default" cols="30" rows="10">大约是2107年12月6日星期一，我刚下班。</textarea>
+                                                   <div class="text-area-footer">
+                                                       <div class="icon-box pull-left">
+                                                           <i class="icon iconfont icon-xiangji"></i>
+                                                           全文快照
+                                                       </div>
+                                                       <div class="pull-right">
+                                                           <button class="btn btn-lucency-blue btn-min-width mr10">印证</button>
+                                                           <button class="btn btn-lucency-orange btn-min-width ">矛盾</button>
+                                                       </div>
+
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                        <div class="add-evi-box">
+                                            <div class="hidden-modal-box modal-new">
+                                                <div class="modal-content ">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" id="closeU" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title">添加证据项</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <ul class="evi-box clearfix">
+                                                            <li class="active">物证</li>
+                                                            <li>书证</li>
+                                                            <li>试听资料</li>
+                                                            <li>证人证言</li>
+                                                            <li>勘验、检查、辨认笔录</li>
+                                                            <li>电子证据</li>
+                                                            <li>被害人陈述</li>
+                                                            <li>犯罪嫌疑人供述</li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-block btn-grey" id="addEvi"><i class="fa fa-plus"></i>添加证据项</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="imgTab1">
+                                    作案地点
+                                </div>
+                                <div class="tab-pane fade" id="imgTab2">
+                                    作案手段
+                                </div>
+                                <div class="tab-pane fade" id="imgTab3">
+                                    骗取财物
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-page-box-right">
+                    <p class="bold">候选项</p>
+
+                    <div class="text-area-box mb20">
+                        <div class="text-area-title clearfix">
+                            <div class="title-left fs12">候选项1</div>
+                            <div class="title-right">来源:起诉意见书</div>
+                        </div>
+                        <div>
+                            <textarea name="" class="text-area-default" cols="30" rows="10">大约是2107年12月6日星期一，我刚下班。</textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="text-area-box mb20">
+                        <div class="text-area-title clearfix">
+                            <div class="title-left fs12">候选项1</div>
+                            <div class="title-right">来源:起诉意见书</div>
+                        </div>
+                        <div>
+                            <textarea name="" class="text-area-default" cols="30" rows="10">与犯罪嫌疑人供述诈骗方式存在矛盾，两处关于领导的描述不一致桌子</textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="text-area-box mb20">
+                        <div class="text-area-title clearfix">
+                            <div class="title-left fs12">候选项1</div>
+                            <div class="title-right">来源:起诉意见书</div>
+                        </div>
+                        <div>
+                            <textarea name="" class="text-area-default" cols="30" rows="10">与犯罪嫌疑人供述诈骗方式存在矛盾，两处关于领导的描述不一致桌子</textarea>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-        <!--图片视图内容end-->
-        <!--选项卡开始-->
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active">
-                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                    <i class="fa fa-user"></i>
-                    王晓斌
-                </a>
-            </li>
-            <li role="presentation">
-                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
-                    <i class="fa fa-user"></i>
-                    王思聪
-                </a>
-            </li>
-            <li role="presentation">
-                <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
-                    <i class="fa fa-user"></i>
-                    王小二
-                </a>
-            </li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content pd0">
-            <div role="tabpanel" class="tab-pane active" id="home">
-                <div class="panel panel-has-blue-title" style="border-top: none;">
-                    <div class="panel-heading" style="border-bottom:1px solid #e7e9f0 ">
-                        <div class="tab-search clearfix">
-                            <ul id="myTab" class="nav nav-tabs pull-left nav-my-style lefts" style="border:none">
-                                <li class="active pl0">
-                                    <a href="#tab0" data-toggle="tab" aria-expanded="false">
-                                        盗窃罪
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#tab1" data-toggle="tab" aria-expanded="false">故意伤害罪</a>
-                                </li>
-                                <li class="">
-                                    <a href="#tab2" data-toggle="tab" aria-expanded="true">掩饰隐瞒犯罪所得</a>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel-body pd0">
-                        <div id="myTabContent" class="tab-content tab-content-all">
-                            <div class="tab-pane fade active in" id="tab0">
-                                <div class="tab0left">
-                                    <div class="ystitle">审阅要素</div>
-                                    <ul class="tab0ul">
-                                        <li class="tab0li activetwo">
-                                            <div class="circle activethree">1</div>
-                                            作案时间
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">2</div>
-                                            作案地点
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">3</div>
-                                            侵害物
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">4</div>
-                                            序号
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">5</div>
-                                            作案工具
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">6</div>
-                                            作案现场
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">7</div>
-                                            嫌疑目标
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">8</div>
-                                            销赃情况
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">9</div>
-                                            赃物下落
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tab0right">
-                                    <!--基准证据-->
-                                    <div class="jzevidence">
-                                        <div class="jsleft">
-                                            基准证据:
-                                        </div>
-                                        <div class="jsright">
-                                            <p class='jzevidencep'>嫌疑人供述</p>
-                                            <form action="" class="jsform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入嫌疑人供述">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</textarea>
-                                            </form>
-                                            <!--全文对照开始-->
-                                            <div class="contrast">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading tou">
-                                                        <h3 class="panel-title">全文对照</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <p class="lightp">大约是 <span class="light">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span></p>
-                                                        <p class="lightp">证据要素出自:
-                                                            <span class="wenjian">《犯罪嫌疑人供述》（第一次）</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--全文对照结束-->
-                                            <div class="jsrights">
-                                                <p class="jsp">基准证据:</p>
-                                                <form action="">
-                                                    <label for="" class="jslabel">
-                                                        <input type="radio" id="icheck" name="zj"/>有罪供述
-                                                    </label>
-                                                    <label for="" class="jslabel">
-                                                        <input type="radio" id="icheck" name="zj" checked/>无罪供述
-                                                    </label>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--证据链条-->
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            证据链条:
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>被害人陈述</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入被害人供述">017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-blueone">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                                <!--全文对照开始-->
-                                                <div class="contrasts">
-                                                    <div class="panel panel-default">
-                                                        <div class="panel-heading tou">
-                                                            <h3 class="panel-title">全文对照</h3>
-                                                        </div>
-                                                        <div class="panel-body">
-                                                            <p class="lightp">大约是 <span class="light">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span></p>
-                                                            <p class="lightp">证据要素出自:
-                                                                <span class="wenjian">《犯罪嫌疑人供述》（第一次）</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--全文对照结束-->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(一)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，我们一起回的家</textarea>
-                                            </form>
-                                            <!--全文对照开始-->
-                                            <div class="contrasts">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading tou">
-                                                        <h3 class="panel-title">全文对照</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <p class="lightp">大约是 <span class="light">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span></p>
-                                                        <p class="lightp">证据要素出自:
-                                                            <span class="wenjian">《犯罪嫌疑人供述》（第一次）</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--全文对照结束-->
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-blueone">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(二)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，一个东西丢失了</textarea>
-                                            </form>
-                                            <!--全文对照开始-->
-                                            <div class="contrasts">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading tou">
-                                                        <h3 class="panel-title">全文对照</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <p class="lightp">大约是 <span class="light">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span></p>
-                                                        <p class="lightp">证据要素出自:
-                                                            <span class="wenjian">《犯罪嫌疑人供述》（第一次）</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--全文对照结束-->
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright" style="position: relative;">
-
-                                            <p class='ltevidencep'>证人证言(三)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <!--全文对照开始-->
-                                            <div class="contrasts">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading tou">
-                                                        <h3 class="panel-title">全文对照</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <p class="lightp">大约是 <span class="light">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span></p>
-                                                        <p class="lightp">证据要素出自:
-                                                            <span class="wenjian">《犯罪嫌疑人供述》（第一次）</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--全文对照结束-->
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(三)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <!--全文对照开始-->
-                                            <div class="contrasts">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-heading tou">
-                                                        <h3 class="panel-title">全文对照</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <p class="lightp">大约是 <span class="light">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span></p>
-                                                        <p class="lightp">证据要素出自:
-                                                            <span class="wenjian">《犯罪嫌疑人供述》（第一次）</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--全文对照结束-->
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">绝对证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="tab1">
-                                故意伤害罪
-                            </div>
-                            <div class="tab-pane fade" id="tab2">
-                                掩饰隐瞒犯罪所得
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div role="tabpanel" class="tab-pane" id="profile">
-                <div class="panel panel-has-blue-title" style="border-top: none;">
-                    <div class="panel-heading" style="border-bottom:1px solid #e7e9f0 ">
-                        <div class="tab-search clearfix">
-                            <ul id="myTab" class="nav nav-tabs pull-left nav-my-style lefts" style="border:none">
-                                <li class="active pl0">
-                                    <a href="#tab0" data-toggle="tab" aria-expanded="false">
-                                        盗窃罪
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#tab1" data-toggle="tab" aria-expanded="false">故意伤害罪</a>
-                                </li>
-                                <li class="">
-                                    <a href="#tab2" data-toggle="tab" aria-expanded="true">掩饰隐瞒犯罪所得</a>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel-body pd0">
-                        <div id="myTabContent" class="tab-content tab-content-all">
-                            <div class="tab-pane fade active in" id="tab0">
-                                <div class="tab0left">
-                                    <div class="ystitle">审阅要素</div>
-                                    <ul class="tab0ul">
-                                        <li class="tab0li activetwo">
-                                            <div class="circle activethree">1</div>
-                                            作案时间
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">2</div>
-                                            作案地点
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">3</div>
-                                            侵害物
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">4</div>
-                                            序号
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">5</div>
-                                            作案工具
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">6</div>
-                                            作案现场
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">7</div>
-                                            嫌疑目标
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">8</div>
-                                            销赃情况
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">9</div>
-                                            赃物下落
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tab0right">
-                                    <!--基准证据-->
-                                    <div class="jzevidence">
-                                        <div class="jsleft">
-                                            基准证据:
-                                        </div>
-                                        <div class="jsright">
-                                            <p class='jzevidencep'>嫌疑人供述</p>
-                                            <form action="" class="jsform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入嫌疑人供述">大约是2107年12月6日星期一，我刚下班。</textarea>
-                                            </form>
-                                            <div class="jsrights">
-                                                <p class="jsp">基准证据:</p>
-                                                <form action="">
-                                                    <label for="" class="jslabel">
-                                                        <input type="radio" id="icheck" name="zj"/>有罪供述
-                                                    </label>
-                                                    <label for="" class="jslabel">
-                                                        <input type="radio" id="icheck" name="zj" checked/>无罪供述
-                                                    </label>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--证据链条-->
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            证据链条:
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>被害人陈述</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入被害人供述">017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-blueone">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(一)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，我们一起回的家</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-blueone">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(二)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，一个东西丢失了</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright" style="position: relative;">
-
-                                            <p class='ltevidencep'>证人证言(三)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(三)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">绝对证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="tab1">
-                                故意伤害罪
-                            </div>
-                            <div class="tab-pane fade" id="tab2">
-                                掩饰隐瞒犯罪所得
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div role="tabpanel" class="tab-pane" id="messages">
-                <div class="panel panel-has-blue-title" style="border-top: none;">
-                    <div class="panel-heading" style="border-bottom:1px solid #e7e9f0 ">
-                        <div class="tab-search clearfix">
-                            <ul id="myTab" class="nav nav-tabs pull-left nav-my-style lefts" style="border:none">
-                                <li class="active pl0">
-                                    <a href="#tab0" data-toggle="tab" aria-expanded="false">
-                                        盗窃罪
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#tab1" data-toggle="tab" aria-expanded="false">故意伤害罪</a>
-                                </li>
-                                <li class="">
-                                    <a href="#tab2" data-toggle="tab" aria-expanded="true">掩饰隐瞒犯罪所得</a>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="panel-body pd0">
-                        <div id="myTabContent" class="tab-content tab-content-all">
-                            <div class="tab-pane fade active in" id="tab0">
-                                <div class="tab0left">
-                                    <div class="ystitle">审阅要素</div>
-                                    <ul class="tab0ul">
-                                        <li class="tab0li activetwo">
-                                            <div class="circle activethree">1</div>
-                                            作案时间
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">2</div>
-                                            作案地点
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">3</div>
-                                            侵害物
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">4</div>
-                                            序号
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">5</div>
-                                            作案工具
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">6</div>
-                                            作案现场
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">7</div>
-                                            嫌疑目标
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">8</div>
-                                            销赃情况
-                                        </li>
-                                        <li class="tab0li">
-                                            <div class="circle">9</div>
-                                            赃物下落
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="tab0right">
-                                    <!--基准证据-->
-                                    <div class="jzevidence">
-                                        <div class="jsleft">
-                                            基准证据:
-                                        </div>
-                                        <div class="jsright">
-                                            <p class='jzevidencep'>嫌疑人供述</p>
-                                            <form action="" class="jsform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaw" placeholder="请输入嫌疑人供述">大约是2107年12月6日星期一，我刚下班。</textarea>
-                                            </form>
-                                            <div class="jsrights">
-                                                <p class="jsp">基准证据:</p>
-                                                <form action="">
-                                                    <label for="" class="jslabel">
-                                                        <input type="radio" id="icheck" name="zj"/>有罪供述
-                                                    </label>
-                                                    <label for="" class="jslabel">
-                                                        <input type="radio" id="icheck" name="zj" checked/>无罪供述
-                                                    </label>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--证据链条-->
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            证据链条:
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>被害人陈述</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入被害人供述">017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-blueone">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(一)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，我们一起回的家</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-blueone">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(二)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，一个东西丢失了</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright" style="position: relative;">
-
-                                            <p class='ltevidencep'>证人证言(三)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">补强证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="ltevidence">
-                                        <div class="ltleft">
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        </div>
-
-                                        <div class="ltright">
-                                            <p class='ltevidencep'>证人证言(三)</p>
-                                            <form action="" class="ltform">
-                                                <textarea name="jzzj" rows="5" cols="" class="textareaws" placeholder="请输入证人证言">2017年12月6日晚上，趁xx不注意，拿了放在桌子上的一部白色苹果手机和一对戒指</textarea>
-                                            </form>
-                                            <div class="ltrights">
-                                                <form action="">
-                                                    <button class="btn btn-blue-bluetwo">绝对证明</button>
-                                                    <button class="btn btn-blue-yellowone">削弱证明</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="tab1">
-                                故意伤害罪
-                            </div>
-                            <div class="tab-pane fade" id="tab2">
-                                掩饰隐瞒犯罪所得
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!--选项卡结束-->
     </div>
     <!--内容end-->
 
@@ -954,8 +420,139 @@
         <p>Copyright 2018 中科点击（北京）技术有限公司提供技术支持</p>
     </footer>
 </div>
-
 </body>
+<!--涉案主体管理弹窗start-->
+<div class="modal fade modal-new" id="mainManagement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">涉案主体管理</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-horizontal form-base-info">
+                    <div class="main-management-form-item scroll-style">
+                        <div class="crime-details-box ">
+                            <div class="spy-type-box more-people">
+                                <div class="opera">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="criminalPerson1" class="col-sm-2 control-label require">
+                                            <span>嫌疑人</span>
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <input type="text" class="base-info-input" id="criminalPerson1" placeholder="犯罪嫌疑人">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <select  title="请选择罪行" class="width-p-100 multiple-select"  multiple size="4">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                    <!-- <select name="" title="请选择罪行" class="selectpicker width-p-100" multiple="multiple">
+                                                         <option value="1">2</option>
+                                                         <option value="1">2</option>
+                                                         <option value="1">2</option>
+                                                     </select>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="victim" class="col-sm-2 control-label require">
+                                            <span>受害人</span>
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="base-info-input" id="victim" placeholder="受害人姓名">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="witness" class="col-sm-2 control-label require">
+                                            <span>证人</span>
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="base-info-input" id="witness" placeholder="证人姓名">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" spy-type-box more-people">
+                                <div class="opera">
+                                    <i class="fa fa-minus"></i>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="criminalPerson" class="col-sm-2 control-label require">
+                                            <span>嫌疑人</span>
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <input type="text" class="base-info-input" id="criminalPerson" placeholder="犯罪嫌疑人">
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <select  title="请选择罪行" class="width-p-100 multiple-select"  multiple size="4">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="victim" class="col-sm-2 control-label require">
+                                            <span>受害人</span>
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="base-info-input" id="victim" placeholder="受害人姓名">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="witness" class="col-sm-2 control-label require">
+                                            <span>证人</span>
+                                        </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="base-info-input" id="witness" placeholder="证人姓名">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer border-none">
+                <div class="clearfix">
+                    <div class=" col-sm-6 text-right">
+                        <button type="submit" class="btn btn-blue-gradient btn-min-width">确 认</button>
+                    </div>
+                    <div class=" col-sm-6 text-left">
+                        <button type="submit" class="btn btn-grey btn-min-width" data-dismiss="modal">取 消</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--涉案主体管理弹窗end-->
 
 
 <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
@@ -965,6 +562,8 @@
 
 <script src="../../vonder/jqueryStep/js/jquery.step.min.js"></script>
 <script src="../../vonder/iCheck/icheck.min.js"></script>
+<script src="../../vonder/jquerySelect/js/select2.full.min.js"></script>
+<script src="../../vonder/jquerySelect/js/select2-krajee.min.js"></script>
 <script src="../../js/common.js"></script>
 
 <script src="../../js/examineArrest/factualApproval.js"></script>
