@@ -29,6 +29,8 @@ function switchImgTxt($domSelect,$domContainer) {
 
 
 
+
+
 //设置小时间轴的弹窗
 function setPopEditAndDel(dom) {
     var dom = dom || $(".pop-img");

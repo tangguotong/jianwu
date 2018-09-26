@@ -525,6 +525,22 @@ label{
     padding: 0;
     margin: 0;
     outline: none;
+    padding: 15px;
+}
+.img-view-box{
+    .txt-view{
+        width: 45%;
+    }
+}
+.right-operate{
+    position: fixed;
+    width: 150px;
+    li.list-group-item{
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 13px;
+        color: #464d5c;
+    }
 }
 
 

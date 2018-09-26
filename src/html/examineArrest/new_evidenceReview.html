@@ -335,10 +335,9 @@
             <div class="right-discern heightP100 relative">
                 <div class="clearfix absolute">
                     <div class="clearfix mb20">
-                        <select name="" class="selectpicker select-grey w120 pull-left" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
-                            <option value="">图片视图</option>
-                            <option value="">文字视图</option>
-                            <option value="">12</option>
+                        <select name="" id="imgTxtSelect" class="selectpicker select-grey w120 pull-left" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
+                            <option value="img">图片视图</option>
+                            <option value="txt">文字视图</option>
                         </select>
                         <ul class="nav navbar-nav nav-page ml20">
                             <li>
@@ -358,12 +357,6 @@
                         <div class="pull-right btn-box mr20">
                             <button class="btn btn-grey btn-min-width" data-toggle="modal" data-target="#savePop">证据导入</button>
                             <button class="btn btn-grey btn-min-width" data-toggle="modal" data-target="#moveTo">移动到</button>
-                            <!--<select name="" class="selectpicker select-grey base-width mr20" title="移动到">
-                                <option value="">12</option>
-                                <option value="">12</option>
-                                <option value="">12</option>
-                            </select>
-                            -->
                             <button class="btn btn-grey btn-min-width">删除</button>
                         </div>
                     </div>
@@ -371,11 +364,9 @@
                 <div class="row heightP100" >
                     <div class="col-md-8 heightP100">
 
-                        <div class="img-view-box scroll-style text-center">
+                        <div class="img-view-box scroll-style text-center" id="imgViewContainer">
                             <img src="../../images/examineArrest/img_view.png" alt="">
                         </div>
-                        <div class="text-view-box"></div>
-
                     </div>
                     <div class="col-md-4">
                         <div class="panel  border-no mb0" >
