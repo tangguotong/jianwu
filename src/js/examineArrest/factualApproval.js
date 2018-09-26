@@ -10,7 +10,9 @@ $(function () {
     });
 
     //罪行下拉框选择
-    $('.multiple-select').select2({"theme":"krajee","width":"100%","placeholder":"请选择罪行","language":"zh-CN"})
+    $('.multiple-select').select2({"theme":"krajee","width":"100%","placeholder":"请选择罪行","language":"zh-CN"});
+    //图片视图下拉框
+    switchImgTxt($(".img-txt-view-select"),$("#imgTxtContainer"));
 
     
     $("#addEvi").on("click",function () {
@@ -47,7 +49,6 @@ $(function () {
     ];
     setTrueTable(data);//事实审定总览函数
 
-
     
     //事实审定总览函数
     function setTrueTable(data) {
@@ -81,4 +82,6 @@ $(function () {
         $(".text-area-container").css('height', height - 75);
 
     }
+
+
 });

@@ -329,7 +329,7 @@ label{
     background-color: #f6f5f5;
       &>div{
           height: 100%;
-          overflow: hidden;
+          //overflow: hidden;
       }
     img{
       width: 100%;
@@ -337,8 +337,9 @@ label{
   }
   .img-page-box-center{
     width: 48%;
-      border-top: 1px solid #ededed;
+      //border-top: 1px solid #ededed;
       border-right: 1px solid #ededed;
+      border-left: 1px solid #ededed;
       .panel{
           -webkit-box-shadow: none;
           box-shadow:none;
@@ -515,4 +516,97 @@ label{
             //padding-left: 20px!important;
         }
     }
+}
+.txt-view{
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+
+
+/*证据审查页面*/
+.img-view-box{
+    height: 100%;
+    img {
+        width: 45%;
+    }
+}
+.pt40{
+  padding-top: 40px!important;
+}
+.mt8{
+    margin-top: 8px;
+}
+.label-box{
+  height: 40px;
+  font-size: 13px;
+  color: #000;
+  background-color: #f6f5f5;
+  line-height: 40px;
+    margin: 0 -15px;
+    padding: 0 15px;
+  vertical-align: middle;
+
+    .dropdown-toggle{
+        color: #000!important;
+    }
+}
+.select-min{
+    width: 80px!important;
+    .btn{
+        padding: 4px 10px;
+    }
+    height: 25px;
+    .text{
+        font-size: 13px!important;
+    }
+}
+.label-container{
+    margin-right: -15px;
+    padding-right: 15px;
+    .text-area-box{
+        .text-area-default{
+            background-color: #f6f5f5;
+            height: 66px;
+        }
+        .title-left{
+            span{
+                color: #464d5c;
+            }
+            .number{
+                padding: 1px 6px;
+                //background-color: #fdc700;
+                border-radius: 50%;
+                &.yellow{
+                    background-color: #fdc700;
+                }
+            }
+            .date{
+
+            }
+        }
+    } 
+}
+.panel{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.pop-control-box{
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.w400{
+    width: 400px;
+}
+.modal-content{
+    margin: 0 auto;
+}
+.cursor{
+    cursor: pointer;
 }

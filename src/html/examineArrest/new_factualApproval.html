@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="../../vonder/jquerySelect/css/select-addl.min.css">
     <link rel="stylesheet" href="../../vonder/jquerySelect/css/select-krajee.min.css">
     <link rel="stylesheet" href="../../vonder/jquerySelect/css/select.min.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_799700_9n2s6fc53q.css">
+    <!--<link rel="stylesheet" href="//at.alicdn.com/t/font_799700_9n2s6fc53q.css">-->
+    <link rel="stylesheet" href="../../css/iconfont.css">
     <link rel="stylesheet" href="../../css/common.css">
 
 
@@ -164,7 +165,10 @@
                     <img src="../../images/openCases/su_icon.png" alt="">
                 </div>
                 <div class="message-details">
-                    <p class="case-message-title">王某某等3人盗窃案  <button class="btn btn-lucency-blue ml20" data-toggle="modal" data-target="#mainManagement">涉案主体管理</button></p>
+                    <p class="case-message-title">
+                        王某某等3人盗窃案
+                        <button class="btn btn-lucency-blue ml20" data-toggle="modal" data-target="#mainManagement">涉案主体管理</button>
+                    </p>
                     <div class="message-classify">
                             <span>
                                 案件类型：<b>提请批准逮捕</b>
@@ -215,10 +219,9 @@
         <!--图片视图内容start-->
         <div id="imgContainer" class="one-content ">
             <div class="clearfix mb20">
-                <select name="" class="selectpicker select-grey w120 pull-left" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
-                    <option value="">12</option>
-                    <option value="">12</option>
-                    <option value="">12</option>
+                <select name="" class="selectpicker select-grey w120 pull-left img-txt-view-select" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
+                    <option value="img">图片视图</option>
+                    <option value="txt">文字视图</option>
                 </select>
                 <ul class="nav navbar-nav nav-page ml20">
                     <li>
@@ -242,7 +245,7 @@
             </div>
             <div class="img-page-box clearfix">
                 <div class="img-page-box-left">
-                    <div>
+                    <div class="scroll-style" id="imgTxtContainer">
                         <img src="../../images/examineArrest/img_view.png" alt="">
                     </div>
                 </div>

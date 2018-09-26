@@ -10,6 +10,25 @@ $(function () {
 function setMinHeight() {
     $(".wrapper").css("min-height", $(window).height());
 }
+
+//文字图片视图切换
+function switchImgTxt($domSelect,$domContainer) {
+    $('.selectpicker').on('changed.bs.select',function(e){
+        var  val = $domSelect.selectpicker("val");
+        if(val == "img"){
+            $domContainer.html("<img src=\"../../images/examineArrest/img_view.png\" alt=\"\">");
+        }else if (val == "txt"){
+            $domContainer.html("<textarea class='txt-view'>textarea</textarea>");
+        }else{
+            $domContainer.html("<img src=\"../../images/examineArrest/img_view.png\" alt=\"\">");
+        }
+    });
+
+
+}
+
+
+
 //设置小时间轴的弹窗
 function setPopEditAndDel(dom) {
     var dom = dom || $(".pop-img");
