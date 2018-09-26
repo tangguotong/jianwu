@@ -465,33 +465,7 @@ label{
             padding-right: 5px;
             padding-bottom: 5px;
         }
-        .evi-box{
-            //margin-right: -10px;
-            width: 100%;
-            li{
-                position: relative;
-                float: left;
-                padding: 3px 8px;
-                margin-bottom: 10px;
-                background-color: #f6f5f5;
-                font-size: 13px;
-                color: #464d5c;
-                border: 1px solid #d5d5d5;
-                margin-right: 10px;
-                cursor: pointer;
-                &.active:after{
-                    content: "";
-                    position: absolute;
-                    right: -5px;
-                    top:-5px;
-                    width: 15px;
-                    height: 15px;
-                    background:url("../images/examineArrest/add_edi_ok.png")no-repeat;
-                    -webkit-background-size: 15px 15px;
-                    background-size: 15px 15px;
-                }
-            }
-        }
+
 
     }
     .btn-grey{
@@ -503,6 +477,33 @@ label{
         }
     }
 
+}
+.evi-box{
+    //margin-right: -10px;
+    width: 100%;
+    li{
+        position: relative;
+        float: left;
+        padding: 3px 8px;
+        margin-bottom: 10px;
+        background-color: #f6f5f5;
+        font-size: 13px;
+        color: #464d5c;
+        border: 1px solid #d5d5d5;
+        margin-right: 10px;
+        cursor: pointer;
+        &.active:after{
+            content: "";
+            position: absolute;
+            right: -5px;
+            top:-5px;
+            width: 15px;
+            height: 15px;
+            background:url("../images/examineArrest/add_edi_ok.png")no-repeat;
+            -webkit-background-size: 15px 15px;
+            background-size: 15px 15px;
+        }
+    }
 }
 .select-has-opt{
 //    成组的下拉框
@@ -625,4 +626,10 @@ label{
 }
 .cursor{
     cursor: pointer;
+}
+.pt0{
+    padding-top: 0!important;
+}
+.block-center{
+    margin: 0 auto!important;
 }

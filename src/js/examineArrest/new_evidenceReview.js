@@ -2,6 +2,13 @@ $(function () {
     showNext();//监听屏幕滚动.显示固定头部的下一步
     setSecondScreenHeight();
     setleftFileShowHide();//左侧文件夹图标的切换/
+    $(".evi-box li").on("click",function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active")
+        }else{
+            $(this).addClass("active")
+        }
+    });
     var $step = $("#step");
     $step.step({
         index: 0,
@@ -11,12 +18,7 @@ $(function () {
     //罪行下拉框选择
     $('.multiple-select').select2({"theme":"krajee","width":"100%","placeholder":"请选择罪行","language":"zh-CN"})
 
-    //计算第二屏高度
-    function setSecondScreenHeight() {
-        var height = parseInt($(".wrapper").css('min-height')) - 62 -55 -70;
-        $('.second-screen').css('height',height);
-        $(".label-container").css("height",height - 150);
-    }
+
     //电子卷宗按钮点击事件
     $('#eleFile').on('click',function () {
         showEleFilePop();
@@ -69,8 +71,6 @@ $(function () {
                     "top":clientY,
                     "left":clientX,
                 });
-
-
             }
             //阻止浏览器默认的右键事件
             return false;
@@ -79,9 +79,38 @@ $(function () {
     function setRightOperateClick($dom) {
         //获取文字信息
         var text = $dom.html();
-        alert(text);
         $(".right-operate ").hide();
+        switch (text){
+            case "加入到摘录":
 
+                break;
+            case "添加批注":
+
+                break;
+            case "瑕疵证据":
+
+                break;
+            case "疑问点":
+
+                break;
+            case "矛盾点":
+
+                break;
+            case "标注要素":
+                $("#labelImportant").modal("show");
+                break;
+            case "加入到文书":
+                $("#addToBook").modal("show");
+                break;
+        }
+        // alert(text);
+
+    }
+    //计算第二屏高度
+    function setSecondScreenHeight() {
+        var height = parseInt($(".wrapper").css('min-height')) - 62 -55 -70;
+        $('.second-screen').css('height',height);
+        $(".label-container").css("height",height - 150);
     }
 
 
