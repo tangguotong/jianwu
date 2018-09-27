@@ -259,5 +259,18 @@ function setTrueTable(data) {
     })
 }
 
+//图片切换
+function imgNextPrev() {
+    $('#myCarousel').carousel('pause')
+    var count = $('#myCarousel .carousel-inner').find(".item").length;
+    $(".nav-page li").eq(1).html(1 +"/" +count)
+    $('#myCarousel').on('slid.bs.carousel', function (a,b,c) {
+        //获取第几帧图片
+        var index = $('#myCarousel .carousel-inner').find(".item.active").index()+1;
+        $(".nav-page li").eq(1).html(index +"/" +count)
+        console.log(index)
+    })
+}
+
 
 

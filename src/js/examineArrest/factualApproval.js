@@ -1,6 +1,9 @@
 $(function () {
     showNext();
     setImgContainerSize();
+    imgNextPrev();//图片轮播
+    //全文快照
+    showFullTxtFast();
 
     var $step = $("#step");
     $step.step({
@@ -15,10 +18,7 @@ $(function () {
     switchImgTxt($(".img-txt-view-select"),$("#imgTxtContainer"));
 
     
-    $("#addEvi").on("click",function () {
-        $(".hidden-modal-box").fadeToggle();
 
-    });
     $("#closeU").on("click",function () {
         $(".hidden-modal-box").fadeOut();
     });
@@ -58,6 +58,25 @@ $(function () {
         $('.img-page-box').css('height', height);
         $(".text-area-container").css('height', height - 75);
 
+    }
+    //全文快照
+    function showFullTxtFast() {
+        $(".text-area-footer .icon-box").tooltip({
+            "html":true,
+            "placement":"right",
+            "title":' <div class="panel panel-full-text mb0">\n' +
+            '                                        <div class="panel-heading">\n' +
+            '                                            <p class="panel-title">全文快照</p>\n' +
+            '                                        </div>\n' +
+            '                                        <div class="panel-body">\n' +
+            '                                            <p class="full-content">\n' +
+            '                                                大约是 <span class="fc-orange">2107年12月6日星期一，我刚下班。2017年12月6日晚上，趁x x不注意，拿了放在桌子上的一部白色苹果手机和一对戒</span>\n' +
+            '                                            </p>\n' +
+            '                                            <p class="text-from">证据要素出自：<a href="#">《犯罪嫌疑人供述》（第一次）</a></p>\n' +
+            '                                        </div>\n' +
+            '                                    </div>',
+
+        });
     }
 
 

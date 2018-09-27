@@ -299,12 +299,21 @@ label{
 .nav-page{
     height: 32px;
     font-size: 13px;
+    display: inline-block;
     &>li{
         color: #413835;
+        float: left;
         margin-right: 20px;
         line-height: 32px;
         cursor: pointer;
         vertical-align: middle;
+        a,
+        &:hover,
+        &:visited,
+        &:focus{
+            color: #413835!important;
+            text-decoration: none!important;
+        }
         .iconfont {
             font-weight: bold;
             color: #413835;
@@ -407,12 +416,35 @@ label{
     }
     .text-area-footer{
         margin-top: 2px;
-        overflow: hidden;
+        position: relative;
+        //overflow: hidden;
+        .full-text-box{
+            width: 400px;
+            border: 1px solid #ededed;
+            position: absolute;
+            left: 20%;
+            bottom: 15px;
+        }
+        .panel-full-text{
+            width: 400px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .tooltip-inner{
+            max-width: 500px;
+            //background-color: #f6f5f5;
+        }
+        .tooltip.top .tooltip-arrow{
+            //border-top-color: #f6f5f5!important;
+        }
     }
     .text-area-default{
         color: #413835;
     }
 
+}
+.text-area-box:last-child{
+    margin-bottom: 40px;
 }
 .text-area-default{
      width: 100%;
