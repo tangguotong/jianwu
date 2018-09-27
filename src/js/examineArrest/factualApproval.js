@@ -50,30 +50,7 @@ $(function () {
     setTrueTable(data);//事实审定总览函数
 
     
-    //事实审定总览函数
-    function setTrueTable(data) {
-        $("#truthTable").bootstrapTable({
-            columns:[
-                {
-                    field:"field0",
-                    title:"罪名/犯罪嫌疑人"
-                },
-                {
-                    field:"field1",
-                    title:"盗窃罪"
-                },
-                {
-                    field:"field2",
-                    title:"故意伤害罪"
-                },
-                {
-                    field:"field3",
-                    title:"掩饰隐藏犯罪所得"
-                },
-            ],
-            data:data
-        })
-    }
+
 
     //计算图片容器的大小
     function setImgContainerSize() {
