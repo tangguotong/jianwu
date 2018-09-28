@@ -343,6 +343,9 @@ label{
     img{
       width: 100%;
     }
+      .carousel,.carousel-inner,.item{
+          min-height: 100%;
+      }
   }
   .img-page-box-center{
     width: 48%;
@@ -551,18 +554,20 @@ label{
     }
 }
 .txt-view{
+    resize: none;
+    display: none;
     width: 100%;
     min-height: 100%;
     background-color: #fff;
     border: none;
-    padding: 0;
+    //padding: 0;
     margin: 0;
     outline: none;
     padding: 15px;
 }
 .img-view-box{
     .txt-view{
-        width: 45%;
+        //width: 45%;
     }
 }
 .right-operate{
@@ -581,8 +586,11 @@ label{
 /*证据审查页面*/
 .img-view-box{
     height: 100%;
-    img {
-        width: 45%;
+    //width: 45%;
+    &>div.carousel{
+        width: 55%;
+        margin: 0 auto;
+
     }
 }
 .pt40{

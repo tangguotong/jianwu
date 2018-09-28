@@ -2,6 +2,8 @@ $(function () {
     showNext();//监听屏幕滚动.显示固定头部的下一步
     setSecondScreenHeight();
     setleftFileShowHide();//左侧文件夹图标的切换/
+    switchImgTxt($(".img-txt-view-select"),$("#myCarousel2"));
+    imgNextPrev($("#myCarousel2"));
     $(".evi-box li").on("click",function () {
         if($(this).hasClass("active")){
             $(this).removeClass("active")

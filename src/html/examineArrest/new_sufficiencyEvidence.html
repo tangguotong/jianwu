@@ -9,17 +9,12 @@
     <link rel="stylesheet" href="../../vonder/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../vonder/bootstrap-table/bootstrap-table.min.css">
     <link rel="stylesheet" href="../../vonder/jqueryStep/css/jquery.step.css">
+    <link rel="stylesheet" href="../../vonder/bootstrap-select-1.12.4/dist/css/bootstrap-select.min.css">
+
     <link rel="stylesheet" href="../../css/iconfont.css">
 
     <link rel="stylesheet" href="../../css/common.css">
 
-    <script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
-    <script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="../../vonder/bootstrap-table/bootstrap-table.min.js"></script>
-    <script src="../../vonder/jqueryStep/js/jquery.step.min.js"></script>
-
-    <script src="../../js/common.js"></script>
-    <script src="../../js/examineArrest/new_sufficiencyEvidence.js"></script>
 </head>
 <body>
 <!--头-->
@@ -184,7 +179,17 @@
                 <div class="message-btn pull-right">
                     <!--<button class="btn btn-border-blue next">下一步</button>
                     <button class="btn btn-border-blue dossier">电子卷宗</button>-->
-                    <button class="btn btn-grey btn-orange-gradient mr20">下一步</button>
+                    <select name=""  class="selectpicker select-orange base-width mr20 select-has-opt" title="程序流转">
+                        <optgroup label="下一步">
+                            　　　　<option>事实审定</option>
+                            　　</optgroup>
+                        　　<optgroup label="流程回退">
+                        　　　　<option>证据审查</option>
+                        　　　　<option>量刑计算</option>
+                        　　　　<option>逮捕必要性评估</option>
+                        　　　　<option>案件监督</option>
+                        　　</optgroup>
+                    </select>
                     <button class="btn btn-blue-gradient">电子卷宗</button>
                 </div>
             </div>
@@ -195,11 +200,13 @@
             <div class=" clearfix mb20">
                 <span class="pull-left left-blue-rect-title">充分性判断总览</span>
                 <div class="right pull-right" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                    <img src="../../images/examineArrest/up.png" alt="" />
-                    收起面板
+                    <span class="icon-box toggle-panel">
+                        <i class="icon iconfont icon-up fc-blue"></i>
+                        收起面板
+                    </span>
                 </div>
             </div>
-            <div class=" mb20 border-no" id="collapseOne" style="overflow-x: auto;overflow-y: hidden;">
+            <div class=" mb20 border-no in" id="collapseOne" >
                 <table id="truthTable" class="table-normal "></table>
             </div>
         </div>
@@ -474,6 +481,16 @@
     </footer>
 </div>
 </body>
+
+<script src="../../vonder/jquery-1.10.2/jquery-1.10.2.min.js"></script>
+<script src="../../vonder/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../../vonder/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="../../vonder/jqueryStep/js/jquery.step.min.js"></script>
+<script src="../../vonder/bootstrap-select-1.12.4/dist/js/bootstrap-select.min.js"></script>
+
+
+<script src="../../js/common.js"></script>
+<script src="../../js/examineArrest/new_sufficiencyEvidence.js"></script>
 <script>
     //控制充分性判断总览li高度
 

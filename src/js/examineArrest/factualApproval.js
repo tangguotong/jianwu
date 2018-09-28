@@ -1,9 +1,8 @@
 $(function () {
     showNext();
     setImgContainerSize();
-    imgNextPrev();//图片轮播
-    //全文快照
-    showFullTxtFast();
+    imgNextPrev($("#myCarousel"));//图片轮播
+    showFullTxtFast();    //全文快照
 
     var $step = $("#step");
     $step.step({
@@ -77,6 +76,32 @@ $(function () {
             '                                    </div>',
 
         });
+    }
+
+
+    //事实审定总览函数表格
+    function setTrueTable(data) {
+        $("#truthTable").bootstrapTable({
+            columns:[
+                {
+                    field:"field0",
+                    title:"罪名/犯罪嫌疑人"
+                },
+                {
+                    field:"field1",
+                    title:"盗窃罪"
+                },
+                {
+                    field:"field2",
+                    title:"故意伤害罪"
+                },
+                {
+                    field:"field3",
+                    title:"掩饰隐藏犯罪所得"
+                },
+            ],
+            data:data
+        })
     }
 
 

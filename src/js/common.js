@@ -1,6 +1,7 @@
 $(function () {
     showHeaderMessage();//头部消息盒子的显示
     setMinHeight();
+    togglePanel();
     // showEleFilePop();
 
 
@@ -12,15 +13,20 @@ function setMinHeight() {
 }
 
 //文字图片视图切换
+/*
+* $domSelect下拉框的jquery对象
+* $domContainer对应的轮播图的容器
+*
+* */
 function switchImgTxt($domSelect,$domContainer) {
-    $('.selectpicker').on('changed.bs.select',function(e){
+    $domSelect.on('changed.bs.select',function(e){
         var  val = $domSelect.selectpicker("val");
         if(val == "img"){
-            $domContainer.html("<img src=\"../../images/examineArrest/img_view.png\" alt=\"\">");
+            $domContainer.find(".item img").show();
+            $domContainer.find(".item textarea").hide();
         }else if (val == "txt"){
-            $domContainer.html("<textarea class='txt-view'>textarea</textarea>");
-        }else{
-            $domContainer.html("<img src=\"../../images/examineArrest/img_view.png\" alt=\"\">");
+            $domContainer.find(".item textarea").show()
+            $domContainer.find(".item img").hide()
         }
     });
 
@@ -82,7 +88,6 @@ function showHeaderMessage() {
 function showNext() {
     window.addEventListener("scroll",function(e){
         var t =document.documentElement.scrollTop||document.body.scrollTop;
-        console.log(t);
         if(t > $('.case-message').height()){
             $('.case-message').addClass('simple-case-message');
         }else if(t < $('.case-message').height()){
@@ -222,51 +227,29 @@ function refreshImgObj() {
 function togglePanel() {
 
     var off=true;
-    $(".first-level-titles .right").click(function(){
+    $(".toggle-panel").click(function(){
         if(off){
-            $(this).html('<img src="../../images/examineArrest/up.png" alt="" />展开面板')
+            $(this).html(' <i class="icon iconfont icon-down fc-blue"></i>\n' +
+                '                        展开面板')
             off=false;
         }else{
-            $(this).html('<img src="../../images/examineArrest/down.png" alt="" />收起面板')
+            $(this).html(' <i class="icon iconfont icon-up fc-blue"></i>\n' +
+                '                        收起面板')
 
             off=true;
         }
     });
 }
 
-//事实审定总览函数
-function setTrueTable(data) {
-    $("#truthTable").bootstrapTable({
-        columns:[
-            {
-                field:"field0",
-                title:"罪名/犯罪嫌疑人"
-            },
-            {
-                field:"field1",
-                title:"盗窃罪"
-            },
-            {
-                field:"field2",
-                title:"故意伤害罪"
-            },
-            {
-                field:"field3",
-                title:"掩饰隐藏犯罪所得"
-            },
-        ],
-        data:data
-    })
-}
 
 //图片切换
-function imgNextPrev() {
-    $('#myCarousel').carousel('pause')
-    var count = $('#myCarousel .carousel-inner').find(".item").length;
+function imgNextPrev($dom) {
+    $dom.carousel('pause');
+    var count = $dom.find(".carousel-inner .item").length;
     $(".nav-page li").eq(1).html(1 +"/" +count)
-    $('#myCarousel').on('slid.bs.carousel', function (a,b,c) {
+    $dom.on('slid.bs.carousel', function () {
         //获取第几帧图片
-        var index = $('#myCarousel .carousel-inner').find(".item.active").index()+1;
+        var index = $dom.find(".carousel-inner .item.active").index()+1;
         $(".nav-page li").eq(1).html(index +"/" +count)
         console.log(index)
     })

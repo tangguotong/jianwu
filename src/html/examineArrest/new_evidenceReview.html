@@ -335,7 +335,7 @@
             <div class="right-discern heightP100 relative">
                 <div class="clearfix absolute">
                     <div class="clearfix mb20">
-                        <select name="" id="imgTxtSelect" class="selectpicker select-grey w120 pull-left" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
+                        <!--<select name="" id="imgTxtSelect" class="selectpicker select-grey w120 pull-left" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
                             <option value="img">图片视图</option>
                             <option value="txt">文字视图</option>
                         </select>
@@ -353,6 +353,30 @@
                             </li>
 
                         </ul>
+                        -->
+                        <select name="" class="selectpicker select-grey w120 pull-left img-txt-view-select" title="<span class='icon-box'><i class='icon iconfont icon-tupian'></i>图片视图</span>">
+                            <option value="img">图片视图</option>
+                            <option value="txt">文字视图</option>
+                        </select>
+                        <ul class="nav-page ml20">
+                            <li>
+                                <a href="#myCarousel2"  data-slide="prev">
+                                    <span class="icon iconfont icon-shangyiye"></span>
+                                    上一页
+                                </a>
+                            </li>
+                            <li>
+                                2/46
+                            </li>
+                            <li>
+                                <a href="#myCarousel2"  data-slide="next">
+                                    下一页
+                                    <span class="icon iconfont icon-xiayiye"></span>
+                                </a>
+
+                            </li>
+
+                        </ul>
 
                         <div class="pull-right btn-box mr20">
                             <button class="btn btn-grey btn-min-width" data-toggle="modal" data-target="#savePop">证据导入</button>
@@ -364,8 +388,26 @@
                 <div class="row heightP100" >
                     <div class="col-md-8 heightP100">
 
-                        <div class="img-view-box scroll-style text-center" id="imgViewContainer">
-                            <img src="../../images/examineArrest/img_view.png" alt="">
+                        <div class="img-view-box scroll-style  heightP100" id="imgViewContainer">
+                            <!--<img src="../../images/examineArrest/img_view.png" alt="">-->
+                            <div id="myCarousel2" class="carousel slide ">
+                                <!-- 轮播（Carousel）项目 -->
+                                <div class="carousel-inner ">
+                                    <div class="item active ">
+                                        <img src="../../images/examineArrest/img_view.png" alt="First slide">
+                                        <textarea class="txt-view">1234</textarea>
+                                    </div>
+                                    <div class="item">
+                                        <img src="../../images/examineArrest/img_view.png" alt="Second slide">
+                                        <textarea class="txt-view">1234</textarea>
+                                    </div>
+                                    <div class="item">
+                                        <img src="../../images/examineArrest/img_view.png" alt="Third slide">
+                                        <textarea class="txt-view">1234</textarea>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -460,7 +502,6 @@
                                                         <textarea name="" class="text-area-default" cols="30" rows="10">与犯罪嫌疑人供述诈骗方式存在矛盾，两处关于领导的描述不一致桌子</textarea>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>

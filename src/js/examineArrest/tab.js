@@ -1,5 +1,5 @@
 $(function(){
-	var off=true;
+	/*var off=true;
 	$(".first-level-titles .right").click(function(){
 			if(off){
 				$(this).html('<img src="../../images/examineArrest/up.png" alt="" />展开面板')
@@ -9,5 +9,5 @@ $(function(){
 				
 				off=true;
 			}
-		})
+		})*/
 })
