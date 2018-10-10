@@ -265,6 +265,7 @@ label{
 }
 .icon-box{
     cursor: pointer;
+    vertical-align: middle;
     i{
         margin-right: 3px;
         vertical-align: middle;
@@ -808,3 +809,183 @@ label{
         vertical-align: middle;
     }
 }
+
+
+
+/*量刑计算页面*/
+.bold-title{
+    font-size: 16px;
+    font-weight: bold;
+}
+.fs13{
+    font-size: 13px;
+}
+.block{
+    display: block;
+}
+.plot-box {
+  border: 1px solid #e7e9f0;
+  padding: 15px;
+  padding-bottom: 0;
+  margin-left: -5px;
+  margin-right: -5px;
+  >li{
+    border-bottom: 1px solid #e7e9f0;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 15px;
+    padding-bottom: 0;
+    &:last-child{
+      border: none;
+    }
+    &:first-child{
+      padding-top: 0;
+    }
+  }
+  .plot-title {
+    position: relative;
+    color: #2b93f5;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 12px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid transparent;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #2b93f5;
+    }
+  }
+}
+.icheck-label-box{
+  padding: 0;
+  overflow: hidden;
+  >li{
+    float: left;
+    width: 200px;
+    >label{
+      padding-right: 15px;
+      height: 45px;
+      overflow: hidden;
+      >div{
+        float: left;
+        height: 19px;
+      }
+      >span{
+        float: left;
+        display: inline-block;
+        width: 155px;
+        padding-left: 8px;
+        vertical-align: middle;
+        font-size: 13px;
+        color: #464d5c;
+      }
+
+    }
+
+  }
+
+}
+.input-deauft{
+  border: 1px solid #d7dde4;
+  height: 30px;
+  min-width: 220px;
+  outline: none;
+  color: #999;
+  font-size: 13px;
+  padding-left: 5px;
+}
+.cause-list-item{
+  position: relative;
+  padding: 20px 0 20px 20px;
+  border-bottom: 1px solid #ededed;
+  .cause-list-detail{
+    h5{
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+    }
+  }
+  .icon-wenben{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    font-size: 28px;
+    color: #2b93f5;
+
+  }
+
+}
+.matching{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  .num-big{
+    margin: 0 6px;
+    font-size: 20px;
+    color: #fd8b04;
+  }
+
+}
+.loading-orange{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/examineArrest/loading-orange.png") no-repeat;
+  background-size:20px;
+}
+.table-page-box{
+  .fixed-table-container{
+    border: none;
+  }
+  .fixed-table-loading{
+    display: none;
+  }
+  thead{
+    display: none;
+  }
+  table{
+    border: none;
+    tbody{
+      tr{
+        border: none;
+        &:hover{
+          background-color: transparent;
+        }
+        &:last-child{
+          td{
+            >div{
+              border: none;
+            }
+          }
+        }
+        td{
+          padding: 0!important;
+        }
+      }
+    }
+  }
+}
+.input-box-border-deep{
+    border: 1px solid rgb(204,204,204);
+    color: rgb(204,204,204);
+    input{
+        color: #b5b5b5;
+    }
+}
+//分页
+.pagination-detail{
+    display: block!important;
+}
+.page-list{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+//.pagination-info{
+//    display: none;
+//}

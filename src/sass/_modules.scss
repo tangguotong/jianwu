@@ -88,6 +88,13 @@
     color: #ff9600!important;
   }
 }
+.btn-orange-hollow{
+  &:hover,&:visited,&:focus,&:active,&{
+    border: 1px solid #feba37!important;
+    background: #fff!important;
+    color: #ff9600!important;
+  }
+}
 .btn-lucency-green,.select-lucency-green .btn-default{
   &:hover,&:visited,&:focus,&:active,&{
     border: 1px solid #29d295!important;
@@ -107,6 +114,11 @@
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = #f9b74c, endColorstr = #f9822b)!important;
     color:#fff !important;
   }
+}
+
+.btn-mini{
+  padding: 0 8px;
+  background-color: #fff;
 }
 
 

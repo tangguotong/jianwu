@@ -17,6 +17,14 @@
 .fc-orange{
   color: #ffa800;
 }
+.fc-gray-light,.fc-gray-deep,.fc-blue,.fc-orange{
+  >span{
+    margin-right: 10px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
 .fs12{
   font-size: 12px;
 }
