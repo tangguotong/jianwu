@@ -10,12 +10,13 @@ $(function () {
 
     showNext();
 
+
     //初始化编辑器
     var E = window.wangEditor
     var editor2 = new E('.right-written')
     editor2.create();
     editor2.txt.html('<h2 class="text-center">用 JS 设置的内容</h2>');
-
+    setHeight();
     //电子卷宗的点击事件
     $('#eleFile').on('click',function () {
         //计算电子卷宗的高和top值
@@ -32,4 +33,10 @@ $(function () {
             $('.ele-pop-box').fadeOut();
         });
     });
+
+    function setHeight() {
+        var height = parseInt($(".wrapper").css('min-height')) - 62 -55 -70;
+        $(".label-container").css("height",height-170);
+        $(".w-e-text-container").css("height",height-170-32)
+    }
 });
