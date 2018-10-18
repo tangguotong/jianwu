@@ -1,13 +1,6 @@
 *{
 	list-style:none;
 }
-/*按钮*/
-//.next{
-//	border:none;
-//    background-image: linear-gradient(to right, #f9822a,#ffa91f);
-//    color: #fff;
-//    padding:7px 25px;
-//}
 .dossier{
 	border:none;
     background-image: linear-gradient(to right, #3e92ff,#2eadff);
@@ -156,6 +149,7 @@
     border-bottom: none;
     &:last-child{
         border-bottom: 1px solid #ededed;
+        margin-bottom: 20px;
     }
     .factorcontent{
         width:100%;
@@ -242,9 +236,7 @@ label{
     text-overflow: ellipsis;
     text-decoration: none;
     color:#464d5c;
-    font-size: 12px;
-    font-family: "微软雅黑";
-    color:#464d5c;
+    font-size: 13px;
     margin-left: 10px;
 }
 .slh:hover {
@@ -278,8 +270,6 @@ label{
     color: #ff9600;
 }
 .select-grey{
-    //f6f5f5
-    //464d5c
     .btn-default{
         background-color: #f6f5f5;
         color:#464d5c!important;
@@ -324,14 +314,12 @@ label{
 }
 .img-page-box{
   margin: 0 -25px -20px -25px;
-    //height: 635px;
     border-bottom: 1px solid #ededed;
     border-top: 1px solid #ededed;
     &>div{
         float: left;
         height: 100%;
         overflow: hidden;
-        //height: 100%;
     }
   .img-page-box-left{
     width: 27%;
@@ -339,7 +327,6 @@ label{
     background-color: #f6f5f5;
       &>div{
           height: 100%;
-          //overflow: hidden;
       }
     img{
       width: 100%;
@@ -350,7 +337,6 @@ label{
   }
   .img-page-box-center{
     width: 48%;
-      //border-top: 1px solid #ededed;
       border-right: 1px solid #ededed;
       border-left: 1px solid #ededed;
       .panel{
@@ -360,7 +346,6 @@ label{
           .text-area-container{
               position: relative;
               padding-bottom: 55px;
-              //overflow: hidden;
               .add-evi-box{
                   position: absolute;
                   width: 100%;
@@ -368,7 +353,6 @@ label{
               }
              .box-group{
                  height: 100%;
-                 //overflow: auto;
                  padding-right: 10px;
                  margin-right: -10px;
              }
@@ -377,7 +361,6 @@ label{
       }
       .panel-heading{
           border-bottom: 1px solid #ededed;
-          //padding: 15px 15px 0px 15px;
           padding-left: 0;
           padding-right: 0;
           .nav-my-style{
@@ -421,7 +404,6 @@ label{
     .text-area-footer{
         margin-top: 2px;
         position: relative;
-        //overflow: hidden;
         .full-text-box{
             width: 400px;
             border: 1px solid #ededed;
@@ -436,10 +418,6 @@ label{
         }
         .tooltip-inner{
             max-width: 500px;
-            //background-color: #f6f5f5;
-        }
-        .tooltip.top .tooltip-arrow{
-            //border-top-color: #f6f5f5!important;
         }
     }
     .text-area-default{
@@ -542,15 +520,10 @@ label{
     }
 }
 .select-has-opt{
-//    成组的下拉框
-    .dropdown-header{
-        //padding-left: 20px;
-    }
     .dropdown-menu>li>a{
         font-size: 13px;
         color: #464d5c;
         &.opt{
-            //padding-left: 20px!important;
         }
     }
 }
@@ -561,15 +534,9 @@ label{
     min-height: 100%;
     background-color: #fff;
     border: none;
-    //padding: 0;
     margin: 0;
     outline: none;
     padding: 15px;
-}
-.img-view-box{
-    .txt-view{
-        //width: 45%;
-    }
 }
 .right-operate{
     position: fixed;
@@ -587,7 +554,6 @@ label{
 /*证据审查页面*/
 .img-view-box{
     height: 100%;
-    //width: 45%;
     &>div.carousel{
         width: 55%;
         margin: 0 auto;
@@ -638,7 +604,6 @@ label{
             }
             .number{
                 padding: 1px 6px;
-                //background-color: #fdc700;
                 border-radius: 50%;
                 &.yellow{
                     background-color: #fdc700;
@@ -678,14 +643,11 @@ label{
     position: relative;
     font-size: 14px;
     color: #464d5c;
-    //line-height: 25px;
-    //padding: 3px 0;
     padding-left: 8px;
     &:before{
         content: '';
         position: absolute;
         width: 4px;
-        //height: 100%;
         top: 2px;
         bottom: 2px;
         left: 0;
@@ -845,7 +807,7 @@ label{
   .plot-title {
     position: relative;
     color: #2b93f5;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     padding-left: 12px;
     margin-bottom: 15px;
@@ -854,9 +816,9 @@ label{
       content: '';
       position: absolute;
       left: 0;
-      top: 6px;
-      width: 7px;
-      height: 7px;
+      top: 7px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background-color: #2b93f5;
     }
@@ -986,6 +948,3 @@ label{
     margin-top: 10px;
     margin-left: 5px;
 }
-//.pagination-info{
-//    display: none;
-//}
