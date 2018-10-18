@@ -15,7 +15,20 @@ $(function () {
     var E = window.wangEditor
     var editor2 = new E('.right-written')
     editor2.create();
-    editor2.txt.html('<h2 class="text-center">用 JS 设置的内容</h2>');
+    editor2.txt.html('<h2 class="text-center">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>' +
+        '<h2 class="text-center mb20">用 JS 设置的内容</h2>');
     setHeight();
     //电子卷宗的点击事件
     $('#eleFile').on('click',function () {
@@ -35,8 +48,9 @@ $(function () {
     });
 
     function setHeight() {
-        var height = parseInt($(".wrapper").css('min-height')) - 62 -55 -70;
-        $(".label-container").css("height",height-170);
-        $(".w-e-text-container").css("height",height-170-32)
+        // var height = parseInt($(".wrapper").css('min-height')) - 62 -55 -70;
+        $(".w-e-text-container").css("height","auto")
+        $(".w-e-text-container").css("z-index","3")
+        $(".w-e-text").css("overflow","hidden")
     }
 });
