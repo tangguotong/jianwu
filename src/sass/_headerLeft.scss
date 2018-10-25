@@ -4,8 +4,8 @@ $topHeight : 60px;
 .nav-top{
   margin-bottom: 0;
   border: none;
+  border-radius: 0;
   background-image: linear-gradient(to right, #2747ce, #2a61dd,#329bfe);    /*从左到右的渐变*/
-  z-index: 1000000;
   .navbar-header{
     margin-right: 10%;
     a{

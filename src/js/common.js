@@ -2,7 +2,7 @@ $(function () {
     showHeaderMessage();//头部消息盒子的显示
     setMinHeight();
     togglePanel();
-    // showEleFilePop();
+
 
 
 
@@ -31,6 +31,77 @@ function switchImgTxt($domSelect,$domContainer) {
     });
 
 
+}
+
+
+//右侧导航
+function showRightNav() {
+    //添加对应dom元素
+    $('body').append($('<div class="right-nav">\n' +
+        '    <div class="btn-group-vertical">\n' +
+        '        <button id="rightBtn1" type="button" class="btn btn-item">\n' +
+        '            <i class=""></i>\n' +
+        '            同类<br>案例\n' +
+        '        </button>\n' +
+        '        <button id="rightBtn2" type="button" class="btn btn-item">\n' +
+        '            法律<br>法规\n' +
+        '        </button>\n' +
+        '        <button id="rightBtn3" type="button" class="btn btn-item">\n' +
+        '\n' +
+        '            意见<br>反馈\n' +
+        '        </button>\n' +
+        '    </div>\n' +
+        '</div>'));
+    //设置弹出框
+    $("#rightBtn1").popover({
+        html:"true",
+        title:"类案推送",
+        placement:"left",
+        trigger:"manual",
+        content:$('.show-box-1'),
+    });
+    $("#rightBtn2").popover({
+        html:"true",
+        title:"法律法规",
+        placement:"left",
+        trigger:"manual",
+        content:$('.show-box-2'),
+    });
+    $("#rightBtn3").popover({
+        html:"true",
+        title:"意见反馈",
+        placement:"left",
+        trigger:"manual",
+        content:$('.show-box-3'),
+    });
+
+    //在弹出框显示之前
+
+    showRightNavBefor();
+
+
+}
+function showRightNavBefor() {
+    var oldEventBtn = null;
+    $('.btn-item').on('click', function () {
+        if(oldEventBtn){
+            if(oldEventBtn.attr('id') == $(this).attr('id')){
+                $(this).popover("toggle");
+            }else{
+                oldEventBtn.popover("hide");
+                $(this).popover("show");
+            }
+        }else{
+            $(this).popover("show");
+        }
+        oldEventBtn = $(this);
+        // $(this).parent().find('button.btn-item').each(function (index,el) {
+        //     var $el = $(el);
+        //     if($el.attr("aria-describedby") && $el.attr("aria-describedby").length>0){
+        //         $el.popover("hide");
+        //     }
+        // });
+    });
 }
 
 

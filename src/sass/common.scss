@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 @import "../vonder/font-awesome-4.7.0/scss/font-awesome";
 @import "popWindow";//弹窗的样式
 @import "public";//其他样式
@@ -10,6 +10,8 @@
 //@import "factualApproval";//事实审定样式
 //@import "sufficiencyEvidence";//证据充分性判断样式
 //@import "sentencingCalculation";//量刑计算
+
+
 /*内容*/
 body{
   font-family: "微软雅黑";
@@ -222,6 +224,7 @@ li{
 .rich-text-box{
   position: relative;
   padding-left: 215px;
+  z-index: 1;
   .left-btn{
     position: absolute;
     left: 0;

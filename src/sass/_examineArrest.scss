@@ -887,6 +887,8 @@ label{
   display: flex;
   align-items: center;
   font-size: 12px;
+    position: relative;
+    top: -6px;
   .num-big{
     margin: 0 6px;
     font-size: 20px;
@@ -947,4 +949,56 @@ label{
 .page-list{
     margin-top: 10px;
     margin-left: 5px;
+}
+.analysis{
+    height:auto;
+    .top{
+        height:60px;
+        width:100%;
+        border-bottom: 1px solid #e7e9f0;
+        .chance-box{
+            line-height: 60px;
+            img{
+                margin:0 4px 0 24px;
+                width:17px;
+                height:18px;
+            }
+            .chance{
+                font-size: 20px;
+                color:#fd8b04;
+            }
+        }
+        .next-box{
+            line-height: 60px;
+            background: none;
+            margin-right:20px;
+        }
+    }
+    .bottom{
+        height:auto;
+        padding-top:10px;
+        padding-bottom:16px;
+        ul{
+            :first-child{
+                color:#464d5c;
+            }
+            li{
+                padding:9px 20px;
+                text-align:left;
+                font-size: 12px;
+                color:#fd942b;
+            }
+        }
+    }
+}
+.prove_icon{
+    li{
+        vertical-align: middle;
+        float: left;
+        padding-right:20px;
+        img{
+            margin:0 10px;
+            margin-bottom: 2px;
+        }
+    }
 }
